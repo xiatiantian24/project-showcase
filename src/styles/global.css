@@ -1,0 +1,147 @@
+:root {
+
+    /* Font */
+
+    /* h6, caption  */
+    --font-size-small: clamp(0.813rem, 0.063vw + 0.8rem, 0.875rem);
+
+    /* paragraph  */
+    --font-size-medium: 1rem;
+
+    /* h3 */
+    --font-size-large: clamp(1rem, 0.25vw + 1rem, 1.25rem);
+
+    /* h2 */
+    --font-size-xlarge: clamp(1.25rem, 0.5vw + 1.15rem, 1.75rem);
+
+    /* h1 */
+    --font-size-xxlarge: clamp(1.5rem, 0.625vw + 1.375rem, 2.125rem);
+
+    --font-weight-reg: 400; 
+    --font-weight-medium: 500; 
+    --font-weight-semibold: 600; 
+    --font-weight-bold: 700;
+
+    --lh-small: 135%;
+    --lh-medium: 150%;
+    --lh-large: 160%;
+    --lh-xlarge: 175%;
+
+    /* Color Tokens */
+    --color-gray-1: #fff; 
+    --color-gray-2: #fbfbfb; 
+    --color-gray-3: #f3f3f6; 
+    --color-gray-4: #e7e7e7;
+    --color-gray-5: #b5b5b5; 
+    --color-gray-6: #646464; 
+    --color-gray-7: #121212;
+
+    --color-background-primary: var(--color-gray-1);
+    --color-background-secondary: var(--color-gray-3); 
+    --color-background-tertiary: var(--color-gray-2);
+    --color-border-light: var(--color-gray-4);
+    --color-border-dark: var(--color-gray-5);
+    --color-text-primary: var(--color-gray-7);
+    --color-text-secondary: var(--color-gray-6);
+
+    --border-radius-xsmall: 0.25rem;
+    --border-radius-small: 0.5rem;
+    --border-radius-medium: clamp(0.25rem, 0.5vw + 0.15rem, 0.75rem);
+    --border-radius-large: 1rem;
+
+    --nav-height: 60px;
+    --illustration-height: clamp(30rem, 20vw + 21rem, 45rem);
+    --card-padding: clamp(0.75rem, 0.75vw + 0.6rem, 1.5rem);
+}
+
+@font-face {
+    font-family: 'AktivGrotesk';
+    src: url('./fonts/AktivGrotesk-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AktivGrotesk';
+    src: url('./fonts/AktivGrotesk-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AktivGrotesk';
+    src: url('./fonts/AktivGrotesk-XBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TTFors';
+    src: url('./fonts/TT-Fors-Light.ttf') format('truetype');
+    font-weight: 300;
+    letter-spacing: -0.03rem;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TTFors';
+    src: url('./fonts/TT-Fors-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+    /*
+    :root {
+        --color-text-main: 22 42 43;
+        --color-bg-main: 214 224 226;
+        --color-bg-muted: 204 216 219;
+        --color-border-main: 22 42 43;
+    }
+    html.dark {
+        --color-text-main: 214 224 226;
+        --color-bg-main: 22 42 43;
+        --color-bg-muted: 28 53 55;
+        --color-border-main: 214 224 226;
+    }
+    */
+
+    /* Green */
+    /*
+    :root {
+        --color-text-main: 58 66 56;
+        --color-bg-main: 243 239 230;
+        --color-bg-muted: 238 233 220;
+        --color-border-main: 58 66 56;
+    }
+    html.dark {
+        --color-text-main: 243 239 230;
+        --color-bg-main: 94 108 91;
+        --color-bg-muted: 89 103 86;
+        --color-border-main: 243 239 230;
+    }
+    */
+
+
+
+/* Notes from Kevin Powell */
+html {
+    color-scheme: light dark; 
+    /* can be switched based on user preference */
+;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+svg {
+    max-width: 100%;
+    display: block;
+}
