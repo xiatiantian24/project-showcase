@@ -93,10 +93,9 @@ html {
 }
 
 body {
-    margin: 0 auto;
+    /* margin: 0 auto;
     width: 100%;
-    max-width: 50rem;
-    padding: 1rem;
+    max-width: 50rem; */
     line-height: 1.5;
     font-size: 100%;
 }

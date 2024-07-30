@@ -1,8 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import ThemeToggle from '../components/ThemeToggle.astro';
-
+import Layout from "../layouts/Layout.astro";
+import ProjectContainer from "../components/ProjectContainer.astro";
+import ThemeToggle from "../components/ThemeToggle.astro";
 
 const pageTitle = "Projects";
 const navLink2 = "Experiments";
@@ -10,27 +9,28 @@ const navLink3 = "About";
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <title>Ray Xia's Project Showcase</title>
-  </head>
-  <body>
-    <h1>{pageTitle}</h1>
-<ThemeToggle />
-
-<ul>
-	<li><a href="/projects/cubbie/">Cubbie</a></li>
-  </ul>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Ray Xia's Project Showcase</title>
+	</head>
 </html>
-<Layout title="Welcome to Astro.">
-	<main>
-	
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		
-		<!-- <ul role="list" class="link-card-grid">
+<div class="container grow w-full max-w-3xl md:mx-auto px-6">
+	<Layout title="Welcome to Astro.">
+		<main>
+			<!-- <h1>Welcome to <span class="text-gradient">Astro</span></h1> -->
+			<!-- <h1>{pageTitle}</h1> -->
+			<!-- <ThemeToggle /> -->
+			<ProjectContainer />
+			<!-- <ul>
+				<li><a href="/projects/cubbie/">Cubbie</a></li>
+			</ul> -->
+			<div class="project-category" id="ux"></div>
+			<div class="project-category" id="web"></div>
+			<div class="project-category" id="ixd"></div>
+
+			<!-- <ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
 				title="Documentation"
@@ -52,9 +52,9 @@ const navLink3 = "About";
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
 		</ul> -->
-	</main>
-</Layout>
-
+		</main>
+	</Layout>
+</div>
 <!-- <style>
 	main {
 		margin: auto;

@@ -1,0 +1,140 @@
+---
+import SideBar from "../components/SideBar.astro";
+---
+
+<div class="scroll-container flex gap-6">
+    <SideBar />
+    <!-- <div class="wrap">
+        <div class="category">A</div>
+        <div class="category">B</div>
+        <div class="category">C</div>
+    </div> -->
+
+    
+    <div class="js-scroll">
+        <div class="scrollwrap" id="history">
+            <div class="max-width-container">
+                <div class="text-wrap">
+                    <h3>The History</h3>
+                    <p>
+                        Learn how the idea of zero was thought about in Babylon,
+                        India, and other cultures at different times.
+                    </p>
+                    <a class="button" href="history.html">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="scrollwrap" id="symbols">
+            <div class="max-width-container">
+                <div class="text-wrap">
+                    <h3>The Symbols</h3>
+                    <p>
+                        The modern numerical zero is usually written as a circle
+                        or ellipse. Learn how zero is written in many other
+                        forms.
+                    </p>
+                    <a class="button" href="symbols.html">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="scrollwrap" id="math-science">
+            <div class="max-width-container">
+                <div class="text-wrap">
+                    <h3>Math + Science</h3>
+                    <p>
+                        Zero is a number which means an amount of null size.
+                        Learn more about how it is used in math and other fields
+                        of science.
+                    </p>
+                    <a class="button" href="math-science.html">Learn More</a>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+
+
+<style>
+
+    .scroll-container {
+        position: relative;
+    }
+    .max-width-container {
+    /* margin: auto; */
+    /* position: relative; */
+    height: 100%;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+
+
+.js-sticky-container {
+    position: relative;
+    /* width: 100%; */
+}
+
+
+.scrollwrap {
+    height: 200vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#history {
+    background-color: #EA733C;
+}
+
+#symbols {
+    background-color: #2C98DF;
+}
+
+#math-science {
+    background-color: #95C37B;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    padding-top: 160px;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 90px;
+}
+
+.scrollwrap .text-wrap {
+    position: sticky;
+    top: 22vh;
+    /* margin: 0 15rem; */
+    padding-bottom: 12rem;
+}
+
+
+
+#main p {
+    color: white;
+    max-width: 500px;
+    margin: 2rem 0;
+}
+
+#main .button {
+    border: solid 1.5px white;
+    color: white;
+}
+
+#main .button:hover {
+    border: solid 1.5px rgba(255, 255, 255, 0);
+    border-bottom: solid 3px white;
+    color: white;
+}
+
+
+</style>
