@@ -51,6 +51,46 @@
     </div>
 </div>
 
+<!-- from codepen -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<div id="follow"><img src="https://pbs.twimg.com/media/FhNJ_c5aMAIrlLR?format=jpg&name=900x900" /><br></br>
+</div>
+<div class="wrap">
+  <div class="accordion">
+    <div class="button"><p>Hover Me</p>
+      <div class="demo07">
+        <div class="demo07__content">
+          <div class="text">
+            This content should…<br />
+            toggle! 👻 </div>
+          <div class="img">img </div>
+        </div>
+      </div>
+    </div>
+    <div class="button"><p>Hover Me</p>
+      <div class="demo07">
+        <div class="demo07__content">
+          <div class="text">
+            This content should…<br />
+            toggle! 👻 </div>
+          <div class="img">img </div>
+        </div>
+      </div>
+    </div>
+      <div class="button"><p>Hover Me</p>
+      <div class="demo07">
+        <div class="demo07__content">
+          <div class="text">
+            This content should…<br />
+            toggle! 👻 </div>
+          <div class="img">img </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <style>
     .wrap {
         height: 100%;
@@ -88,4 +128,76 @@
         margin-top: 0px;
         transition: height 0.4s ease;
     }
+
+    /* from codepen */
+    
+.wrap {
+  position: relative;
+  height: 400px;
+    border: 1px solid red;
+}
+.demo07 {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.3s ease-out;
+  transition-delay: 50ms;
+}
+.demo07__content {
+  align-self: start;
+  min-height: 0;
+  transition: visibility 1s;
+  visibility: none;
+  display:flex;
+   flex-direction: row;
+  justify-content: space-between;
+}
+
+.button:hover  .demo07 {
+  grid-template-rows: 1fr;
+}
+
+.button:hover  .demo07 .demo07__content {
+  visibility: visible;
+  border: 1px solid black;
+}
+
+.accordion{
+     position: absolute;
+        width: 100%;
+        bottom: 0;
+}
+
+.button {
+  padding-top: 1rem;
+  border-bottom: 2px solid blue;
+}
+
+p{
+  height:2rem;
+}
+
+.text{
+  padding:1rem;
+  border-right: 1px solid black;
+  height: 8rem;
+   font-size: 0.8rem;
+}
+
+.img {
+  position: relative;
+  font-size:2rem;
+  border: 1px solid green;
+/*   z-index:99; */
+}
+
+#follow {
+  position: absolute;
+  text-align: center;
+}
+
+img{
+  width: 200px;
+  object-fit: cover;
+}
 </style>
