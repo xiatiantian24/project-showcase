@@ -3,14 +3,46 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectContainer from "../components/ProjectContainer.astro";
 import Accordion from "../components/Accordion.astro";
 import ThemeToggle from "../components/ThemeToggle.astro";
+// import "../scripts/accordion.js";
 
 const pageTitle = "Home";
 ---
 
-	<BaseLayout pageTitle={pageTitle}>
-		<main>
-			<ProjectContainer />
-		</main>
-	</BaseLayout>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	
+<div id="follow">
+	<img
+		src="https://pbs.twimg.com/media/FhNJ_c5aMAIrlLR?format=jpg&name=900x900"
+	/><br />
+</div>
+<BaseLayout pageTitle={pageTitle}>
+	<main>
+		<ProjectContainer />
+	</main>
+</BaseLayout>
+
+<!-- from codepen -->
+<script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script is:inline>
+	console.log("test");
+	const img = document.querySelector("#follow");
+	const height = img.offsetHeight;
+	const width = img.offsetWidth;
+
+	$(document).mousemove(function (e) {
+		$("#follow").css({
+			left: `${e.pageX - width / 2}px`,
+			top: `${e.pageY - height / 2}px`,
+		});
+	});
+</script>
+
+<style>
+	#follow {
+		position: absolute;
+		text-align: center;
+	}
+
+	img {
+		width: 200px;
+		object-fit: cover;
+	}
+</style>
