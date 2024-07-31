@@ -1,44 +1,63 @@
 ---
+const socialLinks = [
+    {
+        text: "LinkedIn",
+        href: "https://linkedin.com/",
+    },
+    {
+        text: "GitHub",
+        href: "https://github.com/",
+    },
+    {
+        text: "Resume",
+        href: "https://twitter.com/",
+    },
+];
 ---
 
+<footer class="w-full mx-auto mt-12 pt-8 pb-10">
+    <div
+        class:list={[
+            " flex flex-col gap-4",
+            {
+                "sm:flex-row-reverse sm:justify-between sm:items-center":
+                    socialLinks.length > 0,
+            },
+        ]}
+    >
+        {
+            socialLinks.length > 0 && (
+                <div class="flex gap-6 text-sm">
+                    {socialLinks.map((link) => (
+                        <a
+                            class="inline-flex items-center justify-center text-sm hover:"
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferer"
+                        >
+                            {link.text}
+                        </a>
+                    ))}
+                </div>
+            )
+        }
+        <p class="text-sm">
+            <!-- &copy; {new Date().getFullYear()}&nbsp;<a
+                class="hover:underline hover:underline-offset-2"
+                href="/">{siteConfig.title}</a
+            > -->
+            .Some Text Here.
+        </p>
+    </div>
+</footer>
+
 <style>
-    
-.footer {
-    margin: 1rem 3rem 3rem 3rem;
-}
-
-.footer a {
-    font-size: 3rem;
-    margin-left: 0;
-    padding-left: 0.8rem;
-}
-
-.grid-wrap {
-    margin-left: 0.8rem;
-    display: grid;
-    grid-template-columns: 400px 200px 200px;
-    column-gap: 100px;
-}
-
-h4 {
-    text-transform: uppercase;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: 1mm;
-}
-
-.footer p {
-    font-size: 0.8rem;
-}
-
-.copyright {
-    margin-top: 1rem;
-}
-
-.grid-wrap a {
-    font-size: 0.8rem;
-    text-decoration: underline;
-    padding: 0;
-    margin: 0;
-}
-
+    footer {
+        font-family: "TT Fors";
+        border-top: 1.5px solid rgb(199, 199, 199);
+    }
+    a {
+        text-transform: uppercase;
+    }
 </style>
+

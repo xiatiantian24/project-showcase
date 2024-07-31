@@ -1,4 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+     /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+    }
+  }
+
 :root, :root.light {
+    scroll-behavior: smooth;
+    scroll-padding-top: 12rem;
+
     --color-text-main: rgba(50, 50, 50, 1);
     --color-bg-main: rgba(252, 251, 248, 1);
     --color-border-main: rgba(99, 99, 99, 1);

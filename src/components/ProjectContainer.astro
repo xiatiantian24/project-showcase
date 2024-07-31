@@ -1,18 +1,22 @@
 ---
 import SideBar from "../components/SideBar.astro";
+import Acccordion from "../components/Accordion.astro";
+import Accordion from "../components/Accordion.astro";
 ---
 
-<div class="scroll-container flex gap-6">
+<div class="scroll-container flex w-full gap-6">
     <SideBar />
-    <!-- <div class="wrap">
-        <div class="category">A</div>
-        <div class="category">B</div>
-        <div class="category">C</div>
-    </div> -->
+    <div class="wrap w-full relative scroll-m-16">
+        <div class="category snap-end" id="ux"><Accordion /></div>
+        <div class="category snap-end" id="web"><Accordion /></div>
+        <div class="category snap-end" id="ixd"><Accordion /></div>
+    </div>
 
-    
-    <div class="js-scroll">
-        <div class="scrollwrap" id="history">
+    <!-- snap-y snap-mandatory overflow-y-auto no-scrollbar -->
+
+
+    <!-- <div class="js-scroll">
+        <div class="scrollwrap" id="ux">
             <div class="max-width-container">
                 <div class="text-wrap">
                     <h3>The History</h3>
@@ -24,7 +28,7 @@ import SideBar from "../components/SideBar.astro";
                 </div>
             </div>
         </div>
-        <div class="scrollwrap" id="symbols">
+        <div class="scrollwrap" id="web">
             <div class="max-width-container">
                 <div class="text-wrap">
                     <h3>The Symbols</h3>
@@ -37,7 +41,7 @@ import SideBar from "../components/SideBar.astro";
                 </div>
             </div>
         </div>
-        <div class="scrollwrap" id="math-science">
+        <div class="scrollwrap" id="ixd"
             <div class="max-width-container">
                 <div class="text-wrap">
                     <h3>Math + Science</h3>
@@ -49,92 +53,45 @@ import SideBar from "../components/SideBar.astro";
                     <a class="button" href="math-science.html">Learn More</a>
                 </div>
             </div>
-        </div>
+        </div> -->
 </div>
 
-
-
-
 <style>
-
-    .scroll-container {
-        position: relative;
+    .category{
+        /* min-height: 36rem; */
+        height: 36rem;
+        border: 1px solid black;
+        margin-top: 2rem;
     }
-    .max-width-container {
-    /* margin: auto; */
-    /* position: relative; */
-    height: 100%;
-}
+    .wrap{
+        /* min-height: 36rem; */
+        /* height: 85vh; */
+    }
+    /* .scroll-container {
+            position: relative;
+        }
+        .max-width-container {
+            height: 100%;
+        }
 
-h2 {
-    font-size: 2rem;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-}
+        .scrollwrap {
+            height: 200vh;
+            justify-content: center;
+            align-items: center;
+        }
 
+        h3 {
+            margin: 0;
+            padding: 0;
+            padding-top: 160px;
+            color: rgb(81, 69, 69);
+            font-family: "Playfair Display", serif;
+            font-size: 90px;
+        }
 
-
-.js-sticky-container {
-    position: relative;
-    /* width: 100%; */
-}
-
-
-.scrollwrap {
-    height: 200vh;
-    justify-content: center;
-    align-items: center;
-}
-
-#history {
-    background-color: #EA733C;
-}
-
-#symbols {
-    background-color: #2C98DF;
-}
-
-#math-science {
-    background-color: #95C37B;
-}
-
-h3 {
-    margin: 0;
-    padding: 0;
-    padding-top: 160px;
-    color: white;
-    font-family: 'Playfair Display', serif;
-    font-size: 90px;
-}
-
-.scrollwrap .text-wrap {
-    position: sticky;
-    top: 22vh;
-    /* margin: 0 15rem; */
-    padding-bottom: 12rem;
-}
-
-
-
-#main p {
-    color: white;
-    max-width: 500px;
-    margin: 2rem 0;
-}
-
-#main .button {
-    border: solid 1.5px white;
-    color: white;
-}
-
-#main .button:hover {
-    border: solid 1.5px rgba(255, 255, 255, 0);
-    border-bottom: solid 3px white;
-    color: white;
-}
-
-
+        .scrollwrap .text-wrap {
+            position: sticky;
+            top: 60vh;
+            padding-bottom: 12rem;
+        } */
 </style>

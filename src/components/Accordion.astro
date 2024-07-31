@@ -1,0 +1,91 @@
+---
+
+---
+
+<div class="wrap">
+    <div class="accordion">
+        <div class="accordion-item ml-50 mt-50">
+            <button class="accordion-btn" type="button">Accordion #1</button>
+            <div class="accordion-content">
+                <strong>This is the first item's accordion body.</strong>
+                <p>
+                    An accordion on a website is like a virtual file organizer.
+                    It neatly organizes content into collapsible sections,
+                    allowing users to expand and view specific information while
+                    keeping the interface clean. It's a space-efficient and
+                    user-friendly way to present details without overwhelming
+                    the page.
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion-item ml-50">
+            <button class="accordion-btn" type="button">Accordion #2</button>
+            <div class="accordion-content">
+                <strong>This is the second item's accordion body.</strong>
+                <p>
+                    An accordion on a website is like a virtual file organizer.
+                    It neatly organizes content into collapsible sections,
+                    allowing users to expand and view specific information while
+                    keeping the interface clean. It's a space-efficient and
+                    user-friendly way to present details without overwhelming
+                    the page.
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion-item ml-50">
+            <button class="accordion-btn" type="button">Accordion #3</button>
+            <div class="accordion-content">
+                <strong>This is the third item's accordion body.</strong>
+                <p>
+                    An accordion on a website is like a virtual file organizer.
+                    It neatly organizes content into collapsible sections,
+                    allowing users to expand and view specific information while
+                    keeping the interface clean. It's a space-efficient and
+                    user-friendly way to present details without overwhelming
+                    the page.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .wrap {
+        height: 100%;
+        position: relative;
+    }
+    .accordion {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .accordion-item {
+        height: fit-content;
+    }
+
+    .accordion-btn {
+        width: 100%;
+        height: 45px;
+        text-align: left;
+        padding-left: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .accordion-content {
+        display: none;
+    }
+
+    .accordion-item:hover .accordion-content {
+        display: block;
+        text-align: justify;
+        padding: 15px;
+        height: fit-content;
+        width: fit-content;
+        margin-top: 0px;
+        transition: height 0.4s ease;
+    }
+</style>

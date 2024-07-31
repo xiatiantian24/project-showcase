@@ -1,6 +1,6 @@
 ---
-import '../styles/global.css';
-
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "About";
 
@@ -18,17 +18,8 @@ const finished = false;
 const goal = 3;
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{pageTitle}</title>
-    </head>
-    <body>
-        <h1>{pageTitle}</h1>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
+<BaseLayout pageTitle={pageTitle}>
+    <main>
         <p>Here are a few facts about me:</p>
         <ul>
             <li>My name is {identity.firstName}.</li>
@@ -62,5 +53,5 @@ const goal = 3;
                 <p>My goal is not 3 days.</p>
             )
         }
-    </body>
-</html>
+    </main>
+</BaseLayout>
