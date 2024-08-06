@@ -1,19 +1,50 @@
 ---
 import SideBar from "../components/SideBar.astro";
-import Acccordion from "../components/Accordion.astro";
+import ProjectLink from "../components/ProjectLink.astro";
 import Accordion from "../components/Accordion.astro";
+import AccordionNew from "../components/AccordionNew.astro";
 ---
 
-<div class="scroll-container w-full gap-6">
-    <SideBar />
-    <div class="wrap w-full relative scroll-m-16">
+<div class="scroll-container flex flex-col w-full">
+    <!-- <SideBar /> -->
+    <div
+        class="category flex flex-col md:flex-row w-full relative gap-2 md:gap-2"
+    >
+        <div class="category-label">
+            <div class="sticky top-28">
+                <p>UX/UI</p>
+            </div>
+        </div>
+        <AccordionNew />
+    </div>
+    <div
+        class="category flex flex-col md:flex-row w-full relative gap-2 md:gap-2"
+    >
+        <div class="category-label">
+            <div class="sticky pt-8 top-20">
+                <p>Web</p>
+            </div>
+        </div>
+        <AccordionNew />
+    </div>
+    <div
+        class="category flex flex-col md:flex-row w-full relative gap-2 md:gap-2"
+    >
+        <div class="category-label">
+            <div class="sticky pt-8 top-20">
+                <p>Inter-<br />action</p>
+            </div>
+        </div>
+        <AccordionNew />
+    </div>
+
+    <div class="wrap w-full relative">
         <div class="category snap-end" id="ux"><Accordion /></div>
         <div class="category snap-end" id="web"><Accordion /></div>
         <div class="category snap-end" id="ixd"><Accordion /></div>
     </div>
 
     <!-- snap-y snap-mandatory overflow-y-auto no-scrollbar -->
-
 
     <!-- <div class="js-scroll">
         <div class="scrollwrap" id="ux">
@@ -57,15 +88,30 @@ import Accordion from "../components/Accordion.astro";
 </div>
 
 <style>
-    .category{
+    .category {
+        height: max-content;
         /* min-height: 36rem; */
         /* height: 36rem; */
-        /* border: 1px solid black; */
-        margin-top: 2rem;
+        border-top: 1px solid black;
     }
-    .wrap{
+    .category-label {
+        font-family: "TT Fors";
+        font-size: 3.25rem;
+        font-weight: 800;
+        width: 16rem;
+        line-height: 0.9;
+        word-wrap: break-word;
+        text-transform: uppercase;
+    }
+    .scroll-container {
+        margin-top: 1rem;
+    }
+    .wrap {
         /* min-height: 36rem; */
         /* height: 85vh; */
+    }
+    p {
+        padding-bottom: 1rem;
     }
     /* .scroll-container {
             position: relative;

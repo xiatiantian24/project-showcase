@@ -1,0 +1,71 @@
+---
+import ProjectLink from "./ProjectLink.astro";
+---
+
+<div class="accordion">
+    <div class="button menu sm:flex sm:items-end sm:justify-between">
+        <div class="description-wrap flex flex-col justify-between">
+            <div class="project-title text-6xl pb-1">Project Title</div>
+            <div class="project-description text-base pb-2">
+                Short description Short description Short description Short
+                description Short description
+            </div>
+        </div>
+        <div class="project-scope text-xs pb-2">Project Scope</div>
+    </div>
+</div>
+<!-- <div class="content-wrap">
+            <div class="content">
+                <ProjectLink
+                    title="Priya"
+                    description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                    scopes={["UX/UI Design", "User Research", "Brand Design"]}
+                    href=""
+                    imgPath="../assets/test.png"
+                    altText="A headshot of Priya against a brick wall background."
+                />
+            </div>
+        </div> -->
+
+<style>
+    .accordion {
+        width: 100%;
+        /* border-bottom: 1px solid black; */
+        height: max-content;
+        font-family: "TT Fors";
+    }
+
+    .button {
+        border-bottom: 1px solid black;
+        height: max-content;
+        padding: 2rem 0 2rem 8vw;
+    }
+
+    .project-title {
+        text-transform: uppercase;
+
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        line-height: 0.9;
+        transform: scaleY(1.05);
+        font-size: clamp(3rem, 5vw, 5rem);
+    }
+
+    .description-wrap {
+        height: 100%;
+        max-width: 50%;
+    }
+
+    .project-description {
+        line-height: 1.1;
+    }
+
+    .project-scope {
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .img {
+        position: relative;
+        font-size: 2rem;
+    }
+</style>

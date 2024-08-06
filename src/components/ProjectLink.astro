@@ -6,14 +6,12 @@ interface Props {
 	title: string;
 	description: string;
 	scopes: Array<string>;
-	timeline: string;
-	note: string;
 	href: string;
 	imgPath: string;
 	altText: string;
 }
 
-const { href, title, description, timeline, scopes, note, altText, imgPath } =
+const { href, title, description, scopes, altText, imgPath } =
 	Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
 	"../assets/*.{jpeg,jpg,png,gif}",
@@ -38,14 +36,14 @@ if (!images[imgPath])
 				<div>
 					{scopes.map((scope) => <p>{scope}</p>)}
 				</div>
-				<h3>Timeline</h3>
+				<!-- <h3>Timeline</h3>
 				<p>
 					{timeline}
 				</p>
 				<h3>Note</h3>
 				<p>
 					{note}
-				</p>
+				</p> -->
 			</div>
 		</div>
 		<div class="img-wrap">

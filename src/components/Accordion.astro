@@ -50,51 +50,61 @@ import ProjectLink from "../components/ProjectLink.astro";
         </div>
     </div>
 </div> --><!-- from codepen --><!-- need javascript to parse all available projects -->
-<div class="wrap">
+<div class="accordion-wrap">
     <div class="accordion">
-        <div class="button">
-            <p>Hover Me</p>
-            <div class="demo07">
-                <div class="demo07__content">
-                    <ProjectLink
-                        title="Priya"
-                        description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                        scopes={["UX/UI Design","User Research","Brand Design"]}
-                        timeline="2024 (3 months)"
-                        note="BFA Capstone"
-                        href=""
-                        imgPath="../assets/test.png"
-                        altText="A headshot of Priya against a brick wall background."
-                    />
-                </div>
-            </div>
-        </div>
-        <div class="button">
-            <p>Hover Me</p>
-            <div class="demo07">
-                <div class="demo07__content">
-                    <ProjectLink
-                        title="Priya"
-                        description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                        scopes={["UX/UI Design","User Research","Brand Design"]}
-                        timeline="2024 (3 months)"
-                        note="BFA Capstone"
-                        href=""
-                        imgPath="../assets/test-2.png"
-                        altText="A headshot of Priya against a brick wall background."
-                    />
-                </div>
-            </div>
-        </div>
-        <div class="button">
-            <p>Hover Me</p>
-            <div class="demo07">
-                <div class="demo07__content">
-                    <div class="text">
-                        This content should…<br />
-                        toggle! 👻
+        <div class="button-border">
+            <div class="button">
+                <p class="project-title">Hover Me</p>
+                <div class="content-wrap">
+                    <div class="content">
+                        <ProjectLink
+                            title="Priya"
+                            description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                            scopes={[
+                                "UX/UI Design",
+                                "User Research",
+                                "Brand Design",
+                            ]}
+                            href=""
+                            imgPath="../assets/test.png"
+                            altText="A headshot of Priya against a brick wall background."
+                        />
                     </div>
-                    <div class="img"></div>
+                </div>
+            </div>
+        </div>
+        <div class="button-border">
+            <div class="button">
+                <p class="project-title">Hover Me</p>
+                <div class="content-wrap">
+                    <div class="content">
+                        <ProjectLink
+                            title="Priya"
+                            description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                            scopes={[
+                                "UX/UI Design",
+                                "User Research",
+                                "Brand Design",
+                            ]}
+                            href=""
+                            imgPath="../assets/test-2.png"
+                            altText="A headshot of Priya against a brick wall background."
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button-border">
+            <div class="button">
+                <p class="project-title">Hover Me</p>
+                <div class="content-wrap">
+                    <div class="content">
+                        <div class="text">
+                            This content should…<br />
+                            toggle! 👻
+                        </div>
+                        <div class="img"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,7 +112,82 @@ import ProjectLink from "../components/ProjectLink.astro";
 </div>
 
 <style>
-    /* .wrap {
+    .accordion-wrap {
+        position: relative;
+        height: 60vh;
+    }
+
+    .accordion {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        border-bottom: 1px solid black;
+    }
+
+    .button-border {
+        border-top: 1px solid black;
+    }
+
+    .content-wrap {
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        transition: grid-template-rows 0.4s ease-in-out;
+        transition-delay: 50ms;
+    }
+
+    .content {
+        align-self: start;
+        min-height: 0;
+        transition: visibility 1s;
+        visibility: none;
+        /* display: flex;
+        flex-direction: row;
+        justify-content: space-between; */
+        margin-left: 3rem;
+    }
+
+    .button:hover {
+        border-right: 1px solid black;
+    }
+
+    .button:hover .content-wrap {
+        grid-template-rows: 1fr;
+    }
+
+    .button:hover .content-wrap .content {
+        visibility: visible;
+        /* border: 1px solid black;  */
+        /* WILL CAUSE HEIGHT TO GLITCH */
+    }
+ 
+    .button {
+        padding-top: 1.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        height: 2rem;
+        margin-left: 3rem;
+    }
+
+    .text {
+        padding: 1rem;
+        /* border-right: 1px solid black; */
+        height: 8rem;
+        font-size: 0.8rem;
+        /* width: 12rem; */
+    }
+
+    .img {
+        position: relative;
+        font-size: 2rem;
+        /* border: 1px solid green; */
+        /*   z-index:99; */
+    }
+
+     /* .wrap {
         height: 100%;
         position: relative;
     }
@@ -138,77 +223,4 @@ import ProjectLink from "../components/ProjectLink.astro";
         margin-top: 0px;
         transition: height 0.4s ease;
     } */
-
-    /* from codepen */
-
-    .wrap {
-        position: relative;
-        height: 60vh;
-        /* border: 1px solid red; */
-    }
-    .demo07 {
-        display: grid;
-        grid-template-rows: 0fr;
-        overflow: hidden;
-        transition: grid-template-rows 0.4s ease-out;
-        transition-delay: 50ms;
-    }
-    .demo07__content {
-        align-self: start;
-        min-height: 0;
-        transition: visibility 1s;
-        visibility: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-left: 3rem;
-    }
-
-    .button:hover {
-        border-right: 1px solid black;
-    }
-
-    .button:hover .demo07 {
-        grid-template-rows: 1fr;
-    }
-
-    .button:hover .demo07 .demo07__content {
-        visibility: visible;
-        /* border: 1px solid black;  */
-        /* WILL CAUSE HEIGHT TO GLITCH */
-    }
-
-    .accordion {
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        border-bottom: 1px solid black;
-    }
-
-    .button {
-        padding-top: 1rem;
-        padding-bottom: 0.25rem;
-        border-top: 1px solid black;
-    }
-
-    p {
-       font-size: 1.1rem;
-        height: 2rem;
-        margin-left: 3rem;
-    }
-
-    .text {
-        padding: 1rem;
-        /* border-right: 1px solid black; */
-        height: 8rem;
-        font-size: 0.8rem;
-        /* width: 12rem; */
-    }
-
-    .img {
-        position: relative;
-        font-size: 2rem;
-        /* border: 1px solid green; */
-        /*   z-index:99; */
-    }
 </style>

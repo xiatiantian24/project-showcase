@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectsLayout from "../layouts/ProjectsLayout.astro";
 import ProjectContainer from "../components/ProjectContainer.astro";
 import Accordion from "../components/Accordion.astro";
 import ThemeToggle from "../components/ThemeToggle.astro";
@@ -8,16 +8,16 @@ import ThemeToggle from "../components/ThemeToggle.astro";
 const pageTitle = "Home";
 ---
 
-<div id="follow">
+<!-- <div id="follow">
 	<img
 		src="https://pbs.twimg.com/media/FhNJ_c5aMAIrlLR?format=jpg&name=900x900"
 	/><br />
-</div>
-<BaseLayout pageTitle={pageTitle}>
+</div> -->
+<ProjectsLayout pageTitle={pageTitle}>
 	<main>
 		<ProjectContainer />
 	</main>
-</BaseLayout>
+</ProjectsLayout>
 
 <!-- from codepen -->
 <script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -44,7 +44,7 @@ const pageTitle = "Home";
 	}
 
 	img {
-		width: 200px;
+		width: 30vw;
 		object-fit: cover;
 	}
 </style>
