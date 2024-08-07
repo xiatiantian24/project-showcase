@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectLayout from "../layouts/ProjectLayout.astro";
 
 const pageTitle = "About";
 
@@ -18,8 +18,8 @@ const finished = false;
 const goal = 3;
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-    <main>
+<ProjectLayout pageTitle={pageTitle}>
+    <main class="container grow w-full max-w-4xl md:mx-auto">
         <p>Here are a few facts about me:</p>
         <ul>
             <li>My name is {identity.firstName}.</li>
@@ -54,4 +54,4 @@ const goal = 3;
             )
         }
     </main>
-</BaseLayout>
+</ProjectsLayout>

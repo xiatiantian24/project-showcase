@@ -1,90 +1,159 @@
 ---
-import SideBar from "../components/SideBar.astro";
-import ProjectLink from "../components/ProjectLink.astro";
-import Accordion from "../components/Accordion.astro";
-import AccordionNew from "../components/AccordionNew.astro";
+import SideBar from "./z-SideBar.astro";
+import ProjectButton from "../components/ProjectButton.astro";
 ---
 
 <div class="scroll-container flex flex-col w-full">
-    <!-- <SideBar /> -->
     <div
-        class="category flex flex-col md:flex-row w-full relative gap-2 md:gap-2"
+        class="category flex flex-col md:flex-row w-full relative gap-0 md:gap-0"
     >
-        <div class="category-label">
-            <div class="sticky top-28">
-                <p>UX/UI</p>
+        <div class="category-label pl-1">
+            <div class="sticky top-24">
+                <a href="#uxui"><p>UX/UI</p></a>
             </div>
         </div>
-        <AccordionNew />
+        <div class="project-wrap" id="uxui">
+            <ProjectButton
+                title="Priya"
+                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                scopes={["UX/UI Design", "User Research", "Brand Design"]}
+                href="/projects/cubbie/"
+                imgPath="../assets/test.png"
+                altText="A headshot of Priya against a brick wall background."
+            />
+            <ProjectButton
+                title="Priya"
+                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                scopes={["UX/UI Design", "User Research", "Brand Design"]}
+                href=""
+                imgPath="../assets/test.png"
+                altText="A headshot of Priya against a brick wall background."
+            />
+            <ProjectButton
+                title="Priya"
+                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                scopes={["UX/UI Design", "User Research", "Brand Design"]}
+                href=""
+                imgPath="../assets/test.png"
+                altText="A headshot of Priya against a brick wall background."
+            />
+            <ProjectButton
+                title="Priya"
+                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                scopes={["UX/UI Design", "User Research", "Brand Design"]}
+                href=""
+                imgPath="../assets/test.png"
+                altText="A headshot of Priya against a brick wall background."
+            />
+            <ProjectButton
+                title="Priya"
+                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                scopes={["UX/UI Design", "User Research", "Brand Design"]}
+                href=""
+                imgPath="../assets/test.png"
+                altText="A headshot of Priya against a brick wall background."
+            />
+            <ProjectButton
+                title="Priya"
+                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                scopes={["UX/UI Design", "User Research", "Brand Design"]}
+                href=""
+                imgPath="../assets/test.png"
+                altText="A headshot of Priya against a brick wall background."
+            />
+        </div>
     </div>
-    <div
-        class="category flex flex-col md:flex-row w-full relative gap-2 md:gap-2"
-    >
-        <div class="category-label">
-            <div class="sticky pt-8 top-20">
-                <p>Web</p>
+    <div class="category flex flex-col md:flex-row w-full relative">
+        <div class="category-label pl-1">
+            <div class="sticky pt-8 top-16">
+                <a href="#web"><p>Web</p></a>
             </div>
         </div>
-        <AccordionNew />
+        <div class="project-wrap" id="web">
+            <ProjectButton
+                title="Priya"
+                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                scopes={["UX/UI Design", "User Research", "Brand Design"]}
+                href=""
+                imgPath="../assets/test.png"
+                altText="A headshot of Priya against a brick wall background."
+            />
+            <ProjectButton
+                title="Priya"
+                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                scopes={["UX/UI Design", "User Research", "Brand Design"]}
+                href=""
+                imgPath="../assets/test.png"
+                altText="A headshot of Priya against a brick wall background."
+            />
+            <ProjectButton
+                title="Priya"
+                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                scopes={["UX/UI Design", "User Research", "Brand Design"]}
+                href=""
+                imgPath="../assets/test.png"
+                altText="A headshot of Priya against a brick wall background."
+            />
+        </div>
     </div>
-    <div
-        class="category flex flex-col md:flex-row w-full relative gap-2 md:gap-2"
-    >
-        <div class="category-label">
-            <div class="sticky pt-8 top-20">
-                <p>Inter-<br />action</p>
+    <div class="category flex flex-col md:flex-row w-full relative">
+        <div class="category-label pl-1">
+            <div class="sticky pt-8 top-16">
+                <a href="#ixd"> <p>Inter<br />action</p></a>
             </div>
         </div>
-        <AccordionNew />
+        <div class="project-wrap" id="ixd">
+            <ProjectButton
+                title="Priya"
+                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                scopes={["UX/UI Design", "User Research", "Brand Design"]}
+                href=""
+                imgPath="../assets/test.png"
+                altText="A headshot of Priya against a brick wall background."
+            />
+            <ProjectButton
+                title="Priya"
+                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                scopes={["UX/UI Design", "User Research", "Brand Design"]}
+                href=""
+                imgPath="../assets/test.png"
+                altText="A headshot of Priya against a brick wall background."
+            />
+            <ProjectButton
+                title="Priya"
+                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                scopes={["UX/UI Design", "User Research", "Brand Design"]}
+                href=""
+                imgPath="../assets/test.png"
+                altText="A headshot of Priya against a brick wall background."
+            />
+            <ProjectButton
+                title="Priya"
+                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                scopes={["UX/UI Design", "User Research", "Brand Design"]}
+                href=""
+                imgPath="../assets/test.png"
+                altText="A headshot of Priya against a brick wall background."
+            />
+            <ProjectButton
+                title="Priya"
+                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
+                scopes={["UX/UI Design", "User Research", "Brand Design"]}
+                href=""
+                imgPath="../assets/test.png"
+                altText="A headshot of Priya against a brick wall background."
+            />
+        </div>
     </div>
 
-    <div class="wrap w-full relative">
+    <!-- <div class="wrap w-full relative">
         <div class="category snap-end" id="ux"><Accordion /></div>
         <div class="category snap-end" id="web"><Accordion /></div>
         <div class="category snap-end" id="ixd"><Accordion /></div>
-    </div>
+    </div> -->
 
     <!-- snap-y snap-mandatory overflow-y-auto no-scrollbar -->
 
-    <!-- <div class="js-scroll">
-        <div class="scrollwrap" id="ux">
-            <div class="max-width-container">
-                <div class="text-wrap">
-                    <h3>The History</h3>
-                    <p>
-                        Learn how the idea of zero was thought about in Babylon,
-                        India, and other cultures at different times.
-                    </p>
-                    <a class="button" href="history.html">Learn More</a>
-                </div>
-            </div>
-        </div>
-        <div class="scrollwrap" id="web">
-            <div class="max-width-container">
-                <div class="text-wrap">
-                    <h3>The Symbols</h3>
-                    <p>
-                        The modern numerical zero is usually written as a circle
-                        or ellipse. Learn how zero is written in many other
-                        forms.
-                    </p>
-                    <a class="button" href="symbols.html">Learn More</a>
-                </div>
-            </div>
-        </div>
-        <div class="scrollwrap" id="ixd"
-            <div class="max-width-container">
-                <div class="text-wrap">
-                    <h3>Math + Science</h3>
-                    <p>
-                        Zero is a number which means an amount of null size.
-                        Learn more about how it is used in math and other fields
-                        of science.
-                    </p>
-                    <a class="button" href="math-science.html">Learn More</a>
-                </div>
-            </div>
-        </div> -->
 </div>
 
 <style>
@@ -92,26 +161,31 @@ import AccordionNew from "../components/AccordionNew.astro";
         height: max-content;
         /* min-height: 36rem; */
         /* height: 36rem; */
-        border-top: 1px solid black;
     }
     .category-label {
         font-family: "TT Fors";
-        font-size: 3.25rem;
-        font-weight: 800;
-        width: 16rem;
+        font-size: clamp(2.5rem, 4vw, 3.2rem);
+        font-weight: 600;
+        font-style: italic;
+        letter-spacing: -0.025em;
+        width: 15.25rem;
         line-height: 0.9;
-        word-wrap: break-word;
         text-transform: uppercase;
+        /* border-bottom: 1.5px solid var(--color-border-secondary); */
     }
-    .scroll-container {
-        margin-top: 1rem;
+
+    @media (min-width: 768px) {
+        .category-label {
+             border-bottom: 1.5px solid var(--color-border-secondary);
+        }
     }
-    .wrap {
-        /* min-height: 36rem; */
-        /* height: 85vh; */
+
+    .project-wrap {
+        width: 100%;
     }
     p {
         padding-bottom: 1rem;
+        max-width: 12.25rem;
     }
     /* .scroll-container {
             position: relative;

@@ -1,7 +1,7 @@
 ---
-import ProjectsLayout from "../layouts/ProjectsLayout.astro";
+import GalleryLayout from "../layouts/GalleryLayout.astro";
 import ProjectContainer from "../components/ProjectContainer.astro";
-import Accordion from "../components/Accordion.astro";
+import Accordion from "../components/z-Accordion.astro";
 import ThemeToggle from "../components/ThemeToggle.astro";
 // import "../scripts/accordion.js";
 
@@ -13,16 +13,16 @@ const pageTitle = "Home";
 		src="https://pbs.twimg.com/media/FhNJ_c5aMAIrlLR?format=jpg&name=900x900"
 	/><br />
 </div> -->
-<ProjectsLayout pageTitle={pageTitle}>
+<GalleryLayout pageTitle={pageTitle}>
 	<main>
 		<ProjectContainer />
 	</main>
-</ProjectsLayout>
+</GalleryLayout>
 
 <!-- from codepen -->
 <script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script is:inline>
-	console.log("test");
+	console.log("inline-js loaded");
 	const img = document.querySelector("#follow");
 	const height = img.offsetHeight;
 	const width = img.offsetWidth;

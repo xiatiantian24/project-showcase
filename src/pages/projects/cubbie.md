@@ -2,13 +2,15 @@
 # frontmatter
 layout: ../../layouts/MarkdownProjectLayout.astro
 title: 'My First Blog Post'
-pubDate: 2022-07-01
 description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
+link: 'https://docs.astro.build/assets/rose.webp'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro", "blogging", "learning in public"]
+role: ["A", "B", "C"]
+team: ["D", "E", "F"]
+
 ---
 # My First Blog Post
 
