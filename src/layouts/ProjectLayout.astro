@@ -1,29 +1,126 @@
 ---
+import { Image } from "astro:assets";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-const { pageTitle } = Astro.props;
+
+const {
+  projectTitle,
+  projectDescription,
+  tags,
+  detail1Title,
+  detail1Content,
+  detail2Title,
+  detail2Content,
+  linksURL,
+  linksTitle,
+} = Astro.props;
 ---
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{pageTitle}</title>
-    </head>
-    <body>
-        <div class="flex flex-col min-h-screen px-2 md:px-4">
-            <Nav />
-            <main class="container grow w-full max-w-4xl md:mx-auto">
-                <h1>{pageTitle}</h1>
-                <h2>{pageTitle}</h2>
-                <slot />
-             </main>
-            <Footer />
-            <script>
-            </script>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{projectTitle}</title>
+  </head>
+  <body>
+    <div class="flex flex-col min-h-screen px-6">
+      <Nav />
+      <main class="container grow w-full max-w-3xl md:mx-auto">
+        <slot name="cover-img" />
+        <div class="menu flex flex-col md:flex-row items-center gap-24 md:my-24">
+          <div class="flex flex-col items-start gap-8">
+            <div class="flex flex-col items-start gap-2">
+              <h1 class="text-4xl pb-1">{projectTitle}</h1>
+              <h2 class="text-lg">{projectDescription}</h2>
+            </div>
+            <div class="tags flex flex-row text-xs pb-1">
+              {tags.map((tag) => <div class="pr-4">{tag}</div>)}
+            </div>
+          </div>
+          <div
+            class="detail-box flex flex-col items-start gap-8 py-8 px-6 text-sm"
+          >
+            <div class="line hidden md:flex"></div>
+            <div class="flex flex-col items-start gap-8">
+              <div class="detail">
+                <div class="detail-title">{detail1Title}</div>
+                <div class="detail-content">
+                  {detail1Content.map((content) => <div>{content}</div>)}
+                </div>
+              </div>
+              <div class="detail">
+                <div class="detail-title">{detail2Title}</div>
+                <div class="detail-content">
+                  {detail2Content.map((content) => <div>{content}</div>)}
+                </div>
+              </div>
+              <div class="detail">
+                <div class="detail-title">URL</div>
+                <div class="detail-content flex flex-col items-start gap-1">
+                  {
+                    linksURL.map((url, index) => (
+                      <a class="flex flex-row" href={url}>
+                        {linksTitle[index]}
+                      </a>
+                    ))
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </body>
+        <slot />
+        <Footer />
+        <script></script>
+      </main>
+    </div>
+  </body>
+
+  <style>
+    h1 {
+      font-family: "TT Fors";
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: -0.0125em;
+      line-height: 0.9;
+      transform: scaleY(1.05);
+      /* font-size: clamp(3rem, 5vw, 5rem); */
+      font-size: 2.75rem;
+      margin: 0.5rem 0;
+    }
+
+    h2 {
+      line-height: 1.1;
+      font-weight: 400;
+    }
+
+    .tags {
+      font-family: "TT Fors";
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .detail-box {
+      border: 1.5px solid var(--color-border-secondary);
+      min-width: 40%;
+    }
+
+    .detail {
+    }
+
+    .detail-title {
+      font-family: "TT Fors";
+      text-transform: uppercase;
+      font-weight: 500;
+      padding-bottom: 0.5rem;
+    }
+
+    .line {
+      width: 26px;
+      border-bottom: 1.5px solid var(--color-border-secondary);
+    }
+  </style>
 </html>

@@ -1,0 +1,47 @@
+---
+import "../../styles/global.css";
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import { Image } from "astro:assets";
+import CoverImage from "../../assets/test.png";
+
+const projectTitle = "Cubbie";
+const projectDescription = "This is the first post of my new Astro blog.";
+
+const tags = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+
+const detail1 = {
+    title: "Role",
+    content: ["UX Design", "User Research", "Branding"],
+};
+
+const detail2 = {
+    title: "Team",
+    content: ["Solo Project"],
+};
+
+const links = {
+    url: [
+        "https://docs.astro.build/en/getting-started/",
+        "https://docs.astro.build/en/",
+    ],
+    title: ["LinkA", "LinkB"],
+};
+---
+
+<ProjectLayout
+    projectTitle="Cubbie"
+    projectDescription="This is the first post of my new Astro blog with slightly longer description sfoif fahosvnaov odfhas o fsofidhg sgug sg sgsog as ogu."
+    tags={["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"]}
+    detail1Title="Role"
+    detail1Content={["UX Design", "User Research", "Branding"]}
+    detail2Title="Team"
+    detail2Content={["Solo Student Project"]}
+    linksURL={[
+        "https://docs.astro.build/en/getting-started/",
+        "https://docs.astro.build/en/",
+    ]}
+    linksTitle={["LinkA", "LinkB"]}
+>
+    <Image src={CoverImage} alt="test" slot="cover-img" />
+    <p>This paragraph should appear after header.</p>
+</ProjectLayout>

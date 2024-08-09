@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+const project = await getCollection("project");
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
@@ -21,45 +24,44 @@ const { frontmatter } = Astro.props;
     <title>{frontmatter.title}</title>
   </head>
   <body>
-    <div class="flex flex-col min-h-screen px-4">
+    <div class="flex flex-col min-h-screen px-6">
       <Nav />
       <main class="container grow w-full max-w-3xl md:mx-auto">
-        <div class="menu flex flex-col items-center gap-20 md:my-24">
+        <div class="menu flex flex-col items-center gap-24 md:my-24">
           <div class="flex flex-col items-start gap-8">
             <div class="flex flex-col items-start gap-2">
-              <h1 class="text-6xl pb-1">{frontmatter.title}</h1>
-              <h2 class="text-base">{frontmatter.description}</h2>
+              <h1 class="text-4xl pb-1">{frontmatter.title}</h1>
+              <h2 class="text-lg">{frontmatter.description}</h2>
             </div>
             <div class="tags flex flex-row text-xs pb-1">
               {frontmatter.tags.map((tag) => <div class="pr-4">{tag}</div>)}
             </div>
-            <img
-              src={frontmatter.image.url}
-              width="100%"
-              alt={frontmatter.image.alt}
-            />
+            <!-- <img
+              src={frontmatter.coverImage.url}
+              alt={frontmatter.coverImage.alt}
+            /> -->
           </div>
           <div
-            class="detail-box flex flex-col items-start gap-10 py-8 px-4 text-sm"
+            class="detail-box flex flex-col items-start gap-8 py-8 px-6 text-sm"
           >
             <div class="line hidden md:flex"></div>
-            <div class="md:inline-flex items-start gap-20">
+            <div class="flex flex-col md:flex-row items-start gap-4 md:gap-20">
               <div class="detail">
-                <div class="detail-title">Role</div>
+                <div class="detail-title">{frontmatter.detail1.title}</div>
                 <div class="detail-content">
-                  {frontmatter.role.map((role) => <div>{role}</div>)}
+                  {frontmatter.detail1.content.map((content) => <div>{content}</div>)}
                 </div>
               </div>
               <div class="detail">
-                <div class="detail-title">Team</div>
+                <div class="detail-title">{frontmatter.detail2.title}</div>
                 <div class="detail-content">
-                  {frontmatter.team.map((team) => <div>{team}</div>)}
+                  {frontmatter.detail2.content.map((content) => <div>{content}</div>)}
                 </div>
               </div>
               <div class="detail">
                 <div class="detail-title">URL</div>
-                <div class="detail-content">
-                  {frontmatter.link}
+                <div class="detail-content flex flex-col items-start gap-1">
+                  {frontmatter.links.url.map((url,index) => <a class="flex flex-row" href={url}>{frontmatter.links.title[index]}</a>)}
                 </div>
               </div>
             </div>
@@ -81,7 +83,7 @@ const { frontmatter } = Astro.props;
       line-height: 0.9;
       transform: scaleY(1.05);
       /* font-size: clamp(3rem, 5vw, 5rem); */
-      font-size: 3rem;
+      font-size: 2.75rem;
       margin: 0.5rem 0;
     }
 
@@ -98,10 +100,10 @@ const { frontmatter } = Astro.props;
 
     .detail-box {
       border: 1.5px solid var(--color-border-secondary);
+      min-width: 60%;
     }
 
     .detail {
-      margin-bottom: 0.5rem;
     }
 
     .detail-title {
