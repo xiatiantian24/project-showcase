@@ -37,7 +37,13 @@ const {
               <h2 class="text-lg">{projectDescription}</h2>
             </div>
             <div class="tags flex flex-row text-xs pb-1">
-              {tags.map((tag) => <div class="pr-4">{tag}</div>)}
+              {
+                tags.map((tag,index) => (
+                index == (tags.length - 1) ?
+                <p>{tag}</p> : 
+                <p>{tag}</p> <span class="px-2">&#47;</span>
+                ))
+                } 
             </div>
           </div>
           <div

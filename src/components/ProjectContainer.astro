@@ -16,9 +16,9 @@ import ProjectButton from "../components/ProjectButton.astro";
             <ProjectButton
                 title="Cubbie"
                 description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                scopes={["UX/UI Design", "User Research", "Brand Design"]}
+                scopes={["Studen Project", "2022"]}
                 href="/project/test-cubbie"
-                imgPath="../assets/test.png"
+                imgPath="../assets/test-2.png"
                 altText="A headshot of Priya against a brick wall background."
             />
             <ProjectButton
@@ -140,21 +140,23 @@ import ProjectButton from "../components/ProjectButton.astro";
                 description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
                 scopes={["UX/UI Design", "User Research", "Brand Design"]}
                 href=""
-                imgPath="../assets/test.png"
+                imgPath="../assets/test-2.png"
                 altText="A headshot of Priya against a brick wall background."
             />
         </div>
     </div>
-
-    <!-- <div class="wrap w-full relative">
-        <div class="category snap-end" id="ux"><Accordion /></div>
-        <div class="category snap-end" id="web"><Accordion /></div>
-        <div class="category snap-end" id="ixd"><Accordion /></div>
-    </div> -->
-
-    <!-- snap-y snap-mandatory overflow-y-auto no-scrollbar -->
-
 </div>
+
+<script>
+    //     const paths = document.querySelectorAll("ProjectButton");
+    //     console.log(paths);
+    //     paths.forEach((path)=> {
+    //         path.addEventListener('mouseover', () => {
+    //                 document.getElementById('img-frame').setAttribute('src', path.dataset.imgPath);
+    //                 console.log(dataset.imgPath);
+    //             });
+    // });
+</script>
 
 <style>
     .category {
@@ -176,7 +178,7 @@ import ProjectButton from "../components/ProjectButton.astro";
 
     @media (min-width: 768px) {
         .category-label {
-             border-bottom: 1.5px solid var(--color-border-secondary);
+            border-bottom: 1.5px solid var(--color-border-secondary);
         }
     }
 

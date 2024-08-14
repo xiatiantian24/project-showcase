@@ -10,11 +10,12 @@ if (!images[imgPath])
     throw new Error(
         `"${imgPath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
     );
+
 ---
 
 <project-button class="button-wrap" data-imgpath={imgPath}>
     <a href={href}>
-        <div class="button menu md:flex md:items-end sm:justify-between">
+        <div class="button menu sm:flex sm:items-end sm:justify-between">
             <div class="description-wrap flex flex-col justify-between">
                 <div class="project-title text-6xl pb-2">{title}</div>
                 <div class="project-description text-base pb-2">
@@ -27,49 +28,30 @@ if (!images[imgPath])
                 index == (scopes.length - 1) ?
                 <p>{scope}</p> : 
                 <p>{scope}</p> <span class="px-2">&#47;</span>
-                ))                
+                ))
                 } 
             </div>
-            <div class="img-desktop hidden md:block">
-                <div class="img-wrap">
-                    <Image src={images[imgPath]()} alt={altText} width="500" class="image"/>
-                </div>
-            </div>
-            <div class="img-mobile md:hidden mt-4">
-                <Image src={images[imgPath]()} alt={altText} class="image"/>
-            </div>
+    <!-- <Image src={images[imgPath]()} alt={altText} width="500" id="img-frame"/> -->
         </div>
-        <div></div>
     </a>
 </project-button>
 
 <script>
-    class ProjectButton extends HTMLElement {
-       constructor() {
-           super();
+     class ProjectButton extends HTMLElement {
+        constructor() {
+            super();
 
-           const imgPath = this.dataset.imgpath;
-           const button = this.querySelector('a');
-           const target = this.querySelector('.img-wrap');
-
-           function follow(e) {
-                target.style.left = `${e.pageX}px`;
-                target.style.top = `${e.pageY - window.scrollY}px`;
-            }
-           
-           button.addEventListener('mouseover', () => {
-                // console.log(imgPath);
-                target.style.display="block";
-                document.addEventListener('mousemove', follow);
+            const imgPath = this.dataset.imgpath;
+            const button = this.querySelector('a');
+            button.addEventListener('mouseover', () => {
+                console.log(imgPath);
+                document.getElementById('img-frame').setAttribute('src', imgPath);
+               
             });
-            button.addEventListener('mouseout', () => {
-                target.style.display="none";
-            });
-           
-       }
-   }       
+        }
+    }       
 
-   customElements.define('project-button', ProjectButton);
+    customElements.define('project-button', ProjectButton);
 </script>
 
 <style>
@@ -77,6 +59,7 @@ if (!images[imgPath])
         width: 100%;
         font-family: "TT Fors";
         height: max-content;
+
     }
 
     .button:last-child {
@@ -84,9 +67,9 @@ if (!images[imgPath])
     }
 
     .button {
-        border-bottom: 1.5px solid var( --color-border-secondary);
         height: max-content;
-        padding: 2rem 1rem;
+        padding: 2rem 0 2rem 8vw;
+        border-bottom: 1.5px solid var( --color-border-secondary);
     }
 
     .project-title {
@@ -113,22 +96,8 @@ if (!images[imgPath])
         font-variation-settings: "wght" 500;
     }
 
-    .img-wrap {
-        position: fixed;
-		text-align: center;
-        display: none;
-		z-index: 99;
-        pointer-events: none;
-    }
-
-    .image{
-        /* width: 30vw; */
-		object-fit: cover;
-    }
-
-    @media screen and (min-width: 768px) {
-        .button {
-        padding: 2rem 0 2rem 8vw;
-    }
+    .img {
+        position: relative;
+        font-size: 2rem;
     }
 </style>
