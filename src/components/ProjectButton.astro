@@ -60,7 +60,7 @@ if (!images[imgPath])
            target.style.transition = 'filter 400ms ease-out, visibility 100ms linear';
            target.style.filter = 'saturate(0%) contrast(50%)';
            
-           button.addEventListener('mouseover', () => {
+           button.addEventListener('mouseenter', () => {
                target.style.display="block";
                target.style.visibility = 'visible';
                setTimeout(() => {
@@ -69,9 +69,10 @@ if (!images[imgPath])
                document.addEventListener('mousemove', follow);
             });
 
-            button.addEventListener('mouseout', () => {
+            button.addEventListener('mouseleave', () => {
                 // target.style.display="none";
                 target.style.visibility = 'hidden';
+                target.style.filter = 'saturate(0%) contrast(50%)';
             });
            
        }
