@@ -2,54 +2,25 @@
 import GalleryLayout from "../layouts/GalleryLayout.astro";
 import ProjectContainer from "../components/ProjectContainer.astro";
 
-import { Image } from "astro:assets";
-import type { ImageMetadata } from 'astro';
-const images = await import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
-const { imgPath } = Astro.props;
+// import { Image } from "astro:assets";
+// import type { ImageMetadata } from 'astro';
+// const images = await import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
+// const { imgPath } = Astro.props;
 
 const pageTitle = "Home";
 ---
 
-<!-- <div id="follow"> -->
-	<!-- <img
-		src="https://pbs.twimg.com/media/FhNJ_c5aMAIrlLR?format=jpg&name=900x900"
-	/><br /> -->
-	<!-- <img src="" width="500" id="img-frame"> -->
-	<!-- <Image src={images[imgPath]()} alt="" width="500" id="img-frame"/> -->
-<!-- </div> -->
-
 <GalleryLayout pageTitle={pageTitle}>
-	<main>
-		<ProjectContainer />
-	</main>
+  <main>
+    <ProjectContainer />
+  </main>
 </GalleryLayout>
 
-<!-- from codepen -->
-<!-- <script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script is:inline>
-	console.log("inline-js loaded");
-	const img = document.querySelector("#follow");
-	const height = img.offsetHeight;
-	const width = img.offsetWidth;
-
-	$(document).mousemove(function (e) {
-		$("#follow").css({
-			left: `${e.pageX + 12}px`,
-			top: `${e.pageY + 12}px`,
-		});
-	});
-</script> -->
-
 <style>
-	#follow {
-		position: absolute;
-		text-align: center;
-		pointer-events: none;
-		z-index: 99;
-	}
-
-	img {
-		width: 30vw;
-		object-fit: cover;
-	}
+  #hero-content {
+    font-family: "LT Cushion";
+    font-weight: 375;
+    font-size: 1.4rem;
+    padding-left: 1.6rem;
+  }
 </style>

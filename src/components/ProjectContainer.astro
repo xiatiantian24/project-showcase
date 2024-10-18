@@ -1,219 +1,245 @@
 ---
-import SideBar from "./z-SideBar.astro";
 import ProjectButton from "../components/ProjectButton.astro";
 ---
 
-<div class="scroll-container flex flex-col w-full">
-    <div
-        class="category flex flex-col md:flex-row w-full relative gap-0 md:gap-0"
-    >
-        <div class="category-label pl-1">
-            <div class="sticky top-24">
-                <a href="#uxui"><p>UX/UI</p></a>
-            </div>
-        </div>
-        <div class="project-wrap" id="uxui">
-            <ProjectButton
-                title="Cubbie"
-                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                scopes={["Studen Project", "2022"]}
-                href="/project/test-cubbie"
-                imgPath="../assets/test-2.png"
-                altText="A headshot of Priya against a brick wall background."
-            />
-            <ProjectButton
-                title="Priya"
-                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                scopes={["UX/UI Design", "User Research", "Brand Design"]}
-                href=""
-                imgPath="../assets/test.png"
-                altText="A headshot of Priya against a brick wall background."
-            />
-            <ProjectButton
-                title="Priya"
-                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                scopes={["UX/UI Design", "User Research", "Brand Design"]}
-                href=""
-                imgPath="../assets/test.png"
-                altText="A headshot of Priya against a brick wall background."
-            />
-            <ProjectButton
-                title="Priya"
-                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                scopes={["UX/UI Design", "User Research", "Brand Design"]}
-                href=""
-                imgPath="../assets/test.png"
-                altText="A headshot of Priya against a brick wall background."
-            />
-            <ProjectButton
-                title="Priya"
-                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                scopes={["UX/UI Design", "User Research", "Brand Design"]}
-                href=""
-                imgPath="../assets/test.png"
-                altText="A headshot of Priya against a brick wall background."
-            />
-            <ProjectButton
-                title="Priya"
-                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                scopes={["UX/UI Design", "User Research", "Brand Design"]}
-                href=""
-                imgPath="../assets/test.png"
-                altText="A headshot of Priya against a brick wall background."
-            />
-        </div>
+<div class="w-full mt-16 mb-32 md:mt-12 mb-16 px-6" id="hero">
+  <div>
+    <p>
+      Ray designs <a href="#uxui">user experiences</a> and likes to do fun (and serious)
+      things with <a>motions</a> and <a>JavaScript</a>.
+    </p>
+    <p class="mt-2" id="prev-exp">
+      Previous experience in health-tech and AI Chatbot for businesses.
+    </p>
+  </div>
+</div>
+<div
+  class="category flex flex-col md:flex-row w-full px-6 relative gap-0 md:gap-0"
+>
+  <div class="category-label">
+    <div class="sticky top-24 pt-10">
+      <a href="#uxui"><p>UX&UI</p></a>
     </div>
-    <div class="category flex flex-col md:flex-row w-full relative">
-        <div class="category-label pl-1">
-            <div class="sticky pt-8 top-16">
-                <a href="#web"><p>Web</p></a>
-            </div>
-        </div>
-        <div class="project-wrap" id="web">
-            <ProjectButton
-                title="Priya"
-                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                scopes={["UX/UI Design", "User Research", "Brand Design"]}
-                href=""
-                imgPath="../assets/test.png"
-                altText="A headshot of Priya against a brick wall background."
-            />
-            <ProjectButton
-                title="Priya"
-                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                scopes={["UX/UI Design", "User Research", "Brand Design"]}
-                href=""
-                imgPath="../assets/test.png"
-                altText="A headshot of Priya against a brick wall background."
-            />
-            <ProjectButton
-                title="Priya"
-                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                scopes={["UX/UI Design", "User Research", "Brand Design"]}
-                href=""
-                imgPath="../assets/test.png"
-                altText="A headshot of Priya against a brick wall background."
-            />
-        </div>
+  </div>
+  <div class="project-wrap" id="uxui">
+    <ProjectButton
+      title="BJC HealthCare"
+      description="Flexible Scheduling App & Virtual Nursing"
+      scopes={["Internship", "2023-2024"]}
+      href="/project/test-cubbie"
+      imgPath="../assets/images/bjc-cover-main.jpg"
+      altText="A headshot of Priya against a brick wall background."
+    />
+    <ProjectButton
+      title="Rulai, inc."
+      description="Flexible Scheduling App & Virtual Nursing"
+      scopes={["UX/UI Design", "User Research", "Brand Design"]}
+      href=""
+      imgPath="../assets/images/rulai-cover.jpg"
+      altText="A headshot of Priya against a brick wall background."
+    />
+    <ProjectButton
+      title="The Path"
+      description="Flexible Scheduling App & Virtual Nursing"
+      scopes={["UX/UI Design", "User Research", "Brand Design"]}
+      href=""
+      imgPath="../assets/images/test.png"
+      altText="A headshot of Priya against a brick wall background."
+    />
+    <ProjectButton
+      title="BJC"
+      description="Flexible Scheduling App & Virtual Nursing"
+      scopes={["UX/UI Design", "User Research", "Brand Design"]}
+      href=""
+      imgPath="../assets/images/test-2.png"
+      altText="A headshot of Priya against a brick wall background."
+    />
+    <ProjectButton
+      title="Smart Toilet App"
+      description="Flexible Scheduling App & Virtual Nursing"
+      scopes={["UX/UI Design", "User Research", "Brand Design"]}
+      href=""
+      imgPath="../assets/images/bjc-cover-main.jpg"
+      altText="A headshot of Priya against a brick wall background."
+    />
+    <ProjectButton
+      title="Pipe Type"
+      description="Flexible Scheduling App & Virtual Nursing"
+      scopes={["UX/UI Design", "User Research", "Brand Design"]}
+      href=""
+      imgPath="../assets/images/bjc-cover-main.jpg"
+      altText="A headshot of Priya against a brick wall background."
+    />
+  </div>
+</div>
+<div class="category flex flex-col md:flex-row w-full px-6 relative">
+  <div class="category-label">
+    <div class="sticky pt-8 top-16">
+      <a href="#web"><p>Web</p></a>
     </div>
-    <div class="category flex flex-col md:flex-row w-full relative">
-        <div class="category-label pl-1">
-            <div class="sticky pt-8 top-16">
-                <a href="#ixd"> <p>Inter<br />action</p></a>
-            </div>
-        </div>
-        <div class="project-wrap" id="ixd">
-            <ProjectButton
-                title="Priya"
-                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                scopes={["UX/UI Design", "User Research", "Brand Design"]}
-                href=""
-                imgPath="../assets/test.png"
-                altText="A headshot of Priya against a brick wall background."
-            />
-            <ProjectButton
-                title="Priya"
-                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                scopes={["UX/UI Design", "User Research", "Brand Design"]}
-                href=""
-                imgPath="../assets/test.png"
-                altText="A headshot of Priya against a brick wall background."
-            />
-            <ProjectButton
-                title="Priya"
-                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                scopes={["UX/UI Design", "User Research", "Brand Design"]}
-                href=""
-                imgPath="../assets/test.png"
-                altText="A headshot of Priya against a brick wall background."
-            />
-            <ProjectButton
-                title="Priya"
-                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                scopes={["UX/UI Design", "User Research", "Brand Design"]}
-                href=""
-                imgPath="../assets/test.png"
-                altText="A headshot of Priya against a brick wall background."
-            />
-            <ProjectButton
-                title="Priya"
-                description="Flexible Scheduling App & Virtual Nursing sdfjaskjdfbsivjsiuv sfuhadf sGS"
-                scopes={["UX/UI Design", "User Research", "Brand Design"]}
-                href=""
-                imgPath="../assets/test-2.png"
-                altText="A headshot of Priya against a brick wall background."
-            />
-        </div>
+  </div>
+  <div class="project-wrap" id="web">
+    <ProjectButton
+      title="Priya"
+      description="Flexible Scheduling App & Virtual Nursing"
+      scopes={["UX/UI Design", "User Research", "Brand Design"]}
+      href=""
+      imgPath="../assets/images/bjc-cover-main.jpg"
+      altText="A headshot of Priya against a brick wall background."
+    />
+    <ProjectButton
+      title="Priya"
+      description="Flexible Scheduling App & Virtual Nursing"
+      scopes={["UX/UI Design", "User Research", "Brand Design"]}
+      href=""
+      imgPath="../assets/images/bjc-cover-main.jpg"
+      altText="A headshot of Priya against a brick wall background."
+    />
+    <ProjectButton
+      title="Priya"
+      description="Flexible Scheduling App & Virtual Nursing"
+      scopes={["UX/UI Design", "User Research", "Brand Design"]}
+      href=""
+      imgPath="../assets/images/bjc-cover-main.jpg"
+      altText="A headshot of Priya against a brick wall background."
+    />
+  </div>
+</div>
+<div class="category flex flex-col md:flex-row w-full px-6 relative">
+  <div class="category-label">
+    <div class="sticky pt-8 top-16">
+      <a href="#ixd"> <p>Inter<br />action</p></a>
     </div>
+  </div>
+  <div class="project-wrap" id="ixd">
+    <ProjectButton
+      title="Priya"
+      description="Flexible Scheduling App & Virtual Nursing"
+      scopes={["UX/UI Design", "User Research", "Brand Design"]}
+      href=""
+      imgPath="../assets/images/bjc-cover-main.jpg"
+      altText="A headshot of Priya against a brick wall background."
+    />
+    <ProjectButton
+      title="Priya"
+      description="Flexible Scheduling App & Virtual Nursing"
+      scopes={["UX/UI Design", "User Research", "Brand Design"]}
+      href=""
+      imgPath="../assets/images/bjc-cover-main.jpg"
+      altText="A headshot of Priya against a brick wall background."
+    />
+    <ProjectButton
+      title="Priya"
+      description="Flexible Scheduling App & Virtual Nursing"
+      scopes={["UX/UI Design", "User Research", "Brand Design"]}
+      href=""
+      imgPath="../assets/images/bjc-cover-main.jpg"
+      altText="A headshot of Priya against a brick wall background."
+    />
+    <ProjectButton
+      title="Priya"
+      description="Flexible Scheduling App & Virtual Nursing"
+      scopes={["UX/UI Design", "User Research", "Brand Design"]}
+      href=""
+      imgPath="../assets/images/bjc-cover-main.jpg"
+      altText="A headshot of Priya against a brick wall background."
+    />
+    <ProjectButton
+      title="Priya"
+      description="Flexible Scheduling App & Virtual Nursing"
+      scopes={["UX/UI Design", "User Research", "Brand Design"]}
+      href=""
+      imgPath="../assets/images/bjc-cover-main.jpg"
+      altText="A headshot of Priya against a brick wall background."
+    />
+  </div>
 </div>
 
 <script>
-    //     const paths = document.querySelectorAll("ProjectButton");
-    //     console.log(paths);
-    //     paths.forEach((path)=> {
-    //         path.addEventListener('mouseover', () => {
-    //                 document.getElementById('img-frame').setAttribute('src', path.dataset.imgPath);
-    //                 console.log(dataset.imgPath);
-    //             });
-    // });
+  //     const paths = document.querySelectorAll("ProjectButton");
+  //     console.log(paths);
+  //     paths.forEach((path)=> {
+  //         path.addEventListener('mouseover', () => {
+  //                 document.getElementById('img-frame').setAttribute('src', path.dataset.imgPath);
+  //                 console.log(dataset.imgPath);
+  //             });
+  // });
 </script>
 
 <style>
-    .category {
-        height: max-content;
-        /* min-height: 36rem; */
-        /* height: 36rem; */
-    }
+  .project-wrap {
+    width: 100%;
+  }
+
+  p {
+    /* padding-bottom: 1rem; */
+  }
+
+  .category {
+    height: max-content;
+  }
+
+  .category-label {
+    font-family: "TT Fors";
+    font-size: 1.2rem;
+    transition: all 250ms ease-in-out;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -0.025em;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+  }
+
+  #hero {
+    font-family: "LT Cushion";
+    font-weight: 375;
+    font-size: 1rem;
+    transition: all 250ms ease-in-out;
+  }
+
+  #prev-exp {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) {
     .category-label {
-        font-family: "TT Fors";
-        font-size: clamp(2.5rem, 4vw, 3.2rem);
-        font-weight: 600;
-        font-style: italic;
-        letter-spacing: -0.025em;
-        width: 15.25rem;
-        line-height: 0.9;
-        text-transform: uppercase;
-        /* border-bottom: 1.5px solid var(--color-border-secondary); */
+      border-bottom: 1.5px solid var(--color-border-secondary);
+      width: 8rem;
+      font-size: 1.5rem;
+      font-weight: 800;
     }
 
-    @media (min-width: 768px) {
-        .category-label {
-            border-bottom: 1.5px solid var(--color-border-secondary);
-        }
+    #hero {
+      border-bottom: none;
     }
 
-    .project-wrap {
-        width: 100%;
+    #hero {
+      padding: 2rem 0 2rem 11.5rem;
+      font-size: 1.15rem;
     }
-    p {
-        padding-bottom: 1rem;
-        max-width: 12.25rem;
+  }
+
+  @media (min-width: 1024px) {
+    .category-label {
+      font-size: 2rem;
+      width: 10rem;
     }
-    /* .scroll-container {
-            position: relative;
-        }
-        .max-width-container {
-            height: 100%;
-        }
 
-        .scrollwrap {
-            height: 200vh;
-            justify-content: center;
-            align-items: center;
-        }
+    #hero {
+      font-size: 1.4rem;
+      padding-left: 16.5rem;
+    }
+  }
 
-        h3 {
-            margin: 0;
-            padding: 0;
-            padding-top: 160px;
-            color: rgb(81, 69, 69);
-            font-family: "Playfair Display", serif;
-            font-size: 90px;
-        }
+  @media (min-width: 1440px) {
+    .category-label {
+      font-size: 2.5rem;
+      width: 15rem;
+    }
 
-        .scrollwrap .text-wrap {
-            position: sticky;
-            top: 60vh;
-            padding-bottom: 12rem;
-        } */
+    #hero {
+      padding-left: 21.25rem;
+    }
+  }
 </style>

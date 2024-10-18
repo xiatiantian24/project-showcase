@@ -4,24 +4,24 @@ import { Image } from "astro:assets";
 
 const { href, title, description, scopes, altText, imgPath } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
-    "../assets/*.{jpeg,jpg,png,gif}",
+    "../assets/images/*"
 );
 if (!images[imgPath])
     throw new Error(
-        `"${imgPath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
+        `"${imgPath}" does not exist in glob: "../assets/images/*"`,
     );
 ---
 
 <project-button class="button-wrap" data-imgpath={imgPath}>
     <a href={href}>
         <div class="button menu md:flex md:items-end sm:justify-between">
-            <div class="description-wrap flex flex-col justify-between">
-                <div class="project-title text-6xl pb-2">{title}</div>
-                <div class="project-description text-base pb-2">
+            <div class="description-wrap flex flex-col justify-between pb-4">
+                <div class="project-description mt-8 pb-2 md:text-base mt-4 pb-3">
                     {description}
                 </div>
+                <div class="project-title">{title}</div>
             </div>
-            <div class="project-scope flex text-xs pb-2">
+            <div class="project-scope flex pb-2">
                 {
                 scopes.map((scope,index) => (
                 index == (scopes.length - 1) ?
@@ -30,14 +30,14 @@ if (!images[imgPath])
                 ))                
                 } 
             </div>
-            <div class="img-desktop hidden md:block">
-                <div class="img-wrap">
-                    <Image src={images[imgPath]()} alt={altText} width="500" class="image"/>
-                </div>
-            </div>
-            <div class="img-mobile md:hidden mt-4">
+        </div>
+        <div class="img-desktop hidden md:block">
+            <div class="img-wrap">
                 <Image src={images[imgPath]()} alt={altText} class="image"/>
             </div>
+        </div>
+        <div class="img-mobile md:hidden mt-4">
+            <Image src={images[imgPath]()} alt={altText} class="image"/>
         </div>
         <div></div>
     </a>
@@ -53,17 +53,25 @@ if (!images[imgPath])
            const target = this.querySelector('.img-wrap');
 
            function follow(e) {
-                target.style.left = `${e.pageX}px`;
-                target.style.top = `${e.pageY - window.scrollY}px`;
+               target.style.left = `${e.pageX + 24}px`;
+               target.style.top = `${e.pageY - window.scrollY - 0.5*target.scrollHeight}px`;
             }
+
+           target.style.transition = 'filter 400ms ease-out, visibility 100ms linear';
+           target.style.filter = 'saturate(0%) contrast(50%)';
            
            button.addEventListener('mouseover', () => {
-                // console.log(imgPath);
-                target.style.display="block";
-                document.addEventListener('mousemove', follow);
+               target.style.display="block";
+               target.style.visibility = 'visible';
+               setTimeout(() => {
+                    target.style.filter = 'saturate(100%) contrast(100%)'; 
+               }, 1);
+               document.addEventListener('mousemove', follow);
             });
+
             button.addEventListener('mouseout', () => {
-                target.style.display="none";
+                // target.style.display="none";
+                target.style.visibility = 'hidden';
             });
            
        }
@@ -84,33 +92,42 @@ if (!images[imgPath])
     }
 
     .button {
-        border-bottom: 1.5px solid var( --color-border-secondary);
         height: max-content;
-        padding: 2rem 1rem;
     }
 
     .project-title {
+        font-family: "LT Cushion";
         text-transform: uppercase;
-        font-weight: 500;
-        letter-spacing: -0.0125em;
+        font-weight: 450;
+        font-style: normal;
+        letter-spacing: -0.02em;
         line-height: 0.9;
         transform: scaleY(1.05);
-        font-size: clamp(3rem, 5vw, 5rem);
+        transform-origin: 0 0;
+        font-size: 1.3rem;
+        transition: font-size 250ms ease-in-out;
     }
 
     .description-wrap {
         height: 100%;
-        max-width: 50%;
     }
 
     .project-description {
-        font-family: "Figtree";
+        font-family: "TT Fors";
         line-height: 1.1;
+        font-weight: 400;
+        transform:scaleX(1.03);
+        transform-origin: 0 0;
+        letter-spacing: -0.03rem;
     }
 
     .project-scope {
         text-transform: uppercase;
-        font-variation-settings: "wght" 500;
+        transform: scaleY(1.1);
+        transform-origin: 0 0;
+        font-size: 0.7rem;
+        letter-spacing: -0.02rem;
+        font-weight: 500;
     }
 
     .img-wrap {
@@ -122,13 +139,37 @@ if (!images[imgPath])
     }
 
     .image{
-        /* width: 30vw; */
 		object-fit: cover;
+        border-bottom: 1.5px solid var(--color-border-secondary);
+        padding-bottom: 1rem;
+    }
+
+    a {
+        border-bottom: 1.5px solid var(--color-border-secondary);
     }
 
     @media screen and (min-width: 768px) {
+        .project-title{
+        font-size: clamp(3rem, 5vw, 4rem);
+        }
+
         .button {
-        padding: 2rem 0 2rem 8vw;
+        padding: 0.5rem 0 0.5rem 3rem;
+        border-bottom: 1.5px solid var( --color-border-secondary);
+        }
+
+        .image {
+        border-bottom: none;
+        padding-bottom: 0;
+        width: 40vw;
+        min-width: 200px;
+        max-width: 1400px;
+        }
     }
+    
+    @media screen and (min-width: 1024px) {
+        .button {
+        padding: 0.5rem 0 0.5rem 6rem;
+        }
     }
 </style>

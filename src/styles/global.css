@@ -20,7 +20,9 @@
     scroll-padding-top: 12rem;
 
     --color-text-main: rgba(50, 50, 50, 1);
+    --color-text-secondary: rgba(99, 99, 99, 1);
     --color-bg-main: rgba(252, 251, 248, 1);
+    --color-bg-white: rgba(255, 255, 255,1);
     --color-border-main: rgba(99, 99, 99, 1);
     --color-border-secondary: rgba(199, 199, 199, 1);
 
@@ -102,15 +104,23 @@
 @font-face {
     font-family: 'TT Fors';
     src: url('./fonts/TT-Fors-Demi-Bold.ttf') format('truetype');
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'TT Fors';
+    src: url('./fonts/TT-Fors-DemiBold-Italic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Fors';
     src: url('./fonts/TT-Fors-Outline-Italic.ttf') format('truetype');
-    font-weight: 600;
+    font-weight: 800;
     font-style: italic;
     font-display: swap;
 }
@@ -120,7 +130,31 @@
     src: url('./fonts/TT-Fors-Variable.ttf') format('truetype');
     font-weight: 200 700;
     font-style: normal;
+    font-display: swap;  
+}
+
+@font-face {
+    font-family: 'LT Cushion';
+    src: url('./fonts/LTCushion-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
     font-display: swap;
+}
+
+@font-face {
+    font-family: 'LT Cushion';
+    src: url('./fonts/LTCushion-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LT Cushion';
+    src: url('./fonts/LTCushion-VF.ttf') format('truetype');
+    font-weight: 200 700;
+    font-style: normal;
+    font-display: swap;  
 }
 
 html {
@@ -130,9 +164,6 @@ html {
 }
 
 body {
-    /* margin: 0 auto;
-    width: 100%;
-    max-width: 50rem; */
     line-height: 1.5;
     font-size: 100%;
 }
@@ -141,36 +172,9 @@ body {
     box-sizing: border-box;
 }
 
-h1 {
-    /* font-family: 'TT Fors', sans-serif; */
-    /* margin: 1rem 0; */
-    /* font-size: 2.5rem; */
+.bg-main {
+    background-color: var(--color-bg-main);
 }
-
-
-
-
-/* Color Tokens */
-/* --color-gray-1: #fff;
-    --color-gray-2: #fbfbfb;
-    --color-gray-3: #f3f3f6;
-    --color-gray-4: #e7e7e7;
-    --color-gray-5: #b5b5b5;
-    --color-gray-6: #646464;
-    --color-gray-7: #121212;
-
-    --color-background-primary: var(--color-gray-1);
-    --color-background-secondary: var(--color-gray-3);
-    --color-background-tertiary: var(--color-gray-2);
-    --color-border-light: var(--color-gray-4);
-    --color-border-dark: var(--color-gray-5);
-    --color-text-primary: var(--color-gray-7);
-    --color-text-secondary: var(--color-gray-6);
-
-     */
-
-
-
 
 
 

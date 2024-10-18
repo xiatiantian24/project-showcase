@@ -1,12 +1,14 @@
 ---
-
+const { bg } = Astro.props;
 ---
 
-<nav class="sticky top-0">
-    <p>test</p>
+<nav class:list={[
+    "sticky top-0",
+    bg || "bg-white"
+  ]}>
+    <p>logo</p>
     <ul class="menu flex gap-4 md:gap-8 text-sm">
         <li class=""><a href="/" class="py-2 hover:">Projects</a></li>
-        <li class=""><a href="/experiments/" class="py-2 hover:">Experiments</a></li>
         <li class=""><a href="/about/" class="py-2 hover:">About</a></li>
     </ul>
     <p>Mode</p>
@@ -15,21 +17,22 @@
 <style>
     nav {
         font-family: "TT Fors";
-        /* left: auto;
-        right: auto; */
-        /* position: fixed; */
         z-index: 9999;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: var(--color-bg-main);
         width: 100%;
-        padding: 0.8rem 0 1.5rem;
-        /* border-bottom: 1.5px solid var( --color-border-secondary); */
+        padding: 0.8rem 1rem 1rem;
     }
+
+    .bg-white {
+        background-color: #fff;
+    }
+
     ul {
         justify-content: flex-end;
     }
+
     li {
         text-transform: uppercase;
     }
