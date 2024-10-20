@@ -196,6 +196,7 @@ h4 {
   font-weight: 450;
   text-transform: uppercase;
   color: var(--color-text-tertiary);
+  margin-bottom: 0.3rem;
 }
 
 a {
@@ -221,6 +222,7 @@ figcaption {
 
 img,
 svg {
+  width: 100%;
   max-width: 100%;
   height: auto;
   display: block;
