@@ -2,39 +2,37 @@
 const { bg } = Astro.props;
 ---
 
-<nav class:list={[
-    "sticky top-0",
-    bg || "bg-white"
-  ]}>
-    <p>logo</p>
-    <ul class="menu flex gap-4 md:gap-8 text-sm">
-        <li class=""><a href="/" class="py-2 hover:">Projects</a></li>
-        <li class=""><a href="/about/" class="py-2 hover:">About</a></li>
-    </ul>
-    <p>Mode</p>
+<nav class:list={["sticky top-0", bg || "bg-white"]}>
+  <div>logo</div>
+  <ul class="menu flex gap-4 md:gap-8 text-sm">
+    <li class=""><a href="/" class="py-2 hover:">Projects</a></li>
+    <li class=""><a href="/about/" class="py-2 hover:">About</a></li>
+  </ul>
+  <div>Mode</div>
 </nav>
 
 <style>
-    nav {
-        font-family: "TT Fors";
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0.8rem 1rem 1rem;
-    }
+  nav {
+    font-family: "TT Fors";
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.8rem 1rem 1rem;
+  }
 
-    .bg-white {
-        background-color: #fff;
-    }
+  .bg-white {
+    background-color: #fff;
+  }
 
-    ul {
-        justify-content: flex-end;
-    }
+  ul {
+    justify-content: flex-end;
+    list-style: none;
+  }
 
-    li {
-        text-transform: uppercase;
-    }
-
+  li {
+    text-transform: uppercase;
+    margin: 0;
+  }
 </style>

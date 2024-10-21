@@ -175,38 +175,6 @@ body {
   background-color: var(--color-bg-main);
 }
 
-section {
-  max-width: 48rem;
-  margin: auto;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-
-h3 {
-  font-family: "LT Cushion";
-  font-weight: 500;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  line-height: 1.1;
-}
-
-h4 {
-  font-family: "TT Fors";
-  font-size: 0.75rem;
-  font-weight: 450;
-  text-transform: uppercase;
-  color: var(--color-text-tertiary);
-  margin-bottom: 0.3rem;
-}
-
-a {
-  color: var(--color-text-secondary);
-}
-
-figcaption {
-  color: var(--color-text-secondary);
-}
-
 /* Notes from Kevin Powell */
 /* html {
     color-scheme: light dark;

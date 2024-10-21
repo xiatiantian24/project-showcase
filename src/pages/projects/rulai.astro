@@ -1,0 +1,479 @@
+---
+import "../../styles/global.css";
+import "../../styles/project.css";
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+---
+
+<ProjectLayout
+  projectTitle="Rulai, Inc."
+  projectDescription="."
+  tags={["UX", "Internship", "2022"]}
+  detail1Title="Role"
+  detail1Content={["UX Design", "Solution Engineering", "Conversation Design", "Front-end Engineering"]}
+  detail2Title="Team"
+  detail2Content={[
+    "Daniel Chen (Developer)",
+    "Law Black (Sales)",
+    "Lawrence Yau (Product Manager)",
+  ]}
+>
+  <!-- Cover Image -->
+  <img
+    class="cover-img mx-auto"
+    src="/images/rulai/rulai-cover.jpg"
+    alt="Rulai Inc."
+    slot="cover-img"
+    width="1440"
+  />
+
+  <!-- Overview -->
+  <div class="project-content px-6" slot="content">
+    <section class="overview">
+      <h3>The Internship</h3>
+      <div class="mb-24">
+        <div>
+          <p>
+            In my last year of undergrad, I worked at a
+            <a href="https://bjc.org" target="_blank" rel="noopener noreferrer"
+              >hospital</a
+            >
+            - the dream job of fifth grade me. But instead of delivering care to
+            the patients, I designed things that help people who are delivering care.
+          </p>
+        </div>
+        <div>
+          <div class="mb-1">
+            I mainly focused on two products to improve nursing flexibility:
+          </div>
+          <ul>
+            <li>
+              <a
+                href="https://flex.bjc.org"
+                target="_blank"
+                rel="noopener noreferrer">BJC Flex</a
+              > - helping design a fully custom-built web app for nurses to schedule
+              work shifts at BJC
+            </li>
+            <li>
+              Virtual Nursing - researching nurse satisfaction and engagement
+              with the technology
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- BJC Flex -->
+    <section class="bjc-flex">
+      <h4>BJC Flex</h4>
+      <h3>Streamlining Shift Scheduling</h3>
+      <div class="mb-24">
+        <p>
+          Due to nursing shortage, the amount of available shifts to be picked
+          up is high. But at BJC, open shift scheduling requires multiple
+          actions, platforms, and back-and-forth communication between nurses
+          and nurse managers.
+        </p>
+        <p>
+          The goal of BJC Flex is to streamline shift scheduling, giving nurses
+          agency to pickup the shifts they want and incentivizing them to stay.
+        </p>
+      </div>
+      <h4>BJC Flex</h4>
+      <h3>A New Messaging Tool</h3>
+      <div class="mb-8">
+        <p>
+          To allow nurse managers to notify nurses about open shifts, I designed
+          and pushed forward the launching of a messaging tool as part of BJC
+          Flex.
+        </p>
+        <p>
+          I was involved in every step of the design cycle, from concepting
+          ideas and prototyping through user testing and gathering feedback
+          on-site.
+        </p>
+      </div>
+    </section>
+    <!-- Flex Admin imgaes -->
+    <div class="image-gallery-grid mx-auto mb-8 grid grid-cols-1 gap-4">
+      <div class="grid-item-row-1 grid grid-cols-1 gap-4">
+        <div class="grid-item-col">
+          <div class="gallery-image">
+            <img
+              src="/images/bjc/bjc-admin.jpg"
+              alt="Messaging tool for BJC Flex"
+              loading="lazy"
+              style="aspect-ratio: 996/725;"
+            />
+          </div>
+        </div>
+        <div class="grid-item-col flex flex-col md:grid grid-rows-2 gap-4">
+          <div class="gallery-image md:row-start-1 md:row-span-3">
+            <img
+              src="/images/bjc/bjc-admin-attach.jpg"
+              alt="Messaging tool for BJC Flex"
+              style="height:100%; object-fit:cover; aspect-ratio: 166/255;"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-image">
+            <img
+              src="/images/bjc/bjc-admin-attached.jpg"
+              alt="Messaging tool for BJC Flex"
+              loading="lazy"
+              style="aspect-ratio: 332/199;"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="grid-item-row-2 grid grid-cols-1 gap-4">
+        <div class="grid-item-col">
+          <div class="gallery-image h-full">
+            <img
+              src="/images/bjc/bjc-admin-group.jpg"
+              style="height:100%; object-fit:cover; border:2px solid #f4f4f4; aspect-ratio: 441/229;"
+              alt="Messaging tool for BJC Flex"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="grid-item-col">
+          <div class="gallery-image">
+            <img
+              src="/images/bjc/bjc-admin-edit.jpg"
+              alt="Messaging tool for BJC Flex"
+              loading="lazy"
+              style="aspect-ratio: 443/462;"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="bjc-flex">
+      <div class="mb-24">
+        <div class="mb-1">Some features I designed include:</div>
+        <ul>
+          <li>Attaching open shifts that are linked through Flex</li>
+          <li>
+            Option to exclude workers with overlapping shift schedules from the
+            recipients
+          </li>
+          <li>Editing recipients based on roles or customized groups</li>
+        </ul>
+      </div>
+      <h4>BJC Flex</h4>
+      <h3>Continuous Mobile Revamp</h3>
+      <div>
+        <p>
+          Besides working on the exciting new features, I also had fun improving
+          existing features based on nurses’ requests throughout my time at BJC.
+          Some made it to the beta version, some didn’t but helped us better
+          learn the prioritization of desirability.
+        </p>
+      </div>
+    </section>
+    <!-- Flex mobile images -->
+    <div class="flex-images mb-24">
+      <div class="figure-medium mx-auto mb-8">
+        <div class="img-medium">
+          <img
+            src="/images/bjc/bjc-flex-overlap.jpg"
+            alt="Experimenting with UIs that prevent nurses from picking up shifts that overlap with ones they already have."
+            loading="lazy"
+            style="aspect-ratio: 432/337;"
+          />
+        </div>
+        <figcaption>
+          A big challenge was preventing errors of nurses signing up shifts that
+          overlap with ones they've already signed up for. I experiment with
+          designs that reduce affordability of overlapping shifts.
+        </figcaption>
+      </div>
+      <div class="figure-medium mx-auto mb-8">
+        <div class="img-medium">
+          <img
+            src="/images/bjc/bjc-flex-night.jpg"
+            alt="Experimenting with UIs that help nurses identify day shifts from night shifts faster."
+            loading="lazy"
+            style="aspect-ratio: 432/251;"
+          />
+        </div>
+        <figcaption>
+          Another experiment with components to help nurses more easily identify
+          and sort day shifts from night shifts, after learning that a
+          significant chunk of shifts signed up by mistake was due to
+          overlooking the time of the day.
+        </figcaption>
+      </div>
+    </div>
+
+    <!-- Flex Result  -->
+    <section class="result">
+      <h4>BJC Flex</h4>
+      <h3>The Result</h3>
+      <ul
+        class="text-gallery grid grid-cols-1 gap-x-20 gap-y-4 md:gap-y-12 mb-24 md:grid-cols-2"
+      >
+        <div class="text-gallery-item">
+          <div class="result-item">
+            <div class="result-highlight">700,000+</div>
+            <p>
+              hours of extra shift picked up through BJC Flex, as of January
+              2024.
+            </p>
+          </div>
+        </div>
+        <div class="text-gallery-item">
+          <div class="result-item">
+            <div class="result-highlight">~2000</div>
+            <p>average monthly active users from the caregiving teams.</p>
+          </div>
+        </div>
+        <div class="result-item">
+          <div class="result-highlight">Launched</div>
+          <p>
+            messaging tool into pilot phase. (I was proud of this the most!)
+          </p>
+        </div>
+      </ul>
+    </section>
+
+    <!-- Virtual Nursing -->
+    <section class="virtual-nursing">
+      <h4>Virtual Nursing</h4>
+      <h3>Researching Nurse Satisfactions</h3>
+      <div class="mb-16">
+        <p>
+          In parallel with BJC Flex, I participated in an initiative that allows
+          nurses to work virtually. While the organization has the intention to
+          adopt virtual nursing, there have been comparisons and debates on the
+          right technology solution to move on with.
+        </p>
+        <p>
+          To help make the decision, one key metric is the nurses’ satisfaction
+          and engagement compared across tech solutions, which the team and I
+          were responsible for researching.
+        </p>
+      </div>
+    </section>
+    <div class="virtual-nursing-images">
+      <div class="figure-medium mx-auto mb-8">
+        <div class="img-medium">
+          <img
+            src="/images/bjc/bjc-vrn-metrics.png"
+            alt="Virtual nursing key metrics"
+            style="border:2px solid #f4f4f4; aspect-ratio: 430/409;"
+            loading="lazy"
+          />
+        </div>
+        <figcaption>
+          As a year-long pilot test with different solutions rolled out in
+          dedicated nursing units, we worked with project managers to make plans
+          and determine the research questions that will answer the metrics.
+        </figcaption>
+      </div>
+      <div class="figure-medium mx-auto mb-8">
+        <div class="img-medium">
+          <img
+            src="/images/bjc/bjc-vrn-survey.jpg"
+            alt="Virtual nursing surveys"
+            loading="lazy"
+            style="aspect-ratio: 432/451;"
+          />
+        </div>
+        <figcaption>
+          Surveys questions were distrubuted across the pilot and control units
+          along side of contextual inquiries and interviews. Together,
+          qualitative and quantative results helped us measure the desirability
+          of the virtual nursing technology.
+        </figcaption>
+      </div>
+      <div class="figure-large mx-auto mb-8">
+        <div class="img-large">
+          <img
+            src="/images/bjc/bjc-vrn-insights.jpg"
+            alt="Virtual nursing insights"
+            style="border:2px solid #f4f4f4; aspect-ratio: 463/278;"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+    <section class="virtual-nursing">
+      <div class="mb-24">
+        <div class="mb-1">Our research findings were used to:</div>
+        <ul>
+          <li>
+            Providing thematic insights, backed up with research-siphoned quotes
+            and numbers, in monthly presentations to project stakeholders
+          </li>
+          <li>
+            Bringing discussions with project managers to review and adjust the
+            project roadmap
+          </li>
+          <li>
+            Exemplifying and advocating for human-centered design in the
+            organization
+          </li>
+        </ul>
+        <div class="tip">
+          <div>
+            <div class="tip-title">Handy Tool Recommendation:</div>
+            My team uses <a
+              href="https://dovetail.com/"
+              target="_blank"
+              rel="noopener noreferrer">Dovetail</a
+            > to help store recordings, organize raw research data, and make qualitative
+            analysis. I found it not only helpful for user research but also transcribing
+            and learning from videos in my daily life.
+          </div>
+        </div>
+        <div>
+          <p>
+            One major setback I encountered (and wasn’t able to resolve
+            gracefully) was that the reports to project stakeholders were not
+            effective at improving decision-making or taking recommendations -
+            and the reason was that it is too easy to simply read the report and
+            not engage with thoughts.
+          </p>
+          <p>
+            If I were to redo the presentations, I will be more active and
+            explicit about soliciting feedback at the end. Even if the feedback
+            is not directly about the report, it will still help us learn
+            stakeholders’ concerns and interests.
+          </p>
+        </div>
+      </div>
+      <div class="mb-24">
+        <h4>Virtual Nursing</h4>
+        <h3>The Result</h3>
+        <p>
+          While the pilot test was still in progress by the time my internship
+          ended, existing research had shown valuable evidence of nurses’
+          preference on one solution over the other, while also providing
+          insights into cases where introducing virtual nursing to certain units
+          might not be as valuable.
+        </p>
+      </div>
+    </section>
+
+    <!-- Day in life -->
+    <section class="day-in-life">
+      <h3>Day in the Life at BJC</h3>
+    </section>
+    <div class="day-in-life-images">
+      <div class="figure-medium mx-auto mb-8">
+        <div class="img-medium">
+          <img
+            src="/images/bjc/bjc-office.png"
+            alt="A peek inside my office building."
+            loading="lazy"
+            style="aspect-ratio: 27/20;"
+          />
+        </div>
+        <figcaption>A peek inside my office building.</figcaption>
+      </div>
+      <div class="figure-medium mx-auto mb-8">
+        <div class="img-medium">
+          <img
+            src="/images/bjc/bjc-meeting.png"
+            alt="First time in a rapid improvement event with nurse managers and I led a ideatation session!"
+            loading="lazy"
+            style="aspect-ratio: 864/457;"
+          />
+        </div>
+        <figcaption>
+          First time in a rapid improvement event with nurse managers, and I led
+          a ideatation session on reimagining float pool shift scheduling!
+        </figcaption>
+      </div>
+      <div class="figure-medium mx-auto mb-8">
+        <div class="img-medium">
+          <img
+            src="/images/bjc/bjc-vrn-cart.png"
+            alt="Shadowing bedside nurses working with virtual nurses over the carts."
+            loading="lazy"
+            style="aspect-ratio: 864/457;"
+          />
+        </div>
+        <figcaption>
+          Shadowing bedside nurses around in the Medical-Surgical Units to learn
+          how they work with virtual nurses over these carts.
+        </figcaption>
+      </div>
+      <div class="figure-medium mx-auto mb-8">
+        <div class="img-medium">
+          <img
+            src="/images/bjc/bjc-flex-donuts.png"
+            style="aspect-ratio: 864/317;"
+            alt="Enticing users of BJC Flex to share feedback."
+            loading="lazy"
+          />
+        </div>
+        <figcaption>
+          Enticing users of BJC Flex to share their feedback with us.
+        </figcaption>
+      </div>
+      <div class="figure-medium mx-auto mb-8">
+        <div class="img-medium">
+          <img
+            src="/images/bjc/bjc-cardinal-game.png"
+            alt="The interns were invited by the CEO to a Cardinals game!"
+            loading="lazy"
+            style="aspect-ratio: 864/623;"
+          />
+        </div>
+        <figcaption>
+          The interns were invited by the CEO to a Cardinals game!
+        </figcaption>
+      </div>
+    </div>
+
+    <!-- Reflection -->
+    <section class="reflection">
+      <h3>Kudos</h3>
+      <p>
+        As the only intern on the Digital Design team, I felt like being
+        supported by eleven older siblings. Every member has their own cool
+        specialty and are passionate about sharing it with others. My experience
+        would not be so accomplishing without learning from them. Kudos to
+        everyone!
+      </p>
+      <div class="figure-small mb-24">
+        <div class="img-small">
+          <img
+            src="/images/bjc/bjc-team.png"
+            alt="Thank you to all the digital design team members"
+            loading="lazy"
+            style="aspect-ratio: 576/71;"
+          />
+        </div>
+      </div>
+    </section>
+  </div>
+</ProjectLayout>
+
+<style>
+  body,
+  nav {
+    background-color: #fff;
+  }
+
+  a {
+    border-bottom: 2px dashed #1820ed;
+  }
+
+  li::marker {
+    color: #1820ed;
+  }
+
+  @media (min-width: 768px) {
+    .grid-item-row-1 {
+      grid-template-columns: 3fr 1fr;
+    }
+
+    .grid-item-row-2 {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+</style>
