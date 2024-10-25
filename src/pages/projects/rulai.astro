@@ -6,10 +6,15 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
 
 <ProjectLayout
   projectTitle="Rulai, Inc."
-  projectDescription="."
+  projectDescription="Revamping an interactive product demonstration system."
   tags={["UX", "Internship", "2022"]}
   detail1Title="Role"
-  detail1Content={["UX Design", "Solution Engineering", "Conversation Design", "Front-end Engineering"]}
+  detail1Content={[
+    "UX Design",
+    "Solution Engineering",
+    "Conversation Design",
+    "Front-end Engineering",
+  ]}
   detail2Title="Team"
   detail2Content={[
     "Daniel Chen (Developer)",
@@ -26,429 +31,265 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
     width="1440"
   />
 
-  <!-- Overview -->
+  <!-- Summary -->
   <div class="project-content px-6" slot="content">
-    <section class="overview">
-      <h3>The Internship</h3>
+    <section class="summary">
+      <h3>Summary</h3>
       <div class="mb-24">
         <div>
           <p>
-            In my last year of undergrad, I worked at a
-            <a href="https://bjc.org" target="_blank" rel="noopener noreferrer"
-              >hospital</a
-            >
-            - the dream job of fifth grade me. But instead of delivering care to
-            the patients, I designed things that help people who are delivering care.
+            Through the summer of 2022, I joined
+            <a href="https://rul.ai/" target="_blank" rel="noopener noreferrer">
+              Rulai</a
+            >, a low-code AI Virtual Assistant platform, as the sole designer.
+            To tackle the interests from various industries and business sizes
+            in Rulai’s solution, I designed a new demo system that lets
+            prospects explore the tool in their own desired way. They can ask
+            about a specific use case, and interact with the Virtual Assistant
+            to see corresponding features targeting that use case.
           </p>
         </div>
-        <div>
-          <div class="mb-1">
-            I mainly focused on two products to improve nursing flexibility:
-          </div>
-          <ul>
-            <li>
-              <a
-                href="https://flex.bjc.org"
-                target="_blank"
-                rel="noopener noreferrer">BJC Flex</a
-              > - helping design a fully custom-built web app for nurses to schedule
-              work shifts at BJC
-            </li>
-            <li>
-              Virtual Nursing - researching nurse satisfaction and engagement
-              with the technology
-            </li>
-          </ul>
-        </div>
       </div>
     </section>
 
-    <!-- BJC Flex -->
-    <section class="bjc-flex">
-      <h4>BJC Flex</h4>
-      <h3>Streamlining Shift Scheduling</h3>
-      <div class="mb-24">
-        <p>
-          Due to nursing shortage, the amount of available shifts to be picked
-          up is high. But at BJC, open shift scheduling requires multiple
-          actions, platforms, and back-and-forth communication between nurses
-          and nurse managers.
-        </p>
-        <p>
-          The goal of BJC Flex is to streamline shift scheduling, giving nurses
-          agency to pickup the shifts they want and incentivizing them to stay.
-        </p>
-      </div>
-      <h4>BJC Flex</h4>
-      <h3>A New Messaging Tool</h3>
+    <!-- Problem -->
+    <section class="problem">
+      <h4>The Problem</h4>
+      <h3>Overwhelming Features</h3>
       <div class="mb-8">
         <p>
-          To allow nurse managers to notify nurses about open shifts, I designed
-          and pushed forward the launching of a messaging tool as part of BJC
-          Flex.
-        </p>
-        <p>
-          I was involved in every step of the design cycle, from concepting
-          ideas and prototyping through user testing and gathering feedback
-          on-site.
+          Exploring all the Virtual Assistant’s features, I came up with the
+          question of what the audience might be interested in learning the most
+          to solve their problem. <span class="em"
+            >With so many features, it can be difficult to draw the line between
+            being impressive and being overwhelming.</span
+          >
         </p>
       </div>
     </section>
-    <!-- Flex Admin imgaes -->
-    <div class="image-gallery-grid mx-auto mb-8 grid grid-cols-1 gap-4">
-      <div class="grid-item-row-1 grid grid-cols-1 gap-4">
-        <div class="grid-item-col">
-          <div class="gallery-image">
-            <img
-              src="/images/bjc/bjc-admin.jpg"
-              alt="Messaging tool for BJC Flex"
-              loading="lazy"
-              style="aspect-ratio: 996/725;"
-            />
-          </div>
-        </div>
-        <div class="grid-item-col flex flex-col md:grid grid-rows-2 gap-4">
-          <div class="gallery-image md:row-start-1 md:row-span-3">
-            <img
-              src="/images/bjc/bjc-admin-attach.jpg"
-              alt="Messaging tool for BJC Flex"
-              style="height:100%; object-fit:cover; aspect-ratio: 166/255;"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-image">
-            <img
-              src="/images/bjc/bjc-admin-attached.jpg"
-              alt="Messaging tool for BJC Flex"
-              loading="lazy"
-              style="aspect-ratio: 332/199;"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="grid-item-row-2 grid grid-cols-1 gap-4">
-        <div class="grid-item-col">
-          <div class="gallery-image h-full">
-            <img
-              src="/images/bjc/bjc-admin-group.jpg"
-              style="height:100%; object-fit:cover; border:2px solid #f4f4f4; aspect-ratio: 441/229;"
-              alt="Messaging tool for BJC Flex"
-              loading="lazy"
-            />
-          </div>
-        </div>
-        <div class="grid-item-col">
-          <div class="gallery-image">
-            <img
-              src="/images/bjc/bjc-admin-edit.jpg"
-              alt="Messaging tool for BJC Flex"
-              loading="lazy"
-              style="aspect-ratio: 443/462;"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <section class="bjc-flex">
-      <div class="mb-24">
-        <div class="mb-1">Some features I designed include:</div>
-        <ul>
-          <li>Attaching open shifts that are linked through Flex</li>
-          <li>
-            Option to exclude workers with overlapping shift schedules from the
-            recipients
-          </li>
-          <li>Editing recipients based on roles or customized groups</li>
-        </ul>
-      </div>
-      <h4>BJC Flex</h4>
-      <h3>Continuous Mobile Revamp</h3>
-      <div>
-        <p>
-          Besides working on the exciting new features, I also had fun improving
-          existing features based on nurses’ requests throughout my time at BJC.
-          Some made it to the beta version, some didn’t but helped us better
-          learn the prioritization of desirability.
-        </p>
-      </div>
-    </section>
-    <!-- Flex mobile images -->
-    <div class="flex-images mb-24">
+    <div class="rulai-images">
       <div class="figure-medium mx-auto mb-8">
         <div class="img-medium">
           <img
-            src="/images/bjc/bjc-flex-overlap.jpg"
-            alt="Experimenting with UIs that prevent nurses from picking up shifts that overlap with ones they already have."
+            src="/images/rulai/rulai-meeting.jpg"
+            alt="Crash course to learn Rulai features and use cases"
             loading="lazy"
-            style="aspect-ratio: 432/337;"
+            style="aspect-ratio: 864/397;"
           />
         </div>
         <figcaption>
-          A big challenge was preventing errors of nurses signing up shifts that
-          overlap with ones they've already signed up for. I experiment with
-          designs that reduce affordability of overlapping shifts.
+          While I had no previous exposure to Conversational AI, my manager and
+          teammate gave me a crash course to learn all the cool functionalities
+          and existing use cases of the virtual assistant.
         </figcaption>
       </div>
-      <div class="figure-medium mx-auto mb-8">
+      <div class="figure-medium mx-auto mb-24">
         <div class="img-medium">
           <img
-            src="/images/bjc/bjc-flex-night.jpg"
-            alt="Experimenting with UIs that help nurses identify day shifts from night shifts faster."
+            src="/images/rulai/rulai-features.jpg"
+            alt="Sorting features according to their functionality"
             loading="lazy"
-            style="aspect-ratio: 432/251;"
+            style="aspect-ratio: 864/643;"
           />
         </div>
         <figcaption>
-          Another experiment with components to help nurses more easily identify
-          and sort day shifts from night shifts, after learning that a
-          significant chunk of shifts signed up by mistake was due to
-          overlooking the time of the day.
+          Sorting features according to their functionality.
+        </figcaption>
+      </div>
+    </div>
+    <section class="problem">
+      <div class=" mb-24">
+        <p>
+          Working with the experienced Engineering team was crucial for me to
+          figure out how Virtual Assistants are used across industries. For
+          example, I got to study user transcripts to learn how Q&A is used
+          differently by a B2B manufacturer vs a B2C retailor. Law, from the
+          Sales team, also provided me with insights on the top features asked
+          by Rulai’s prospects.
+        </p>
+      </div>
+    </section>
+    <div class="rulai-images mb-24">
+      <div class="figure-medium mx-auto mb-8">
+        <div class="img-medium">
+          <img
+            src="/images/rulai/rulai-industries.jpg"
+            alt="Narrowing down functionalities based on industry-specific insights"
+            loading="lazy"
+            style="aspect-ratio: 54/29;"
+          />
+        </div>
+        <figcaption>
+          Narrowing down functionalities based on industry-specific insights. It
+          was still a bit generalized, but it served a good starting place to
+          list out features to be prioritized.
         </figcaption>
       </div>
     </div>
 
-    <!-- Flex Result  -->
+    <!-- Solution -->
+    <section class="solution">
+      <h4>The Solution</h4>
+      <h3>Customizing the Use Cases</h3>
+      <div class="mb-8">
+        <p>
+          I moved on with the idea of breaking the demonstration system into use
+          cases like chapters. Each use case <span class="em"
+            >targets one problem</span
+          > that can be solved by specific features, so that the audience can <span
+            class="em">explore the use cases independently</span
+          > without being overwhelmed.
+        </p>
+        <p>
+          Before pitching my idea to the organization, I needed a convincing
+          prototype. I started with a fictitious retail business profile as a
+          audience persona, since it would allow me to integrate the most common
+          use cases according the audience interests.
+        </p>
+      </div>
+    </section>
+    <div class="rulai-images">
+      <div class="figure-medium mx-auto mb-24">
+        <div class="img-medium">
+          <img
+            src="/images/rulai/rulai-persona.jpg"
+            alt="I also created an end user profile, Remi, to match the company’s profile"
+            loading="lazy"
+            style="aspect-ratio: 72/59;"
+          />
+        </div>
+        <figcaption>
+          To help the audience better imagine the end users interacting with
+          Virtual Assistants, I also created an end user profile, Remi, to match
+          the company’s profile.
+        </figcaption>
+      </div>
+    </div>
+    <section class="solution">
+      <div>
+        <p>To start off with an engaging use case, I crafted a scenario:</p>
+        <div class="tip">
+          Remi wants to get a kitchen stove for her new house. She goes on the
+          website and asks the Virtual Assistant to provide her a list of stoves
+          that exactly match her needs. She then browses and selects the best
+          fit before she makes a purchase and schedules a delivery with the
+          Virtual Assistant.
+        </div>
+        <p>
+          Together with Daniel, the front-end developer, we implemented the
+          Virtual Assistant with conversation flows highlighting the features
+          designed in the first scenario. We presented a mock demo to the rest
+          of the team and executives that turned out to be successful.
+        </p>
+      </div>
+    </section>
+    <div class="rulai-images mb-24">
+      <div class="figure-medium mx-auto mb-8">
+        <div class="img-medium">
+          <img
+            src="/images/rulai/rulai-workflow.jpg"
+            alt="Workflow of a single use case"
+            loading="lazy"
+            style="aspect-ratio: 96/71;"
+          />
+        </div>
+        <figcaption>
+          Starting with a single use case, I used it matching features to come
+          up with a conversation script, which inform the behavior of the
+          Virtual Assistant.
+        </figcaption>
+      </div>
+      <div class="figure-medium mx-auto mb-8">
+        <div class="img-medium">
+          <img
+            src="/images/rulai/rulai-all-use-cases.jpg"
+            alt="Putting multiple use cases together"
+            loading="lazy"
+            style="aspect-ratio: 432/253;"
+          />
+        </div>
+        <figcaption>
+          Applying the workflow of a single use case to more use cases.
+        </figcaption>
+      </div>
+    </div>
+    <section class="solution">
+      <div class="mb-24">
+        <p>
+          While moving on to implementing the rest of the use cases, <span
+            class="em"
+          >
+            I also found it important to go through details in the first
+            scenario, giving personalities to the Virtual Assistant, expanding
+            scripts for different user behaviors, and applying brand identity to
+            the user interface.</span
+          > I learned to pay attention to terminologies and tones I used when delivering
+          the presentation.
+        </p>
+      </div>
+    </section>
+    <div class="rulai-images mb-24">
+      <div class="figure-medium mx-auto mb-8">
+        <div class="img-medium">
+          <img
+            src="/images/rulai/rulai-kani-logo.jpg"
+            alt="Making the demo logo 3D"
+            loading="lazy"
+            style="aspect-ratio: 288/95;"
+          />
+        </div>
+        <figcaption>
+          Although it didn't end up in the final product demonstration, I had
+          some fun with the branding, making the the logo popped into 3D using a
+          cool tool called <a
+            href="https://spline.design/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Spline</a
+          >.
+        </figcaption>
+      </div>
+      <div class="figure-medium mx-auto mb-8">
+        <div class="img-medium">
+          <img
+            src="/images/rulai/rulai-web-preview.jpg"
+            alt="I developed a mock website to host the demo Virtual Assistant"
+            loading="lazy"
+            style="aspect-ratio: 108/65;"
+          />
+        </div>
+        <figcaption>
+          As the use cases became more polished, I developed a mock website to
+          host the demo Virtual Assistant. This provides a playground for
+          prospects to try the tool out themselves.
+        </figcaption>
+      </div>
+    </div>
+
+    <!-- Result  -->
     <section class="result">
-      <h4>BJC Flex</h4>
       <h3>The Result</h3>
+      <p class="mb-8">
+        While I can't provide numbers on engagement and conversion rate, here
+        are some of the results compared to the benchmark metrics:
+      </p>
       <ul
         class="text-gallery grid grid-cols-1 gap-x-20 gap-y-4 md:gap-y-12 mb-24 md:grid-cols-2"
       >
         <div class="text-gallery-item">
           <div class="result-item">
-            <div class="result-highlight">700,000+</div>
-            <p>
-              hours of extra shift picked up through BJC Flex, as of January
-              2024.
-            </p>
+            <div class="result-highlight">30+</div>
+            <p>newly integrated features to the demo system.</p>
           </div>
         </div>
         <div class="text-gallery-item">
           <div class="result-item">
-            <div class="result-highlight">~2000</div>
-            <p>average monthly active users from the caregiving teams.</p>
+            <div class="result-highlight">50%</div>
+            <p>more efficient product demonstration.</p>
           </div>
-        </div>
-        <div class="result-item">
-          <div class="result-highlight">Launched</div>
-          <p>
-            messaging tool into pilot phase. (I was proud of this the most!)
-          </p>
         </div>
       </ul>
-    </section>
-
-    <!-- Virtual Nursing -->
-    <section class="virtual-nursing">
-      <h4>Virtual Nursing</h4>
-      <h3>Researching Nurse Satisfactions</h3>
-      <div class="mb-16">
-        <p>
-          In parallel with BJC Flex, I participated in an initiative that allows
-          nurses to work virtually. While the organization has the intention to
-          adopt virtual nursing, there have been comparisons and debates on the
-          right technology solution to move on with.
-        </p>
-        <p>
-          To help make the decision, one key metric is the nurses’ satisfaction
-          and engagement compared across tech solutions, which the team and I
-          were responsible for researching.
-        </p>
-      </div>
-    </section>
-    <div class="virtual-nursing-images">
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-vrn-metrics.png"
-            alt="Virtual nursing key metrics"
-            style="border:2px solid #f4f4f4; aspect-ratio: 430/409;"
-            loading="lazy"
-          />
-        </div>
-        <figcaption>
-          As a year-long pilot test with different solutions rolled out in
-          dedicated nursing units, we worked with project managers to make plans
-          and determine the research questions that will answer the metrics.
-        </figcaption>
-      </div>
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-vrn-survey.jpg"
-            alt="Virtual nursing surveys"
-            loading="lazy"
-            style="aspect-ratio: 432/451;"
-          />
-        </div>
-        <figcaption>
-          Surveys questions were distrubuted across the pilot and control units
-          along side of contextual inquiries and interviews. Together,
-          qualitative and quantative results helped us measure the desirability
-          of the virtual nursing technology.
-        </figcaption>
-      </div>
-      <div class="figure-large mx-auto mb-8">
-        <div class="img-large">
-          <img
-            src="/images/bjc/bjc-vrn-insights.jpg"
-            alt="Virtual nursing insights"
-            style="border:2px solid #f4f4f4; aspect-ratio: 463/278;"
-            loading="lazy"
-          />
-        </div>
-      </div>
-    </div>
-    <section class="virtual-nursing">
-      <div class="mb-24">
-        <div class="mb-1">Our research findings were used to:</div>
-        <ul>
-          <li>
-            Providing thematic insights, backed up with research-siphoned quotes
-            and numbers, in monthly presentations to project stakeholders
-          </li>
-          <li>
-            Bringing discussions with project managers to review and adjust the
-            project roadmap
-          </li>
-          <li>
-            Exemplifying and advocating for human-centered design in the
-            organization
-          </li>
-        </ul>
-        <div class="tip">
-          <div>
-            <div class="tip-title">Handy Tool Recommendation:</div>
-            My team uses <a
-              href="https://dovetail.com/"
-              target="_blank"
-              rel="noopener noreferrer">Dovetail</a
-            > to help store recordings, organize raw research data, and make qualitative
-            analysis. I found it not only helpful for user research but also transcribing
-            and learning from videos in my daily life.
-          </div>
-        </div>
-        <div>
-          <p>
-            One major setback I encountered (and wasn’t able to resolve
-            gracefully) was that the reports to project stakeholders were not
-            effective at improving decision-making or taking recommendations -
-            and the reason was that it is too easy to simply read the report and
-            not engage with thoughts.
-          </p>
-          <p>
-            If I were to redo the presentations, I will be more active and
-            explicit about soliciting feedback at the end. Even if the feedback
-            is not directly about the report, it will still help us learn
-            stakeholders’ concerns and interests.
-          </p>
-        </div>
-      </div>
-      <div class="mb-24">
-        <h4>Virtual Nursing</h4>
-        <h3>The Result</h3>
-        <p>
-          While the pilot test was still in progress by the time my internship
-          ended, existing research had shown valuable evidence of nurses’
-          preference on one solution over the other, while also providing
-          insights into cases where introducing virtual nursing to certain units
-          might not be as valuable.
-        </p>
-      </div>
-    </section>
-
-    <!-- Day in life -->
-    <section class="day-in-life">
-      <h3>Day in the Life at BJC</h3>
-    </section>
-    <div class="day-in-life-images">
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-office.png"
-            alt="A peek inside my office building."
-            loading="lazy"
-            style="aspect-ratio: 27/20;"
-          />
-        </div>
-        <figcaption>A peek inside my office building.</figcaption>
-      </div>
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-meeting.png"
-            alt="First time in a rapid improvement event with nurse managers and I led a ideatation session!"
-            loading="lazy"
-            style="aspect-ratio: 864/457;"
-          />
-        </div>
-        <figcaption>
-          First time in a rapid improvement event with nurse managers, and I led
-          a ideatation session on reimagining float pool shift scheduling!
-        </figcaption>
-      </div>
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-vrn-cart.png"
-            alt="Shadowing bedside nurses working with virtual nurses over the carts."
-            loading="lazy"
-            style="aspect-ratio: 864/457;"
-          />
-        </div>
-        <figcaption>
-          Shadowing bedside nurses around in the Medical-Surgical Units to learn
-          how they work with virtual nurses over these carts.
-        </figcaption>
-      </div>
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-flex-donuts.png"
-            style="aspect-ratio: 864/317;"
-            alt="Enticing users of BJC Flex to share feedback."
-            loading="lazy"
-          />
-        </div>
-        <figcaption>
-          Enticing users of BJC Flex to share their feedback with us.
-        </figcaption>
-      </div>
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-cardinal-game.png"
-            alt="The interns were invited by the CEO to a Cardinals game!"
-            loading="lazy"
-            style="aspect-ratio: 864/623;"
-          />
-        </div>
-        <figcaption>
-          The interns were invited by the CEO to a Cardinals game!
-        </figcaption>
-      </div>
-    </div>
-
-    <!-- Reflection -->
-    <section class="reflection">
-      <h3>Kudos</h3>
-      <p>
-        As the only intern on the Digital Design team, I felt like being
-        supported by eleven older siblings. Every member has their own cool
-        specialty and are passionate about sharing it with others. My experience
-        would not be so accomplishing without learning from them. Kudos to
-        everyone!
-      </p>
-      <div class="figure-small mb-24">
-        <div class="img-small">
-          <img
-            src="/images/bjc/bjc-team.png"
-            alt="Thank you to all the digital design team members"
-            loading="lazy"
-            style="aspect-ratio: 576/71;"
-          />
-        </div>
-      </div>
     </section>
   </div>
 </ProjectLayout>
@@ -460,14 +301,18 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
   }
 
   a {
-    border-bottom: 2px dashed #1820ed;
+    border-bottom: 2px dashed #5a34c3;
   }
 
   li::marker {
-    color: #1820ed;
+    color: #5a34c3;
   }
 
-  @media (min-width: 768px) {
+  .tip {
+    margin-top: 2rem;
+  }
+
+  /* @media (min-width: 768px) {
     .grid-item-row-1 {
       grid-template-columns: 3fr 1fr;
     }
@@ -475,5 +320,5 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
     .grid-item-row-2 {
       grid-template-columns: 2fr 1fr;
     }
-  }
+  } */
 </style>
