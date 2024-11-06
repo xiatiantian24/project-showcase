@@ -1,13 +1,14 @@
 ---
 const { bg } = Astro.props;
+import Logo from "../components/Logo.astro";
 ---
 
 <nav class:list={["sticky top-0", bg || "bg-white"]}>
-  <div id="logo">logo</div>
+ <Logo />
   <div id="my-name" class="hidden md:flex">Ray Xia</div>
   <ul class="menu flex gap-4 md:gap-8 text-sm">
-    <li class=""><a href="/" class="py-2 hover:">Projects</a></li>
-    <li class=""><a href="/about/" class="py-2 hover:">About</a></li>
+    <li class=""><a href="/" class="p-2 hover:">Projects</a></li>
+    <li class=""><a href="/about/" class="p-2 hover:">About</a></li>
   </ul>
 </nav>
 
@@ -19,7 +20,7 @@ const { bg } = Astro.props;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0.8rem 1rem 1rem;
+    padding: 0.1rem 1rem 0.2rem;
   }
 
   .bg-white {
@@ -43,6 +44,4 @@ const { bg } = Astro.props;
     position: absolute;
     left: calc(50% - 25px);
   }
-
-
 </style>

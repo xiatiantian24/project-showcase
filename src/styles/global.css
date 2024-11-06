@@ -183,6 +183,10 @@ body {
   background-color: var(--color-bg-main);
 }
 
+.coverSquare-main {
+  fill: var(--color-bg-main);
+}
+
 /* Notes from Kevin Powell */
 /* html {
     color-scheme: light dark;
