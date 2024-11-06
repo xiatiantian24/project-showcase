@@ -18,13 +18,13 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
   ]}
 >
   <!-- Cover Image -->
-  <img
+  <!-- <img
     class="cover-img mx-auto"
     src="/images/bjc/bjc-cover-flex.jpg"
     alt="BJC Flex"
     slot="cover-img"
     width="1440"
-  />
+  /> -->
 
   <!-- Summary -->
   <div class="project-content px-6" slot="content">
@@ -43,16 +43,19 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
         </div>
         <div>
           <div class="mb-1">
-            I mainly focused on two products, both of which are the driving initiatives of improving nursing flexibility in the organization:
+            I mainly focused on two products, both of which are the driving
+            initiatives of improving nursing flexibility in the organization:
           </div>
           <ul>
             <li>
-              <a
-                href="https://flex.bjc.org"
-                target="_blank"
-                rel="noopener noreferrer">BJC Flex</a
-              > - helping design a fully custom-built web app for nurses to schedule
-              work shifts at BJC
+              <span class="hover-trigger" data-img="/images/bjc/bjc-admin.jpg"
+                ><a
+                  href="https://flex.bjc.org"
+                  target="_blank"
+                  rel="noopener noreferrer">BJC Flex</a
+                > - helping design a fully custom-built web app for nurses to schedule
+                work shifts at BJC
+              </span>
             </li>
             <li>
               Virtual Nursing - researching nurse satisfaction and engagement
@@ -245,9 +248,11 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
       <div class="mb-16">
         <p>
           In parallel with BJC Flex, I participated in an initiative that allows
-          nurses to do parts of their job virtually, such as admissions/discharges and patient monitoring. While the organization has the intention to
-          adopt virtual nursing, there have been comparisons and debates on the
-          right technology solution to move on with.
+          nurses to do parts of their job virtually, such as
+          admissions/discharges and patient monitoring. While the organization
+          has the intention to adopt virtual nursing, there have been
+          comparisons and debates on the right technology solution to move on
+          with.
         </p>
         <p>
           To help make the decision, one key metric is the nurses’ satisfaction
@@ -453,6 +458,63 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
   </div>
 </ProjectLayout>
 
+<script>
+  const hoverTriggers = document.querySelectorAll(".hover-trigger");
+  const target = document.querySelector(".image-gallery-grid"); // The container for your images
+  const visibleImage = target.querySelector('img'); 
+  const imageHeight = visibleImage ? visibleImage.offsetHeight : 0; // Use the image's actual height
+
+  function follow(e) {
+    target.style.left = `${e.pageX + 48}px`;
+    if (e.clientY < window.innerHeight / 2) {
+      // Mouse is in the top half, display the gallery below the mouse
+      target.style.top = `${e.pageY + 48}px`; // Add some space below the mouse
+    } else {
+      // Mouse is in the bottom half, display the gallery above the mouse
+      target.style.top = `${e.clientY - imageHeight}px`; // Add some space above the mouse
+    }
+  }
+
+  function showImage(imgSrc) {
+    const images = target.querySelectorAll("img");
+    images.forEach((img) => {
+      if (img.src.includes(imgSrc)) {
+        img.style.visibility = "visible";
+        img.style.opacity = "1";
+      } else {
+        img.style.visibility = "hidden";
+        img.style.opacity = "0";
+      }
+    });
+  }
+
+  function hideImages() {
+    const images = target.querySelectorAll("img");
+    images.forEach((img) => {
+      img.style.visibility = "hidden";
+      img.style.opacity = "0";
+    });
+  }
+
+  hoverTriggers.forEach((trigger) => {
+    const imgSrc = trigger.getAttribute("data-img");
+
+    trigger.addEventListener("mouseenter", () => {
+      target.style.display = "block";
+      target.style.visibility = "visible";
+      target.style.width = "100%";
+      showImage(imgSrc);
+      document.addEventListener("mousemove", follow);
+    });
+
+    trigger.addEventListener("mouseleave", () => {
+      target.style.visibility = "hidden";
+      hideImages();
+      document.removeEventListener("mousemove", follow);
+    });
+  });
+</script>
+
 <style>
   body,
   nav {
@@ -465,6 +527,31 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
 
   li::marker {
     color: #1820ed;
+  }
+
+  .image-gallery-grid img {
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      opacity 0.1s ease-out,
+      visibility 0.1s linear;
+  }
+
+  .image-gallery-grid {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    pointer-events: none;
+  }
+
+  .hover-trigger {
+    padding: 0.3rem 0.5rem;
+    background-color: #f7f7f7;
+    border-radius: 0.2rem;
+  }
+
+  .hover-trigger:hover {
+    background-color: #f1f1f1;
   }
 
   @media (min-width: 768px) {

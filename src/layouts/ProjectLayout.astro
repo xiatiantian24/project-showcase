@@ -32,10 +32,10 @@ const {
       <Nav />
       <main class="w-full">
         <div class="project-overview flex flex-col items-center gap-24 my-12 max-w-5xl mx-auto md:flex-row mt-24 mb-12 px-6">
-          <div class="w-full flex flex-col items-center md:items-start gap-6 md:gap-8">
-            <div class="w-full flex flex-col items-center md:items-start gap-2">
-              <h1 class="text-2xl text-center md:text-5xl text-left pb-1">{projectTitle}</h1>
-              <h2 class="text-base text-center md:text-lg text-left">{projectDescription}</h2>
+          <div class="w-full flex flex-col items-center gap-6 md:gap-8">
+            <div class="w-full flex flex-col items-center gap-2">
+              <h2 class="text-base text-center md:text-lg">{projectDescription}</h2>
+              <h1 class="text-2xl text-center md:text-5xl pb-1">{projectTitle}</h1>
             </div>
             <div class="tags flex flex-wrap text-xs pb-1">
               {
@@ -51,23 +51,23 @@ const {
         <slot name="cover-img" />
         <slot />
         <div
-          class="detail-box w-8/12 my-12 md:w-6/12 md:my-24 max-w-xl mx-auto flex flex-col items-start gap-8 py-8 px-4 text-sm"
+          class="detail-box w-8/12 my-28 md:w-6/12 md:my-36 max-w-xl mx-auto flex flex-col items-start gap-8 py-8 px-4 text-sm"
         >
           <div class="line hidden md:flex"></div>
           <div class="grid grid-cols-1 w-full md:grid-flow-col auto-cols-fr">
-            <div class="detail mb-4 md:mb-0 px-1">
+            <div class="detail mb-8 md:mb-0 px-1">
               <div class="detail-title">{detail1Title}</div>
               <div class="detail-content">
                 {detail1Content.map((content) => <div class="detail-item">{content}</div>)}
               </div>
             </div>
-            <div class="detail mb-4 md:mb-0 px-1">
+            <div class="detail mb-8 md:mb-0 px-1">
               <div class="detail-title">{detail2Title}</div>
               <div class="detail-content">
                 {detail2Content.map((content) => <div class="detail-item">{content}</div>)}
               </div>
             </div>
-            {detail3Title && <div class="detail mb-4 md:mb-0 px-1">
+            {detail3Title && <div class="detail mb-8 md:mb-0 px-1">
               <div class="detail-title">{detail3Title}</div>
               <div class="detail-content flex flex-col items-start gap-1">
                 {
@@ -93,12 +93,10 @@ const {
   <style>
     h1 {
       font-family: "LT Cushion";
-      text-transform: uppercase;
-      font-weight: 500;
+      font-weight: 300;
       letter-spacing: -0.0125em;
       line-height: 0.9;
       transform: scaleY(1.05);
-      /* font-size: 2.75rem; */
       margin: 0.5rem 0;
     }
 

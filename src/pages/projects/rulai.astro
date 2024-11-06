@@ -5,8 +5,8 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
 ---
 
 <ProjectLayout
-  projectTitle="Rulai, Inc."
-  projectDescription="Revamping an interactive product demonstration system."
+  projectTitle="Adding interactive features to a demo"
+  projectDescription="Rulai, Inc."
   tags={["UX", "Internship", "2022"]}
   detail1Title="Role"
   detail1Content={[
@@ -33,43 +33,47 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
 
   <!-- Summary -->
   <div class="project-content px-6" slot="content">
-    <section class="summary">
-      <h3>Summary</h3>
-      <div class="mb-24">
+    <section class="summary mb-36 md:mb-48">
+      <h3>sole designer at a low code platform</h3>
+      <div>
         <div>
           <p>
-            Through the summer of 2022, I joined
             <a href="https://rul.ai/" target="_blank" rel="noopener noreferrer">
               Rulai</a
-            >, a low-code AI Virtual Assistant platform, as the sole designer.
-            To tackle the interests from various industries and business sizes
-            in Rulai’s solution, I designed a new demo system that lets
-            prospects explore the tool in their own desired way. They can ask
-            about a specific use case, and interact with the Virtual Assistant
-            to see corresponding features targeting that use case.
+            > is a low-code AI Virtual Assistant platform for businesses.
+          </p>
+          <p>
+            Through the summer of 2022, I joined Rulai as the sole designer. To
+            tackle the inquiries from businesses in various industries and
+            sizes, I designed a new demo system that allows prospects to explore
+            the Virtual Assistant Studio in their own desired way. They can ask
+            about a specific use case, and interact with the tool to see
+            corresponding features targeting that use case.
           </p>
         </div>
       </div>
     </section>
 
     <!-- Problem -->
-    <section class="problem">
-      <h4>The Problem</h4>
-      <h3>Overwhelming Features</h3>
-      <div class="mb-8">
+    <section class="problem mb-16">
+      <h3>
+        it was difficult to understand audience interests without the ability to
+        talk to them
+      </h3>
+      <div>
         <p>
-          Exploring all the Virtual Assistant’s features, I came up with the
-          question of what the audience might be interested in learning the most
-          to solve their problem. <span class="em"
-            >With so many features, it can be difficult to draw the line between
-            being impressive and being overwhelming.</span
-          >
+          Working with so many conversational AI features, I had a problem with
+          knowing which audience might be most interested in using what
+          features. They may want the Virtual Assistant to do different things,
+          and I did not have the authority to meet Rulai’s current customers.
         </p>
       </div>
     </section>
-    <div class="rulai-images">
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
+    <div
+      class="rulai-images grid grid-cols-1 gap-y-8 gap-x-8 mb-16 md:grid-cols-2"
+    >
+      <div class="figure-medium mx-auto">
+        <div class="img-medium img-bg">
           <img
             src="/images/rulai/rulai-meeting.jpg"
             alt="Crash course to learn Rulai features and use cases"
@@ -78,13 +82,12 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           />
         </div>
         <figcaption>
-          While I had no previous exposure to Conversational AI, my manager and
-          teammate gave me a crash course to learn all the cool functionalities
-          and existing use cases of the virtual assistant.
+          The team gave me a crash course on all the cool functionalities of the
+          Virtual Assistant Studio.
         </figcaption>
       </div>
-      <div class="figure-medium mx-auto mb-24">
-        <div class="img-medium">
+      <div class="figure-medium mx-auto">
+        <div class="img-medium img-bg">
           <img
             src="/images/rulai/rulai-features.jpg"
             alt="Sorting features according to their functionality"
@@ -93,63 +96,69 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           />
         </div>
         <figcaption>
-          Sorting features according to their functionality.
+          I sorted the features according to their functionality.
         </figcaption>
       </div>
     </div>
-    <section class="problem">
-      <div class=" mb-24">
-        <p>
-          Working with the experienced Engineering team was crucial for me to
-          figure out how Virtual Assistants are used across industries. For
-          example, I got to study user transcripts to learn how Q&A is used
-          differently by a B2B manufacturer vs a B2C retailor. Law, from the
-          Sales team, also provided me with insights on the top features asked
-          by Rulai’s prospects.
-        </p>
-      </div>
-    </section>
-    <div class="rulai-images mb-24">
+    <div class="rulai-images mb-16">
       <div class="figure-medium mx-auto mb-8">
         <div class="img-medium">
           <img
             src="/images/rulai/rulai-industries.jpg"
-            alt="Narrowing down functionalities based on industry-specific insights"
+            alt="S list of industries that expressed interest in the Virtual Assistant product"
             loading="lazy"
             style="aspect-ratio: 54/29;"
           />
         </div>
         <figcaption>
-          Narrowing down functionalities based on industry-specific insights. It
-          was still a bit generalized, but it served a good starting place to
-          list out features to be prioritized.
+          Studying user analytics and transcripts, I compiled a list of
+          industries that expressed interest in the Virtual Assistant product.
         </figcaption>
       </div>
     </div>
+    <section class="findings mb-36 md:mb-48">
+      <div>
+        <p>
+          An interesting insight I found out was that, regardless of industry:
+        </p>
+        <ul class="mb-8">
+          <li>
+            <span class="em"> Larger companies</span> tend to prioritize the Virtual
+            Assistant’s ease of use with limited resources.
+          </li>
+          <li>
+            <span class="em">More modest-sized businesses</span> aim to be more hands-on
+            and demand less from the Rulai team.
+          </li>
+        </ul>
+        <p>
+          Therefore, larger companies often want more complex support that are
+          not cookie-cutter solutions.
+        </p>
+      </div>
+    </section>
 
     <!-- Solution -->
     <section class="solution">
-      <h4>The Solution</h4>
-      <h3>Customizing the Use Cases</h3>
-      <div class="mb-8">
+      <h3>cookie-cutters can work well when coming in many shapes</h3>
+      <div class="mb-16">
         <p>
-          I moved on with the idea of breaking the demonstration system into use
-          cases like chapters. Each use case <span class="em"
-            >targets one problem</span
-          > that can be solved by specific features, so that the audience can <span
-            class="em">explore the use cases independently</span
-          > without being overwhelmed.
+          With Rulai’s new emphasis on smaller businesses, I decided the new
+          demo to be cookie-cutter-based (i.e., solutions that can tackle common
+          tasks). However, different audience interest would still be a problem.
         </p>
         <p>
-          Before pitching my idea to the organization, I needed a convincing
-          prototype. I started with a fictitious retail business profile as a
-          audience persona, since it would allow me to integrate the most common
-          use cases according the audience interests.
+          After tapping into my product manager’s expertise, I determined to
+          break the demo system into use cases like chapters. Each use case <span
+            class="em">solves one problem</span
+          >with a set of specific features, and audience can customize their demo to  <span
+          class="em">explore use cases independently in any order.</span
+          >, depending on their priority.
         </p>
       </div>
     </section>
     <div class="rulai-images">
-      <div class="figure-medium mx-auto mb-24">
+      <div class="figure-medium mx-auto mb-16">
         <div class="img-medium">
           <img
             src="/images/rulai/rulai-persona.jpg"
@@ -165,38 +174,29 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
         </figcaption>
       </div>
     </div>
-    <section class="solution">
+    <section class="solution mb-16">
       <div>
-        <p>To start off with an engaging use case, I crafted a scenario:</p>
-        <div class="tip">
-          Remi wants to get a kitchen stove for her new house. She goes on the
-          website and asks the Virtual Assistant to provide her a list of stoves
-          that exactly match her needs. She then browses and selects the best
-          fit before she makes a purchase and schedules a delivery with the
-          Virtual Assistant.
-        </div>
         <p>
-          Together with Daniel, the front-end developer, we implemented the
-          Virtual Assistant with conversation flows highlighting the features
-          designed in the first scenario. We presented a mock demo to the rest
-          of the team and executives that turned out to be successful.
+          Our team implemented the first common use case, scheduling a delivery,
+          into the demo Virtual Assistant. We presented a mock demo to the rest
+          of the team and executives, who ended up giving us the green light!
         </p>
       </div>
     </section>
-    <div class="rulai-images mb-24">
+    <div class="rulai-images mb-36 md:mb-48">
       <div class="figure-medium mx-auto mb-8">
         <div class="img-medium">
           <img
             src="/images/rulai/rulai-workflow.jpg"
-            alt="Workflow of a single use case"
+            alt="Workflow for the scheduling a delivery use case"
             loading="lazy"
             style="aspect-ratio: 96/71;"
           />
         </div>
         <figcaption>
-          Starting with a single use case, I used it matching features to come
-          up with a conversation script, which inform the behavior of the
-          Virtual Assistant.
+          For the “scheduling a delivery” use case, I integrated some of the
+          most common features such as carousel display, user recognition, and
+          data access and retrieval.
         </figcaption>
       </div>
       <div class="figure-medium mx-auto mb-8">
@@ -209,26 +209,28 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           />
         </div>
         <figcaption>
-          Applying the workflow of a single use case to more use cases.
+          Applying other features to different uses cases, coming up with
+          conversation scripts, and implementing the Virtual Assistant.
         </figcaption>
       </div>
     </div>
-    <section class="solution">
-      <div class="mb-24">
+    <section class="solution mb-16">
+      <h3>little personality never killed nobody</h3>
+      <div>
         <p>
-          While moving on to implementing the rest of the use cases, <span
+          When testing the rest of the use cases, I found out that <span
             class="em"
+            >taking the time to bring up the content fidelity can make demos
+            much more convincing.</span
           >
-            I also found it important to go through details in the first
-            scenario, giving personalities to the Virtual Assistant, expanding
-            scripts for different user behaviors, and applying brand identity to
-            the user interface.</span
-          > I learned to pay attention to terminologies and tones I used when delivering
-          the presentation.
+          I went back to brush up details in the first use case, giving personalities
+          to the Virtual Assistant, expanding scripts for different user behaviors,
+          and applying brand identity to the user interface.I learned to pay attention
+          to terminologies and tones I use when delivering the presentation.
         </p>
       </div>
     </section>
-    <div class="rulai-images mb-24">
+    <div class="rulai-images mb-36 md:mb-48">
       <div class="figure-medium mx-auto mb-8">
         <div class="img-medium">
           <img
@@ -240,8 +242,8 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
         </div>
         <figcaption>
           Although it didn't end up in the final product demonstration, I had
-          some fun with the branding, making the the logo popped into 3D using a
-          cool tool called <a
+          some fun experimenting with branding the demo bot, making the the logo
+          popped into 3D using a cool tool called <a
             href="https://spline.design/"
             target="_blank"
             rel="noopener noreferrer"
@@ -262,18 +264,15 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
         <figcaption>
           As the use cases became more polished, I developed a mock website to
           host the demo Virtual Assistant. This provides a playground for
-          prospects to try the tool out themselves.
+          prospects to interact with the tool themselves.
         </figcaption>
       </div>
     </div>
 
     <!-- Result  -->
-    <section class="result">
+    <section class="result mb-36 md:mb-48">
       <h3>The Result</h3>
-      <p class="mb-8">
-        While I can't provide numbers on engagement and conversion rate, here
-        are some of the results compared to the benchmark metrics:
-      </p>
+      <p>Here are some of the results compared to the benchmark metrics:</p>
       <ul
         class="text-gallery grid grid-cols-1 gap-x-20 gap-y-4 md:gap-y-12 mb-24 md:grid-cols-2"
       >
@@ -287,6 +286,12 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           <div class="result-item">
             <div class="result-highlight">50%</div>
             <p>more efficient product demonstration.</p>
+          </div>
+        </div>
+        <div class="text-gallery-item">
+          <div class="result-item">
+            <div class="result-highlight">1st</div>
+            <p>demo with presenter documentation at Rulai.</p>
           </div>
         </div>
       </ul>
@@ -312,13 +317,14 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
     margin-top: 2rem;
   }
 
-  /* @media (min-width: 768px) {
-    .grid-item-row-1 {
-      grid-template-columns: 3fr 1fr;
+  @media (min-width: 768px) {
+    .grid .img-medium {
+      height: 100%;
     }
 
-    .grid-item-row-2 {
-      grid-template-columns: 2fr 1fr;
+    .grid .img-bg {
+      background-color: #f4f4f4;
+      align-content: center;
     }
-  } */
+  }
 </style>

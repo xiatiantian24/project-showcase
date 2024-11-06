@@ -1,0 +1,149 @@
+---
+import "../../styles/global.css";
+import "../../styles/project.css";
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+---
+<ProjectLayout
+  projectTitle="BJC Healthcare"
+  projectDescription="Empowering caregivers at the largest healthcare organization in Missouri."
+  tags={["UX", "Internship", "2023-2024"]}
+  detail1Title="Role"
+  detail1Content={["UX Design", "User Research"]}
+  detail2Title="Team"
+  detail2Content={[
+    "Benjamin Flotken (Product Designer)",
+    "Gregory Casey (Senior Product Designer)",
+    "Samantha Friess (UX Researcher)",
+    "Hilary Bainbridge (UX Researcher)",
+  ]}
+>
+  <!-- Cover Image -->
+  <img
+    class="cover-img mx-auto"
+    src="/images/bjc/bjc-cover-main.jpg"
+    alt="BJC Flex"
+    slot="cover-img"
+    width="1440"
+  />
+
+
+  <!-- Virtual Nursing -->
+  <section class="virtual-nursing">
+    <h4>Virtual Nursing</h4>
+    <h3>Researching Nurse Satisfactions</h3>
+    <div class="mb-16">
+      <p>
+        In parallel with BJC Flex, I participated in an initiative that allows
+        nurses to do parts of their job virtually, such as admissions/discharges and patient monitoring. While the organization has the intention to
+        adopt virtual nursing, there have been comparisons and debates on the
+        right technology solution to move on with.
+      </p>
+      <p>
+        To help make the decision, one key metric is the nurses’ satisfaction
+        and engagement compared across tech solutions, which the team and I
+        were responsible for researching.
+      </p>
+    </div>
+  </section>
+  <div class="virtual-nursing-images">
+    <div class="figure-medium mx-auto mb-8">
+      <div class="img-medium">
+        <img
+          src="/images/bjc/bjc-vrn-metrics.png"
+          alt="Virtual nursing key metrics"
+          style="border:2px solid #f4f4f4; aspect-ratio: 430/409;"
+          loading="lazy"
+        />
+      </div>
+      <figcaption>
+        As a year-long pilot test with different solutions rolled out in
+        dedicated nursing units, we worked with project managers to make plans
+        and determine the research questions that will answer the metrics.
+      </figcaption>
+    </div>
+    <div class="figure-medium mx-auto mb-8">
+      <div class="img-medium">
+        <img
+          src="/images/bjc/bjc-vrn-survey.jpg"
+          alt="Virtual nursing surveys"
+          loading="lazy"
+          style="aspect-ratio: 432/451;"
+        />
+      </div>
+      <figcaption>
+        Surveys questions were distrubuted across the pilot and control units
+        along side of contextual inquiries and interviews. Together,
+        qualitative and quantative results helped us measure the desirability
+        of the virtual nursing technology.
+      </figcaption>
+    </div>
+    <div class="figure-large mx-auto mb-8">
+      <div class="img-large">
+        <img
+          src="/images/bjc/bjc-vrn-insights.jpg"
+          alt="Virtual nursing insights"
+          style="border:2px solid #f4f4f4; aspect-ratio: 463/278;"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+  <section class="virtual-nursing">
+    <div class="mb-24">
+      <div class="mb-1">Our research findings were used to:</div>
+      <ul>
+        <li>
+          Providing thematic insights, backed up with research-siphoned quotes
+          and numbers, in monthly presentations to project stakeholders
+        </li>
+        <li>
+          Bringing discussions with project managers to review and adjust the
+          project roadmap
+        </li>
+        <li>
+          Exemplifying and advocating for human-centered design in the
+          organization
+        </li>
+      </ul>
+      <div class="tip">
+        <div>
+          <div class="tip-title">Handy tool recommendation:</div>
+          My team uses <a
+            href="https://dovetail.com/"
+            target="_blank"
+            rel="noopener noreferrer">Dovetail</a
+          > to help store recordings, organize raw research data, and make qualitative
+          analysis. I found it not only helpful for user research but also transcribing
+          and learning from videos in my daily life.
+        </div>
+      </div>
+      <div>
+        <p>
+          One major setback I encountered (and wasn’t able to resolve
+          gracefully) was that the reports to project stakeholders were not
+          effective at improving decision-making or taking recommendations -
+          and the reason was that it is too easy to simply read the report and
+          not engage with thoughts.
+        </p>
+        <p>
+          If I were to redo the presentations, I will be more active and
+          explicit about soliciting feedback at the end. Even if the feedback
+          is not directly about the report, it will still help us learn
+          stakeholders’ concerns and interests.
+        </p>
+      </div>
+    </div>
+    <div class="mb-24">
+      <h4>Virtual Nursing</h4>
+      <h3>The Result</h3>
+      <p>
+        While the pilot test was still in progress by the time my internship
+        ended, existing research had shown valuable evidence of nurses’
+        preference on one solution over the others, while also providing
+        insights into cases where introducing virtual nursing to certain units
+        might not be as valuable.
+      </p>
+    </div>
+  </section>
+
+</ProjectLayout>

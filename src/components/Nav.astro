@@ -3,12 +3,12 @@ const { bg } = Astro.props;
 ---
 
 <nav class:list={["sticky top-0", bg || "bg-white"]}>
-  <div>logo</div>
+  <div id="logo">logo</div>
+  <div id="my-name" class="hidden md:flex">Ray Xia</div>
   <ul class="menu flex gap-4 md:gap-8 text-sm">
     <li class=""><a href="/" class="py-2 hover:">Projects</a></li>
     <li class=""><a href="/about/" class="py-2 hover:">About</a></li>
   </ul>
-  <div>Mode</div>
 </nav>
 
 <style>
@@ -35,4 +35,14 @@ const { bg } = Astro.props;
     text-transform: uppercase;
     margin: 0;
   }
+
+  #my-name {
+    font-family: "LT Cushion";
+    text-transform: uppercase;
+    font-weight: 450;
+    position: absolute;
+    left: calc(50% - 25px);
+  }
+
+
 </style>
