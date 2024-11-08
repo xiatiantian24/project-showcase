@@ -30,6 +30,12 @@ a {
   color: var(--color-text-secondary);
   text-decoration: none;
   position: relative;
+  transition: 100ms ease;
+  pointer-events: auto;
+}
+
+a:hover {
+  color: var(--color-text-main);
 }
 
 figcaption {
@@ -54,9 +60,6 @@ li {
 
 .figure-small {
   max-width: 36rem;
-}
-
-.figure-medium {
 }
 
 .image-gallery-grid {

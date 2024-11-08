@@ -33,72 +33,104 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
       <div>
         <p>
           The volume of unpicked-up work shifts are high at BJC due to nursing
-          shortage. What makes it worse is that, currently, open shift
-          scheduling requires multiple actions, platforms, and back-and-forth
-          communication between nurses and nurse managers.
+          shortage. What makes it worse is that, through our observation, open
+          shift scheduling requires multiple actions, platforms, and
+          back-and-forth communication between nurses and nurse managers.
         </p>
         <p>
-          <a
+          As one of the designers of <a
             href="https://flex.bjc.org"
             target="_blank"
             rel="noopener noreferrer">BJC Flex</a
-          > aims to make open shift scheduling easier for nurses while giving them
-          the agency to pick up shifts they want, thereby incentivizing them to stay.
+          >, my goal is to <span class="em"
+            >make open shift scheduling easier for nurses while giving them the
+            agency to pick up shifts they want</span
+          >, thereby incentivizing them to stay.
         </p>
       </div>
     </section>
 
-    <!-- BJC Flex -->
-    <section class="bjc-flex">
-      <h4>BJC Flex</h4>
-      <h3>Streamlining Shift Scheduling</h3>
-      <div class="mb-24">
-        <p></p>
-      </div>
-      <h4>BJC Flex</h4>
-      <h3>A New Messaging Tool</h3>
-      <div class="mb-8">
+    <!-- Communication Tool -->
+    <section class="bjc-flex mb-16">
+      <h3>multiple attempts to find the right way of communication</h3>
+      <div>
         <p>
-          To allow nurse managers to notify nurses about open shifts, I designed
-          and pushed forward the launching of a messaging tool as part of BJC
-          Flex.
+          One of the biggest initiatives I took in this project was to find the
+          right way for nurse managers to communicate to their nurses about open
+          shifts.
         </p>
         <p>
-          I was involved in every step of the design cycle, from concepting
-          ideas and prototyping through user testing and gathering feedback
-          on-site.
+          Normally, nurse managers would call their floor nurses one by one to
+          see if they would like to pick them up when open shifts appear. If
+          not, they might call nurse managers from other floors to see if they
+          have any extra hands.
+        </p>
+        <p>
+          I took lead in designing and pushing forward the launch of a messaging
+          tool as part of BJC Flex. The tool focuses on three things:
+          <ul class="mb-8">
+            <li>
+              <span class="em"
+                >allowing nurse managers to notify nurses efficiently</span
+              > when and what shifts are available, or when there is a specific shift
+              needing immediate help.
+            </li>
+            <li>
+              <span class="em"
+                >allowing nurse managers to target recipients who are more
+                likely to respond yes</span
+              >, especially when they know the nurses' routine better or know
+              some nurses prefer working together.
+            </li>
+            <li>
+              <span class="em">avoiding alert fatigue</span>.
+            </li>
+          </ul>
         </p>
       </div>
     </section>
-    <!-- Flex Admin imgaes -->
-    <div class="image-gallery-grid mx-auto mb-8 grid grid-cols-1 gap-4">
+
+    <!-- Communication Tool Imgaes -->
+    <div
+      class="image-gallery-grid mx-auto mb-36 md:mb-48 grid grid-cols-1 gap-8"
+    >
       <div class="grid-item-row-1 grid grid-cols-1 gap-4">
         <div class="grid-item-col">
-          <div class="gallery-image">
+          <div class="gallery-image img-bg">
             <img
               src="/images/bjc/bjc-admin.jpg"
-              alt="Messaging tool for BJC Flex"
+              alt="Creating a new message - full view"
               loading="lazy"
               style="aspect-ratio: 996/725;"
             />
           </div>
+          <figcaption>Creating a new message - full view</figcaption>
         </div>
         <div class="grid-item-col flex flex-col md:grid grid-rows-2 gap-4">
           <div class="gallery-image md:row-start-1 md:row-span-3">
-            <img
-              src="/images/bjc/bjc-admin-attach.jpg"
-              alt="Messaging tool for BJC Flex"
-              style="height:100%; object-fit:cover; aspect-ratio: 166/255;"
-              loading="lazy"
-            />
+            <div class="grid-item-col">
+              <img
+                src="/images/bjc/bjc-admin-attach.jpg"
+                alt="Messaging tool for BJC Flex"
+                style="height:100%; object-fit:cover; aspect-ratio: 166/255;"
+                loading="lazy"
+              />
+              <figcaption>Attaching shift(s) to message - modal</figcaption>
+            </div>
           </div>
           <div class="gallery-image">
-            <img
-              src="/images/bjc/bjc-admin-attached.jpg"
-              alt="Messaging tool for BJC Flex"
-              loading="lazy"
-              style="aspect-ratio: 332/199;"
-            />
+            <div class="grid-item-col">
+              <img
+                src="/images/bjc/bjc-admin-attached.jpg"
+                alt="Messaging tool for BJC Flex"
+                loading="lazy"
+                style="aspect-ratio: 332/199;"
+              />
+              <figcaption>
+                Remove nurses with schedule conflict from the recipients -
+                detail view
+              </figcaption>
+            </div>
           </div>
         </div>
       </div>
@@ -111,10 +143,13 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
               alt="Messaging tool for BJC Flex"
               loading="lazy"
             />
+            <figcaption>
+              Customizing recipients by groups - detail view
+            </figcaption>
           </div>
         </div>
         <div class="grid-item-col">
-          <div class="gallery-image">
+          <div class="gallery-image img-bg">
             <img
               src="/images/bjc/bjc-admin-edit.jpg"
               alt="Messaging tool for BJC Flex"
@@ -122,34 +157,29 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
               style="aspect-ratio: 443/462;"
             />
           </div>
+          <figcaption>Editing recipient groups - modal</figcaption>
         </div>
       </div>
     </div>
-    <section class="bjc-flex">
-      <div class="mb-24">
-        <div class="mb-1">Some features I designed include:</div>
-        <ul>
-          <li>Attaching open shifts that are linked through Flex</li>
-          <li>
-            Option to exclude workers with overlapping shift schedules from the
-            recipients
-          </li>
-          <li>Editing recipients based on roles or customized groups</li>
-        </ul>
-      </div>
-      <h4>BJC Flex</h4>
-      <h3>Continuous Mobile Revamp</h3>
+
+    <!-- Mobile Revamp -->
+    <section class="bjc-flex mb-16">
+      <h3>reducing mistakenly scheduled shifts</h3>
       <div>
         <p>
-          Besides working on the exciting new features, I also had fun improving
-          existing features based on nurses’ requests throughout my time at BJC.
-          Some made it to the beta version, some didn’t but helped us better
-          learn the prioritization of desirability.
+          Besides working on new ideas, I also had fun improving existing
+          features based on nurses' requests throughout my time at BJC. Some
+          turned out to be appreciated, some didn't but helped us better learn
+          the prioritization of desirability.
+        </p>
+        <p>
+          For example, one of the successful improvement we made was to reduce
+          error in mistakenly signed up shifts.
         </p>
       </div>
     </section>
     <!-- Flex mobile images -->
-    <div class="flex-images mb-24">
+    <div class="flex-images mb-36 md:mb-48">
       <div class="figure-medium mx-auto mb-8">
         <div class="img-medium">
           <img
@@ -160,9 +190,9 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           />
         </div>
         <figcaption>
-          A big challenge was preventing errors of nurses signing up shifts that
-          overlap with ones they've already signed up for. I experiment with
-          designs that reduce affordability of overlapping shifts.
+          We found that errors in self-scheduling can happen when nurses don't
+          realize the shift overlaps with those they've already signed up for.
+          We experiment with reducing the affordability of overlapping shifts.
         </figcaption>
       </div>
       <div class="figure-medium mx-auto mb-8">
@@ -175,20 +205,19 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           />
         </div>
         <figcaption>
-          Another experiment with components to help nurses more easily identify
-          and sort day shifts from night shifts, after learning that a
-          significant chunk of shifts signed up by mistake was due to
-          overlooking the time of the day.
+          After learning that overlooking the time of the day was another major
+          factor of mistakenly signed up shifts, we experiment with visual cues
+          that help nurses more easily identify and sort day shifts from night
+          shifts.
         </figcaption>
       </div>
     </div>
 
-    <!-- Flex Result  -->
-    <section class="result">
-      <h4>BJC Flex</h4>
-      <h3>The Result</h3>
+    <!-- Result  -->
+    <section class="result mb-36 md:mb-48">
+      <h3>the result</h3>
       <ul
-        class="text-gallery grid grid-cols-1 gap-x-20 gap-y-4 md:gap-y-12 mb-24 md:grid-cols-2"
+        class="text-gallery grid grid-cols-1 gap-x-20 gap-y-4 md:gap-y-12 md:grid-cols-2"
       >
         <div class="text-gallery-item">
           <div class="result-item">
@@ -214,11 +243,11 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
       </ul>
     </section>
 
-    <!-- Day in life -->
-    <section class="day-in-life">
-      <h3>Day in the Life at BJC</h3>
+    <!-- Behind the Scenes -->
+    <section class="behind-the-scenes">
+      <h3>behind the scenes</h3>
     </section>
-    <div class="day-in-life-images">
+    <div class="behind-the-scenes-images mb-36 md:mb-48">
       <div class="figure-medium mx-auto mb-8">
         <div class="img-medium">
           <img
@@ -240,22 +269,8 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           />
         </div>
         <figcaption>
-          First time in a rapid improvement event with nurse managers, and I led
-          a ideatation session on reimagining float pool shift scheduling!
-        </figcaption>
-      </div>
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-vrn-cart.png"
-            alt="Shadowing bedside nurses working with virtual nurses over the carts."
-            loading="lazy"
-            style="aspect-ratio: 864/457;"
-          />
-        </div>
-        <figcaption>
-          Shadowing bedside nurses around in the Medical-Surgical Units to learn
-          how they work with virtual nurses over these carts.
+          Working with nurse managers during a rapid improvement event, and I
+          led a ideatation session on reimagining float pool shift scheduling!
         </figcaption>
       </div>
       <div class="figure-medium mx-auto mb-8">
@@ -271,41 +286,27 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           Enticing users of BJC Flex to share their feedback with us.
         </figcaption>
       </div>
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-cardinal-game.png"
-            alt="The interns were invited by the CEO to a Cardinals game!"
-            loading="lazy"
-            style="aspect-ratio: 864/623;"
-          />
-        </div>
-        <figcaption>
-          The interns were invited by the CEO to a Cardinals game!
-        </figcaption>
-      </div>
     </div>
 
-    <!-- Reflection -->
-    <section class="reflection">
-      <h3>Kudos</h3>
-      <p>
-        As the only intern on the Digital Design team, I felt like being
-        supported by eleven older siblings. Every member has their own cool
-        specialty and are passionate about sharing it with others. My experience
-        would not be so accomplishing without learning from them. Kudos to
-        everyone!
-      </p>
-      <div class="figure-small mb-24">
-        <div class="img-small">
-          <img
-            src="/images/bjc/bjc-team.png"
-            alt="Thank you to all the digital design team members"
-            loading="lazy"
-            style="aspect-ratio: 576/71;"
-          />
-        </div>
-      </div>
+    <section class="w-full flex flex-col items-center mb-36">
+      <p class="text-next-part">Continue to BJC HealthCare pt.2</p>
+      <a
+        href="/projects/bjc-virtual-nursing"
+        class="link-next-part flex flex-col items-center"
+        ><p>what nurses need to work virtually</p><div class="icon-next-part">
+          <svg
+            width="43"
+            height="82"
+            viewBox="0 0 43 82"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M24.7133 7.86888C25.2991 8.45467 26.2488 8.45467 26.8346 7.86888C27.4204 7.28309 27.4204 6.33335 26.8346 5.74756L24.7133 7.86888ZM21.6729 2.70711L20.6122 3.76777L20.6122 3.76777L21.6729 2.70711ZM20.2586 2.70711L21.3193 3.76777L21.3193 3.76777L20.2586 2.70711ZM2.70711 20.2586L3.76777 21.3193L3.76777 21.3193L2.70711 20.2586ZM2.70711 21.6729L3.76777 20.6122L3.76777 20.6122L2.70711 21.6729ZM40.2929 59.2586L41.3536 58.198L41.3536 58.198L40.2929 59.2586ZM40.2929 60.6729L39.2322 59.6122L39.2322 59.6122L40.2929 60.6729ZM19.4658 80C19.4658 80.8284 20.1373 81.5 20.9658 81.5L34.4658 81.5C35.2942 81.5 35.9658 80.8284 35.9658 80C35.9658 79.1716 35.2942 78.5 34.4658 78.5L22.4658 78.5L22.4658 66.5C22.4658 65.6716 21.7942 65 20.9658 65C20.1373 65 19.4658 65.6716 19.4658 66.5L19.4658 80ZM26.8346 5.74756L22.7335 1.64645L20.6122 3.76777L24.7133 7.86888L26.8346 5.74756ZM19.198 1.64645L1.64645 19.198L3.76777 21.3193L21.3193 3.76777L19.198 1.64645ZM1.64645 22.7335L39.2322 60.3193L41.3536 58.198L3.76777 20.6122L1.64645 22.7335ZM39.2322 59.6122L19.9051 78.9393L22.0264 81.0607L41.3536 61.7335L39.2322 59.6122ZM39.2322 60.3193C39.037 60.124 39.037 59.8075 39.2322 59.6122L41.3536 61.7335C42.3299 60.7572 42.3299 59.1743 41.3536 58.198L39.2322 60.3193ZM1.64645 19.198C0.670133 20.1743 0.670137 21.7572 1.64645 22.7335L3.76777 20.6122C3.96303 20.8075 3.96303 21.124 3.76777 21.3193L1.64645 19.198ZM22.7335 1.64645C21.7572 0.670135 20.1743 0.670136 19.198 1.64645L21.3193 3.76777C21.124 3.96303 20.8075 3.96303 20.6122 3.76777L22.7335 1.64645Z"
+              fill="currentColor"></path>
+          </svg>
+        </div></a
+      >
     </section>
   </div>
 </ProjectLayout>
@@ -324,13 +325,44 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
     color: #1820ed;
   }
 
+  .link-next-part {
+    font-family: "LT Cushion";
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    border-bottom: none;
+    transition: 300ms ease-out;
+  }
+
+  .link-next-part svg {
+    width: 28px;
+  }
+
+  .link-next-part:hover {
+    color: var(--color-text-main);
+  }
+
+  .link-next-part:hover {
+    transform: translateY(4px);
+  }
+
   @media (min-width: 768px) {
     .grid-item-row-1 {
-      grid-template-columns: 3fr 1fr;
+      grid-template-columns: 13fr 4fr;
     }
 
     .grid-item-row-2 {
       grid-template-columns: 2fr 1fr;
+    }
+
+    .grid .gallery-image {
+      height: 100%;
+    }
+
+    .grid .img-bg {
+      background-color: #f4f4f4;
+      align-content: center;
     }
   }
 </style>
