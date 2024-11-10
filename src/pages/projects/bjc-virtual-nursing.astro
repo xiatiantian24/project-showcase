@@ -9,7 +9,7 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
   projectDescription="BJC HealthCare"
   tags={["UX", "Internship", "2023-2024"]}
   detail1Title="Role"
-  detail1Content={["UX Design", "User Research"]}
+  detail1Content={["UX Research"]}
   detail2Title="Team"
   detail2Content={[
     "Benjamin Flotken (Product Designer)",
@@ -26,211 +26,305 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
     width="1440"
   />
 
-  <!-- Summary -->
   <div class="project-content px-6" slot="content">
-    <!-- Virtual Nursing -->
-    <section class="virtual-nursing">
-      <h4>Virtual Nursing</h4>
-      <h3>Researching Nurse Satisfactions</h3>
-      <div class="mb-16">
+    <!-- Summary -->
+    <section class="virtual-nursing mb-36 md:mb-48">
+      <h3>evaluating technology solutions through work satisfaction</h3>
+      <div>
         <p>
-          In parallel with BJC Flex, I participated in an initiative that allows
-          nurses to do parts of their job virtually, such as admissions/discharges and patient monitoring. While the organization has the intention to
-          adopt virtual nursing, there have been comparisons and debates on the
-          right technology solution to move on with.
+          As one of BJC's top new initiatives, <span class="em"
+            >virtual nursing aims to allow registered nurses to work remotely</span
+          >. While the organization intends to adopt virtual nursing, there have
+          been comparisons and debates about the right technology solution to
+          move forward with.
         </p>
         <p>
-          To help make the decision, one key metric is the nurses’ satisfaction
-          and engagement compared across tech solutions, which the team and I
-          were responsible for researching.
+          To help the organization make the decision, my team has been tasked
+          with measuring one of the key metrics — nurses' work satisfaction and
+          preference — compared across multiple tech solutions during a pilot
+          test.
         </p>
       </div>
     </section>
+
+    <!-- Research Methodology -->
+    <section class="virtual-nursing mb-16">
+      <h3>using grounded theory to develop our questions</h3>
+      <div>
+        <p>
+          Reviewing goal metrics and existing research, we derived some high
+          level questions we're curious to learn:
+          <ul>
+            <li>
+              How does virtual nursing <span class="em"
+                >impact unit performance</span
+              >, if at all?
+            </li>
+            <li>
+              <span class="em">What issues</span> does the technology solve or fail
+              to solve for nurses?
+            </li>
+            <li>
+              How satisfied are both virtual and bedside nurses with their <span
+                class="em">caregiving experience</span
+              > compared to the baseline?
+            </li>
+          </ul>
+        </p>
+      </div>
+    </section>
+
+    <!-- Research Methodology Image -->
     <div class="virtual-nursing-images">
-      <div class="figure-medium mx-auto mb-8">
+      <div class="figure-medium mx-auto mb-36 md:mb-48">
         <div class="img-medium">
           <img
             src="/images/bjc/bjc-vrn-metrics.png"
-            alt="Virtual nursing key metrics"
-            style="border:2px solid #f4f4f4; aspect-ratio: 430/409;"
+            alt="Virtual nursing key metrics and questions"
+            style="aspect-ratio: 430/409;"
             loading="lazy"
           />
         </div>
         <figcaption>
-          As a year-long pilot test with different solutions rolled out in
-          dedicated nursing units, we worked with project managers to make plans
-          and determine the research questions that will answer the metrics.
+          A more detail diagram of how we derived our guiding questions.
+        </figcaption>
+      </div>
+    </div>
+
+    <!-- Research Process -->
+    <section class="virtual-nursing mb-16">
+      <h3>we asked 60 nurses + 3 managers how their jobs are going</h3>
+      <div>
+        <p>
+          To keep our research in synch with the pilot, during which each
+          technology combination rolls out at a different phase, we visited the
+          testing units during each phase.
+        </p>
+        <p>
+          Knowing that nurses are always hands-on and busy in their unit, here
+          are the research approaches we chose, along with how we believe they
+          will help answer our questions:
+          <ul>
+            <li>
+              <span class="em">Contextual inquiries.</span> We follow nurses as they
+              work in the unit and observe how they interact with the technology.
+            </li>
+            <li>
+              <span class="em">Interviews.</span> We gain deeper insights into unit
+              performance by talking to the nurse manager of each testing unit.
+            </li>
+            <li>
+              <span class="em">Short surveys.</span> Measuring changes in work satisfaction
+              across pilot phases.
+            </li>
+          </ul>
+        </p>
+      </div>
+    </section>
+
+    <!-- Research Process Images -->
+    <div class="virtual-nursing-images mb-16">
+      <div class="figure-medium mx-auto mb-8">
+        <div class="img-medium">
+          <img
+            src="/images/bjc/bjc-vrn-cart.png"
+            alt="Observing bedside nurses working with virtual nurses over the carts."
+            loading="lazy"
+            style="aspect-ratio: 864/457;"
+          />
+        </div>
+        <figcaption>
+          During the first pilot phase, I followed bedside nurses and these
+          carts around in the Medical-Surgical Units to learn how bedside nurses
+          collaborate with the virtual nurses.
         </figcaption>
       </div>
       <div class="figure-medium mx-auto mb-8">
         <div class="img-medium">
           <img
             src="/images/bjc/bjc-vrn-survey.jpg"
-            alt="Virtual nursing surveys"
+            alt="Virtual nursing example survey questions"
             loading="lazy"
             style="aspect-ratio: 432/451;"
           />
         </div>
-        <figcaption>
-          Surveys questions were distrubuted across the pilot and control units
-          along side of contextual inquiries and interviews. Together,
-          qualitative and quantative results helped us measure the desirability
-          of the virtual nursing technology.
-        </figcaption>
+        <figcaption>Survey questions asked during pilot phase 3.</figcaption>
       </div>
+    </div>
+    <section class="mb-36 md:mb-48">
+      <div>
+        <p>
+          A valuable setback we later discovered was that <span class="em"
+            >our survey results conflicted with qualitative insights</span
+          > and caused confusion during presentations. This was because our measure
+          of satisfaction didn't successfully filter out the environmental and personal
+          factors that brought noises to the result, and we had a small sample group. In other words, if a unit
+          was significantly busier during the time nurses filled out the survey,
+          they tended to respond with a higher workload and lower satisfaction score,
+          which led to recency bias and primacy bias.
+        </p>
+        <p>
+          As a workaround, we focused on reflecting nurse satisfaction in our
+          qualitative insights, and for quantitative insights, we asked nurse
+          managers to obtain nurse recruitment and retention rate for their
+          units, which are less subject to noise factors.
+        </p>
+      </div>
+      <div class="tip mt-24">
+        <div class="tip-header flex flex-row">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="size-5 icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 6.75a5.25 5.25 0 0 1 6.775-5.025.75.75 0 0 1 .313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 0 1 1.248.313 5.25 5.25 0 0 1-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 1 1 2.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0 1 12 6.75ZM4.117 19.125a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z"
+              clip-rule="evenodd"></path>
+          </svg>
+
+          <div class="tip-title">Handy Tool</div>
+        </div>
+        <div class="tip-body mb-6">
+          My team leverages <a
+            href="https://dovetail.com/"
+            target="_blank"
+            rel="noopener noreferrer">Dovetail</a
+          > to help store recordings, organize raw research data, and make qualitative
+          analysis. I found it not only helpful for user research but also transcribing
+          videos for daily learning.
+        </div>
+        <div class="figure-small mx-auto w-full">
+          <div class="img-small">
+            <img
+              src="/images/bjc/bjc-vrn-dovetail.jpg"
+              alt="Virtual nursing example executive report"
+              style="border:2px solid #f4f4f4; aspect-ratio: 2037/1287;"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Findings -->
+    <section class="virtual-nursing mb-16">
+      <h3>some interesting findings that stood out to us</h3>
+      <div>
+        <p>
+          <span class="em"
+            >Nurses appreciate the introduction of virtual nursing</span
+          > regardless of which technology they use.
+        </p>
+        <p class="mb-8">
+          The volume of the speaker <span class="em"
+            >causes privacy concerns</span
+          > because patients with hearing impairment need to turn up the volume to
+          hear. Patients from other rooms sometimes can overhear their conversations.
+        </p>
+        <div class="mb-1">The cart technology:</div>
+        <ul class="mb-8">
+          <li>
+            Allows <span class="em">higher-quality conversations</span> during patient
+            admissions because of more stable connections.
+          </li>
+          <li>
+            <span class="em">Detracts from continued usage</span> for its clunkiness
+            and manual nature to move.
+          </li>
+        </ul>
+        <div class="mb-1">The in-room camera technology:</div>
+        <ul>
+          <li>
+            Enables <span class="em">more independent virtual workflows</span>,
+            such as rounding and secondary skin assessments, because of the
+            camera's capability to pan, tilt, and zoom.
+          </li>
+          <li>
+            <span class="em">More accessible</span> for patients to see and interact
+            with virtual nurses.
+          </li>
+          <li>
+            Subjects to <span class="em">network issues</span> more frequently.
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div class="virtual-nursing-images mb-36 md:mb-48">
       <div class="figure-large mx-auto mb-8">
         <div class="img-large">
           <img
             src="/images/bjc/bjc-vrn-insights.jpg"
-            alt="Virtual nursing insights"
-            style="border:2px solid #f4f4f4; aspect-ratio: 463/278;"
+            alt="Virtual nursing example executive report"
+            style="border:2px solid #f4f4f4; aspect-ratio: 2304/1211;"
             loading="lazy"
           />
         </div>
+        <figcaption>Insight report from pilot phase 3.</figcaption>
       </div>
     </div>
-    <section class="virtual-nursing">
-      <div class="mb-24">
-        <div class="mb-1">Our research findings were used to:</div>
-        <ul>
-          <li>
-            Providing thematic insights, backed up with research-siphoned quotes
-            and numbers, in monthly presentations to project stakeholders
-          </li>
-          <li>
-            Bringing discussions with project managers to review and adjust the
-            project roadmap
-          </li>
-          <li>
-            Exemplifying and advocating for human-centered design in the
-            organization
-          </li>
-        </ul>
-        <div class="tip">
-          <div>
-            <div class="tip-title">Handy tool recommendation:</div>
-            My team uses <a
-              href="https://dovetail.com/"
-              target="_blank"
-              rel="noopener noreferrer">Dovetail</a
-            > to help store recordings, organize raw research data, and make qualitative
-            analysis. I found it not only helpful for user research but also transcribing
-            and learning from videos in my daily life.
+
+    <!-- Result -->
+    <section class="result mb-36 md:mb-48">
+      <h3>the result</h3>
+      <ul
+        class="text-gallery grid grid-cols-1 gap-x-20 gap-y-4 md:gap-y-12 md:grid-cols-2 mb-12"
+      >
+        <div class="text-gallery-item">
+          <div class="result-item">
+            <div class="result-highlight">Monthly</div>
+            <p>
+              executive report to inform project stakeholders and provide
+              recommendations.
+            </p>
           </div>
         </div>
-        <div>
+        <div class="text-gallery-item">
+          <div class="result-item">
+            <div class="result-highlight">Validated*</div>
+            <p>
+              improvements in nurse recruitment and retention. <div
+                class="note"
+              >
+                *As described by nurse managers from the pilot units.
+              </div>
+            </p>
+          </div>
+        </div>
+        <div class="result-item">
+          <div class="result-highlight">Exemplified</div>
           <p>
-            One major setback I encountered (and wasn’t able to resolve
-            gracefully) was that the reports to project stakeholders were not
-            effective at improving decision-making or taking recommendations -
-            and the reason was that it is too easy to simply read the report and
-            not engage with thoughts.
-          </p>
-          <p>
-            If I were to redo the presentations, I will be more active and
-            explicit about soliciting feedback at the end. Even if the feedback
-            is not directly about the report, it will still help us learn
-            stakeholders’ concerns and interests.
+            by the organization as a project that advocates for a
+            human-centered-design.
           </p>
         </div>
-      </div>
-      <div class="mb-24">
-        <h4>Virtual Nursing</h4>
-        <h3>The Result</h3>
-        <p>
-          While the pilot test was still in progress by the time my internship
-          ended, existing research had shown valuable evidence of nurses’
-          preference on one solution over the others, while also providing
-          insights into cases where introducing virtual nursing to certain units
-          might not be as valuable.
-        </p>
-      </div>
+      </ul>
+      <p>
+        In addition, I was able to help the team build a tight relationship with
+        stakeholders that had never been achieved before. I was extremely proud
+        when hearing the following feedback from my project manager:
+      </p>
+      <p class="tip quote">
+        “I know I was reluctant to have an intern on the program, but the fresh
+        pair of eyes helped us start with a clean slate and get us to here. ...
+        I've been impressed with Ray's skills - you do not seem like your
+        typical intern!”
+      </p>
     </section>
 
-    <!-- Day in life -->
-    <section class="day-in-life">
-      <h3>Day in the Life at BJC</h3>
-    </section>
-    <div class="day-in-life-images">
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-office.png"
-            alt="A peek inside my office building."
-            loading="lazy"
-            style="aspect-ratio: 27/20;"
-          />
-        </div>
-        <figcaption>A peek inside my office building.</figcaption>
-      </div>
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-meeting.png"
-            alt="First time in a rapid improvement event with nurse managers and I led a ideatation session!"
-            loading="lazy"
-            style="aspect-ratio: 864/457;"
-          />
-        </div>
-        <figcaption>
-          First time in a rapid improvement event with nurse managers, and I led
-          a ideatation session on reimagining float pool shift scheduling!
-        </figcaption>
-      </div>
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-vrn-cart.png"
-            alt="Shadowing bedside nurses working with virtual nurses over the carts."
-            loading="lazy"
-            style="aspect-ratio: 864/457;"
-          />
-        </div>
-        <figcaption>
-          Shadowing bedside nurses around in the Medical-Surgical Units to learn
-          how they work with virtual nurses over these carts.
-        </figcaption>
-      </div>
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-flex-donuts.png"
-            style="aspect-ratio: 864/317;"
-            alt="Enticing users of BJC Flex to share feedback."
-            loading="lazy"
-          />
-        </div>
-        <figcaption>
-          Enticing users of BJC Flex to share their feedback with us.
-        </figcaption>
-      </div>
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-cardinal-game.png"
-            alt="The interns were invited by the CEO to a Cardinals game!"
-            loading="lazy"
-            style="aspect-ratio: 864/623;"
-          />
-        </div>
-        <figcaption>
-          The interns were invited by the CEO to a Cardinals game!
-        </figcaption>
-      </div>
-    </div>
-
-    <!-- Reflection -->
-    <section class="reflection">
+    <!-- Kudos -->
+    <section class="kudos mb-36 md:mb-48">
       <h3>Kudos</h3>
       <p>
         As the only intern on the Digital Design team, I felt like being
-        supported by eleven older siblings. Every member has their own cool
-        specialty and are passionate about sharing it with others. My experience
-        would not be so accomplishing without learning from them. Kudos to
-        everyone!
+        supported by eleven bigger brothers and sisters. Every member has their
+        own cool specialty and are passionate about sharing it with others. My
+        experience would not be so accomplishing without learning from them.
+        Kudos to everyone!
       </p>
-      <div class="figure-small mb-24">
-        <div class="img-small">
+      <div class="figure-medium mb-24">
+        <div class="img-medium">
           <img
             src="/images/bjc/bjc-team.png"
             alt="Thank you to all the digital design team members"
@@ -239,6 +333,35 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           />
         </div>
       </div>
+    </section>
+
+    <!-- Next -->
+    <section class="w-full flex flex-col items-center mb-36">
+      <p class="text-next-part">Back to BJC HealthCare pt.1</p>
+      <a
+        href="/projects/bjc-flexible-scheduling"
+        class="link-next-part flex flex-col items-center"
+        id="next"
+        ><p>streamliming shift scheduling for nurses</p>
+        <div class="icon-next-part">
+          <svg
+            class="arrow-icon"
+            width="43"
+            height="82"
+            viewBox="0 0 43 82"
+            fill="none"
+            xmlns="
+            http:
+            www.w3.org
+            2000
+            svg"
+          >
+            <path
+              d="M24.7133 7.86888C25.2991 8.45467 26.2488 8.45467 26.8346 7.86888C27.4204 7.28309 27.4204 6.33335 26.8346 5.74756L24.7133 7.86888ZM21.6729 2.70711L20.6122 3.76777L20.6122 3.76777L21.6729 2.70711ZM20.2586 2.70711L21.3193 3.76777L21.3193 3.76777L20.2586 2.70711ZM2.70711 20.2586L3.76777 21.3193L3.76777 21.3193L2.70711 20.2586ZM2.70711 21.6729L3.76777 20.6122L3.76777 20.6122L2.70711 21.6729ZM40.2929 59.2586L41.3536 58.198L41.3536 58.198L40.2929 59.2586ZM40.2929 60.6729L39.2322 59.6122L39.2322 59.6122L40.2929 60.6729ZM19.4658 80C19.4658 80.8284 20.1373 81.5 20.9658 81.5L34.4658 81.5C35.2942 81.5 35.9658 80.8284 35.9658 80C35.9658 79.1716 35.2942 78.5 34.4658 78.5L22.4658 78.5L22.4658 66.5C22.4658 65.6716 21.7942 65 20.9658 65C20.1373 65 19.4658 65.6716 19.4658 66.5L19.4658 80ZM26.8346 5.74756L22.7335 1.64645L20.6122 3.76777L24.7133 7.86888L26.8346 5.74756ZM19.198 1.64645L1.64645 19.198L3.76777 21.3193L21.3193 3.76777L19.198 1.64645ZM1.64645 22.7335L39.2322 60.3193L41.3536 58.198L3.76777 20.6122L1.64645 22.7335ZM39.2322 59.6122L19.9051 78.9393L22.0264 81.0607L41.3536 61.7335L39.2322 59.6122ZM39.2322 60.3193C39.037 60.124 39.037 59.8075 39.2322 59.6122L41.3536 61.7335C42.3299 60.7572 42.3299 59.1743 41.3536 58.198L39.2322 60.3193ZM1.64645 19.198C0.670133 20.1743 0.670137 21.7572 1.64645 22.7335L3.76777 20.6122C3.96303 20.8075 3.96303 21.124 3.76777 21.3193L1.64645 19.198ZM22.7335 1.64645C21.7572 0.670135 20.1743 0.670136 19.198 1.64645L21.3193 3.76777C21.124 3.96303 20.8075 3.96303 20.6122 3.76777L22.7335 1.64645Z"
+              fill="currentColor"></path>
+          </svg>
+        </div>
+      </a>
     </section>
   </div>
 </ProjectLayout>
@@ -255,6 +378,10 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
 
   li::marker {
     color: #1820ed;
+  }
+
+  .link-next-part {
+    border-bottom: none;
   }
 
   @media (min-width: 768px) {

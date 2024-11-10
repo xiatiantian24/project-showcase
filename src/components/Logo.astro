@@ -16,17 +16,16 @@ const { coverSquare } = Astro.props;
           fill="none"
           rx="1"
           ry="1"
-          transform="rotate(45 100 100)"></rect>
+          transform="rotate(45, 0, 0)"></rect>
 
         <rect
           id="cover-square"
-          class:list={[coverSquare || "coverSquare-white"]}
+          class:list={[coverSquare || "coverSquare-main"]}
           width="45"
           height="45"
           rx="10"
           ry="10"
-          transform="rotate(45 100 100) translate(53, 137.5)"
-          visibility="visible"></rect>
+          transform="rotate(45, 0, 0) translate(54,125)"></rect>
 
         <line
           id="line1"
@@ -34,7 +33,7 @@ const { coverSquare } = Astro.props;
           y1="50"
           x2="100"
           y2="150"
-          transform="rotate(45 100 100)"
+          transform="rotate(0, 0, 0) scale(1, 1.4)"
           stroke="#454545"
           stroke-width="5"
           stroke-linecap="round"></line>
@@ -45,7 +44,7 @@ const { coverSquare } = Astro.props;
           y1="100"
           x2="150"
           y2="100"
-          transform="rotate(45 100 100)"
+          transform="rotate(0, 0, 0) scale(1.4, 1)"
           stroke="#454545"
           stroke-width="5"
           stroke-linecap="round"></line>
@@ -65,9 +64,10 @@ const { coverSquare } = Astro.props;
       logo.addEventListener("mouseenter", () => {
         coverSquare.setAttribute(
           "transform",
-          "rotate(45 100 100) translate(35, 35)"
+          "rotate(45, 0, 0) translate(25, 25)"
         );
-        coverSquare.setAttribute("visibility", "visible");
+        line1.setAttribute("transform", "rotate(45, 0, 0) scale(1, 1)");
+        line2.setAttribute("transform", "rotate(45, 0, 0) scale(1, 1)");
       });
 
       logo.addEventListener("mousemove", (event) => {
@@ -77,7 +77,7 @@ const { coverSquare } = Astro.props;
         const mouseY = mouseEvent.clientY - rect.top;
 
         const adjustedMouseX = mouseX - 20;
-        const adjustedMouseY = mouseY - 10;
+        const adjustedMouseY = mouseY;
 
         const rotatedX =
           adjustedMouseX * Math.cos(Math.PI / 4) +
@@ -95,9 +95,11 @@ const { coverSquare } = Astro.props;
       logo.addEventListener("mouseleave", () => {
         coverSquare.setAttribute("width", "45");
         coverSquare.setAttribute("height", "45");
-        coverSquare.setAttribute("transform", "rotate(45 100 100)");
-        coverSquare.setAttribute("x", "53");
-        coverSquare.setAttribute("y", "137.5");
+        coverSquare.setAttribute("transform", "rotate(45, 0, 0) translate(0,0)");
+        coverSquare.setAttribute("x", "54");
+        coverSquare.setAttribute("y", "125");
+        line1.setAttribute("transform", "rotate(0, 0, 0) scale(1, 1.4)");
+        line2.setAttribute("transform", "rotate(0, 0, 0) scale(1.4, 1)");
       });
     }
   }
@@ -110,11 +112,21 @@ const { coverSquare } = Astro.props;
     height: 48px;
   }
 
-  #cover-square {
-    transition: transform 500ms ease;
+  svg * {
+    transform-origin: center;
+  }
+
+  #cover-square,
+  #line1,
+  #line2 {
+    transition: transform 400ms ease;
   }
 
   .coverSquare-white {
     fill: #fff;
+  }
+
+  .coverSquare-main {
+    fill: var(--color-bg-main);
   }
 </style>

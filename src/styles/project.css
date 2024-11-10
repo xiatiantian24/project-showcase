@@ -58,10 +58,6 @@ li {
   font-weight: 650;
 }
 
-.figure-small {
-  max-width: 36rem;
-}
-
 .image-gallery-grid {
   max-width: 84rem;
 }
@@ -69,21 +65,58 @@ li {
 .result-highlight {
   font-family: "LT Cushion";
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .tip {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
   padding: 2rem 2.8rem;
   font-size: 0.9rem;
-  color: rgba(99, 99, 99, 1);
-  background-color: rgb(248, 248, 248);
+  color: var(--color-text-secondary);
+  background-color: rgb(244, 242, 238);
   border-radius: 8px;
 }
 
 .tip-title {
   font-size: 1rem;
   font-weight: 500;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.tip .icon {
+  margin-right: 0.25rem;
+}
+
+.tip-body {
+  line-height: 1.4;
+}
+
+.note {
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+}
+
+.quote {
+  font-style: italic;
+}
+
+.link-next-part {
+  font-family: "LT Cushion";
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  border-bottom: none;
+  transition: 300ms ease-out;
+}
+
+.link-next-part svg {
+  width: 28px;
+}
+
+.link-next-part:hover {
+  color: var(--color-text-main);
+}
+
+.link-next-part:hover {
+  transform: translateY(4px);
 }
