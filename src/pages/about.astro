@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import AboutLayout from "../layouts/AboutLayout.astro";
+import Resume from "../components/Resume.astro";
 
 const pageTitle = "About";
 
@@ -18,7 +19,7 @@ const finished = false;
 const goal = 3;
 ---
 
-<AboutLayout pageTitle={pageTitle}>
+<AboutLayout>
     <main class="container grow w-full max-w-4xl md:mx-auto">
         <p>Here are a few facts about me:</p>
         <ul>
@@ -53,5 +54,6 @@ const goal = 3;
                 <p>My goal is not 3 days.</p>
             )
         }
+        <Resume />
     </main>
 </AboutLayout>

@@ -30,7 +30,7 @@ const socialLinks = [
         <div class="flex gap-4 md:gap-8 text-sm">
           {socialLinks.map((link) => (
             <a
-              class="inline-flex items-center justify-center text-sm hover:"
+              class="inline-flex items-center justify-center text-sm p-2"
               href={link.href}
               target="_blank"
               rel="noopener noreferer"
@@ -41,8 +41,8 @@ const socialLinks = [
         </div>
       )
     }
-    <div class="text-sm">
-      &copy; {new Date().getFullYear()}&nbsp; .Some Text Here.
+    <div class="copy-right">
+      &copy; {new Date().getFullYear()}.&nbsp; Ray Xia.
     </div>
   </div>
 </footer>
@@ -50,9 +50,17 @@ const socialLinks = [
 <style>
   footer {
     font-family: "TT Fors";
-    padding: 0.8rem 1rem 1rem;
+    padding: 7.8rem 2rem 1rem;
   }
+
   a {
     text-transform: uppercase;
+  }
+
+  .copy-right {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transform: scaleY(0.95);
   }
 </style>

@@ -1,5 +1,5 @@
 section {
-  max-width: 48rem;
+  max-width: 42rem;
   margin: auto;
   margin-bottom: 1rem;
   margin-top: 1rem;
@@ -43,6 +43,7 @@ figcaption {
   margin-top: 0.3rem;
   font-size: 0.9rem;
   line-height: 1.4;
+  /* max-width: 42rem; */
 }
 
 ul {

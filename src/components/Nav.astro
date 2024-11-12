@@ -1,15 +1,27 @@
 ---
-const { bg } = Astro.props;
+const { bg, showButtons } = Astro.props;
 import Logo from "../components/Logo.astro";
 ---
 
 <nav class:list={["sticky top-0", bg || "bg-white"]}>
- <Logo />
+  <Logo />
   <div id="my-name" class="hidden md:flex">Ray Xia</div>
-  <ul class="menu flex gap-4 md:gap-8 text-sm">
-    <li class=""><a href="/#projects" class="p-2 hover:">Projects</a></li>
-    <li class=""><a href="/about/" class="p-2 hover:">About</a></li>
-  </ul>
+  {
+    showButtons && (
+      <ul class="menu flex gap-4 md:gap-8 text-sm">
+        <li class="">
+          <a href="/#projects" class="p-2">
+            Projects
+          </a>
+        </li>
+        <li class="">
+          <a href="/about/" class="p-2">
+            About
+          </a>
+        </li>
+      </ul>
+    )
+  }
 </nav>
 
 <style>
