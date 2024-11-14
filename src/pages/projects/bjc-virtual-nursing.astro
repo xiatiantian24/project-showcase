@@ -81,7 +81,7 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           <img
             src="/images/bjc/bjc-vrn-metrics.png"
             alt="Virtual nursing key metrics and questions"
-            style="aspect-ratio: 430/409;"
+            style="aspect-ratio: 430/409; background-color: #f4f4f4;"
             loading="lazy"
           />
         </div>
@@ -158,10 +158,10 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
             >our survey results conflicted with qualitative insights</span
           > and caused confusion during presentations. This was because our measure
           of satisfaction didn't successfully filter out the environmental and personal
-          factors that brought noises to the result, and we had a small sample group. In other words, if a unit
-          was significantly busier during the time nurses filled out the survey,
-          they tended to respond with a higher workload and lower satisfaction score,
-          which led to recency bias and primacy bias.
+          factors that brought noises to the result, and we had a small sample group.
+          In other words, if a unit was significantly busier during the time nurses
+          filled out the survey, they tended to respond with a higher workload and
+          lower satisfaction score, which led to recency bias and primacy bias.
         </p>
         <p>
           As a workaround, we focused on reflecting nurse satisfaction in our
@@ -378,6 +378,16 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
 
   li::marker {
     color: #1820ed;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    a {
+      border-bottom: 2px dashed #6584e1;
+    }
+
+    li::marker {
+      color: #6584e1;
+    }
   }
 
   .link-next-part {

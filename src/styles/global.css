@@ -21,8 +21,9 @@
 
   --color-text-main: rgba(50, 50, 50, 1);
   --color-text-secondary: rgba(99, 99, 99, 1);
-  --color-text-tertiary: rgb(154, 154, 154);
+  --color-text-tertiary: rgba(99, 99, 99,1);
   --color-bg-main: rgba(252, 251, 248, 1);
+  --color-bg-secondary: rgba(244, 242, 238, 1);
   --color-bg-white: rgba(255, 255, 255, 1);
   --color-border-main: rgba(99, 99, 99, 1);
   --color-border-secondary: rgba(199, 199, 199, 1);
@@ -62,10 +63,28 @@
   --card-padding: clamp(0.75rem, 0.75vw + 0.6rem, 1.5rem);
 }
 
-:root.dark {
-  --color-text-main: rgba(247, 247, 247, 1);
-  --color-bg-main: rgba(77, 77, 77, 1);
+.dark {
+  --color-text-main: rgba(233, 230, 230,1);
+  --color-text-secondary: rgb(182, 182, 182);
+  --color-text-tertiary: rgb(209, 209, 209);
+  --color-bg-main: rgb(77, 77, 77);
+  --color-bg-secondary: rgb(100, 100, 100);
+  --color-border-secondary: rgba(120, 120, 120, 1);
+
 }
+
+@media (prefers-color-scheme: dark) {
+:root {
+  --color-text-main: rgba(233, 230, 230,1);
+  --color-text-secondary: rgb(182, 182, 182);
+  --color-text-tertiary: rgb(209, 209, 209);
+  --color-bg-main: rgb(77, 77, 77);
+  --color-bg-secondary: rgb(100, 100, 100);
+  --color-border-secondary: rgba(120, 120, 120, 1);
+
+}
+}
+
 
 @font-face {
   font-family: "Figtree";
@@ -172,6 +191,7 @@ html {
   background-color: var(--color-bg-main);
   font-family: "Figtree", sans-serif;
   color: var(--color-text-main);
+  /* transition: background-color 0.2s ease, color 0.2s ease; */
 }
 
 body {
@@ -186,13 +206,6 @@ body {
 .coverSquare-main {
   fill: var(--color-bg-main);
 }
-
-/* Notes from Kevin Powell */
-/* html {
-    color-scheme: light dark;
-    can be switched based on user preference
-    ;
-} */
 
 *,
 *::before,

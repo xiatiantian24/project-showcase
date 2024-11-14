@@ -1,8 +1,9 @@
 ---
 import ProjectButton from "../components/ProjectButton.astro";
+import ThemeToggle from "./ThemeToggle.astro";
 ---
 
-<div class="w-full mt-16 mb-32 md:mt-12 mb-16 px-6" id="hero">
+<div class="w-full mt-16 mb-32 md:mt-12 mb-16 pl-4" id="hero">
   <div>
     <div>
       Ray designs <a href="#uxui">user experiences</a> and likes to do fun (and serious)
@@ -11,10 +12,11 @@ import ProjectButton from "../components/ProjectButton.astro";
     <div class="mt-2" id="prev-exp">
       Previous experience in health-tech and AI Chatbot for businesses.
     </div>
+    <!-- <ThemeToggle /> -->
   </div>
 </div>
 <div
-  class="category flex flex-col md:flex-row w-full px-6 relative gap-0 md:gap-0" id="projects"
+  class="category flex flex-col md:flex-row w-full pl-4 relative gap-0" id="projects"
 >
   <div class="category-label">
     <div class="sticky top-24 pt-10">
@@ -41,14 +43,14 @@ import ProjectButton from "../components/ProjectButton.astro";
     <ProjectButton
       title="personalizing virtual assistant demos"
       description="Rulai, Inc."
-      scopes={["Internship", "2022", "UX Design", "Solution Design"]}
+      scopes={["Internship", "2022", "UX Design", "Solution Engineer"]}
       href="/projects/rulai"
       imgPath="../assets/images/rulai-cover.jpg"
       altText="Thumbnail of the Rulai project"
     />
   </div>
 </div>
-<div class="category flex flex-col md:flex-row w-full px-6 relative">
+<div class="category flex flex-col md:flex-row w-full pl-4 relative">
   <div class="category-label">
     <div class="sticky pt-8 top-16">
       <a href="#motion"><div>Motion</div></a>
@@ -65,7 +67,7 @@ import ProjectButton from "../components/ProjectButton.astro";
     />
   </div>
 </div>
-<div class="category flex flex-col md:flex-row w-full px-6 relative">
+<div class="category flex flex-col md:flex-row w-full pl-4 relative">
   <div class="category-label">
     <div class="sticky pt-8 top-16">
       <a href="#js"> <div>JS</div></a>
@@ -124,12 +126,9 @@ import ProjectButton from "../components/ProjectButton.astro";
     }
 
     #hero {
-      border-bottom: none;
-    }
-
-    #hero {
-      padding: 2rem 0 2rem 11.5rem;
+      padding: 2rem 0 2rem 11rem;
       font-size: 1.15rem;
+      border-bottom: none;
     }
   }
 
@@ -141,7 +140,7 @@ import ProjectButton from "../components/ProjectButton.astro";
 
     #hero {
       font-size: 1.4rem;
-      padding-left: 16.5rem;
+      padding-left: 15.5rem;
     }
   }
 
@@ -152,7 +151,7 @@ import ProjectButton from "../components/ProjectButton.astro";
     }
 
     #hero {
-      padding-left: 20.75rem;
+      padding-left: 20rem;
     }
   }
 </style>

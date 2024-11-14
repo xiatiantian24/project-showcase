@@ -17,10 +17,10 @@
       ) as HTMLImageElement;
       const closeBtn = document.getElementById("lightbox-close");
 
-      // allowing scroll for now because the bg color looks wierd
-    //   document.documentElement.style.scrollbarGutter = "stable";
-    //   document.documentElement.style.overflowY = "auto";
-    //   document.documentElement.style.scrollbarColor = "";
+      // disabling overflow:hidden for now because the bg color gets wierd
+      //   document.documentElement.style.scrollbarGutter = "stable";
+      //   document.documentElement.style.overflowY = "auto";
+      //   document.documentElement.style.scrollbarColor = "";
 
       images.forEach((img) => {
         img.style.pointerEvents = "auto";
@@ -31,7 +31,7 @@
           lightboxImg.src = img.src;
           lightbox.classList.add("show");
           lightbox.classList.remove("hide");
-        //   document.documentElement.style.overflowY = "hidden";
+          //   document.documentElement.style.overflowY = "hidden";
         });
       });
 
@@ -47,7 +47,7 @@
         if (e.target === lightbox) {
           lightbox.classList.remove("show");
           lightbox.classList.add("hide");
-        //   document.documentElement.style.overflowY = "auto";
+          //   document.documentElement.style.overflowY = "auto";
         }
       });
     }

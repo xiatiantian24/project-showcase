@@ -313,6 +313,16 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
     color: #5a34c3;
   }
 
+  @media (prefers-color-scheme: dark) {
+    a {
+      border-bottom: 2px dashed #6584e1;
+    }
+
+    li::marker {
+      color: #6584e1;
+    }
+  }
+
   .tip {
     margin-top: 2rem;
   }
