@@ -26,16 +26,18 @@ p {
   margin-bottom: 0.9rem;
 }
 
-a {
+p a {
   color: var(--color-text-tertiary);
   text-decoration: none;
   position: relative;
   transition: 100ms ease;
   pointer-events: auto;
+  border-bottom: 1.5px solid var(--color-border-secondary);
 }
 
 a:hover {
   color: var(--color-text-main);
+  border-bottom: 1.5px solid var(--color-border-main);
 }
 
 figcaption {

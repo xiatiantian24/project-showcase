@@ -9,15 +9,17 @@ import ThemeToggle from "./ThemeToggle.astro";
   <div id="my-name" class="hidden md:flex">Ray Xia</div>
   {
     showButtons && (
-      <ul class="menu flex gap-4 md:gap-8 text-sm">
+      <ul class="menu flex gap-4 md:gap-8 text-sm pr-1">
         <li class="">
-          <a href="/#projects" class="p-2">
-            Projects
+          <a href="/#projects" class="p-1">
+            <span>Projects</span>
+            <span class="slider" />
           </a>
         </li>
         <li class="">
-          <a href="/about/" class="p-2">
-            About
+          <a href="/about/" class="p-1">
+            <span>About</span>
+            <span class="slider" />
           </a>
         </li>
       </ul>
@@ -55,9 +57,42 @@ import ThemeToggle from "./ThemeToggle.astro";
     text-transform: uppercase;
     font-weight: 400;
     font-size: 0.8rem;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.4rem;
     position: absolute;
-    left: calc(50% - 50px);
+    left: calc(50% - 45px);
     color: var(--color-text-secondary);
+  }
+
+  a {
+    transition: all 0.2s ease-in-out;
+    border-bottom: solid transparent 1.5px;
+    position: relative;
+  }
+
+  a:before {
+    content: "";
+    width: 0;
+    height: 1.5px;
+    background: var(--color-border-secondary);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  a:hover:before {
+    width: 100%;
+  }
+
+  .slider {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 90%;
+    margin: 0 auto;
+    height: 1.5px;
+    background-color: var(--color-border-secondary);
+    width: 0%;
+    transition: width 0.2s ease;
   }
 </style>

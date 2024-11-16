@@ -19,8 +19,8 @@ if (!images[imgPath])
 <project-button class="button-wrap" data-imgpath={imgPath}>
     <a href={href}>
         <div class="button menu md:flex md:items-end sm:justify-between">
-            <div class="description-wrap flex flex-col justify-between pb-4">
-                <div class="project-description mt-8 pb-3 md:text-base">
+            <div class="description-wrap flex flex-col justify-between pb-1.5">
+                <div class="project-description mt-12 md:mt-8 pb-2 md:pb-1">
                     {description}
                 </div>
                 <div class="project-title">{title}</div>
@@ -30,18 +30,18 @@ if (!images[imgPath])
                 scopes.map((scope,index) => (
                 index == (scopes.length - 1) ?
                 <div class="content-center w-max">{scope}</div> : 
-                <div class="content-center w-max">{scope}</div> <span class="px-2 content-center">&#47;</span>
+                <div class="content-center w-max">{scope}</div> <span class="px-1 content-center">&#47;</span>
                 ))                
                 } 
             </div>
         </div>
         <div class="img-desktop hidden md:block">
             <div class="img-wrap">
-                <Image src={images[imgPath]()} alt={altText} class="image"/>
+                <Image src={images[imgPath]()} alt={altText} class="image" loading="eager"/>
             </div>
         </div>
         <div class="img-mobile md:hidden mt-4">
-            <Image src={images[imgPath]()} alt={altText} class="image"/>
+            <Image src={images[imgPath]()} alt={altText} class="image" loading="eager"/>
         </div>
         <div></div>
     </a>
@@ -52,7 +52,6 @@ if (!images[imgPath])
        constructor() {
            super();
 
-           const imgPath = this.dataset.imgpath;
            const button = this.querySelector('a');
            const target = this.querySelector('.img-wrap') as HTMLElement;
 
@@ -139,7 +138,7 @@ if (!images[imgPath])
         position: fixed;
 		text-align: center;
         display: none;
-		z-index: 99;
+		z-index: 1000;
         pointer-events: none;
     }
 

@@ -2,7 +2,7 @@
 const socialLinks = [
   {
     text: "Resume",
-    href: "/about",
+    href: "/about#resume",
   },
   {
     text: "GitHub",
@@ -28,14 +28,16 @@ const socialLinks = [
     {
       socialLinks.length > 0 && (
         <div class="flex gap-4 md:gap-8 text-sm">
+                     
           {socialLinks.map((link) => (
             <a
-              class="inline-flex items-center justify-center text-sm p-2"
+              class="text-sm p-1"
               href={link.href}
               target="_blank"
               rel="noopener noreferer"
             >
-              {link.text}
+              <span>{link.text}</span>
+              <span class="slider" />
             </a>
           ))}
         </div>
@@ -55,6 +57,8 @@ const socialLinks = [
 
   a {
     text-transform: uppercase;
+    border-bottom: solid transparent 1.5px;
+    position: relative;
   }
 
   .copy-right {
@@ -62,5 +66,32 @@ const socialLinks = [
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     transform: scaleY(0.95);
+  }
+
+  a:before {
+    content: "";
+    width: 0;
+    height: 1.5px;
+    background: var(--color-border-secondary);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  a:hover:before {
+    width: 100%;
+  }
+
+  .slider {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 90%;
+    margin: 0 auto;
+    height: 1.5px;
+    background-color: var(--color-border-secondary);
+    width: 0%;
+    transition: width 0.2s ease;
   }
 </style>

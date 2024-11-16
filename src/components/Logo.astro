@@ -26,7 +26,7 @@ const { coverSquare } = Astro.props;
           height="45"
           rx="10"
           ry="10"
-          transform="rotate(45, 0, 0) translate(54,125)"></rect>
+          transform="rotate(45, 0, 0) translate(52.5,125)"></rect>
 
         <line
           id="line1"
@@ -65,7 +65,7 @@ const { coverSquare } = Astro.props;
       logo.addEventListener("mouseenter", () => {
         coverSquare.setAttribute(
           "transform",
-          "rotate(45, 0, 0) translate(25, 25)"
+          "rotate(45, 0, 0) translate(25, 25) scale(1.6, 1.6)"
         );
         line1.setAttribute("transform", "rotate(45, 0, 0) scale(1, 1)");
         line2.setAttribute("transform", "rotate(45, 0, 0) scale(1, 1)");
@@ -77,8 +77,8 @@ const { coverSquare } = Astro.props;
         const mouseX = mouseEvent.clientX - rect.left;
         const mouseY = mouseEvent.clientY - rect.top;
 
-        const adjustedMouseX = mouseX - 20;
-        const adjustedMouseY = mouseY;
+        const adjustedMouseX = mouseX - 15;
+        const adjustedMouseY = mouseY + mouseY * 0.6;
 
         const rotatedX =
           adjustedMouseX * Math.cos(Math.PI / 4) +
@@ -96,8 +96,11 @@ const { coverSquare } = Astro.props;
       logo.addEventListener("mouseleave", () => {
         coverSquare.setAttribute("width", "45");
         coverSquare.setAttribute("height", "45");
-        coverSquare.setAttribute("transform", "rotate(45, 0, 0) translate(0,0)");
-        coverSquare.setAttribute("x", "54");
+        coverSquare.setAttribute(
+          "transform",
+          "rotate(45, 0, 0) translate(0,0) scale(1,1)"
+        );
+        coverSquare.setAttribute("x", "52.5");
         coverSquare.setAttribute("y", "125");
         line1.setAttribute("transform", "rotate(0, 0, 0) scale(1, 1.4)");
         line2.setAttribute("transform", "rotate(0, 0, 0) scale(1.4, 1)");
@@ -109,8 +112,8 @@ const { coverSquare } = Astro.props;
 
 <style>
   .logo-container svg {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
   }
 
   svg * {
