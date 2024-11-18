@@ -6,9 +6,10 @@ import Logo from "../components/Logo.astro";
 <nav class:list={["sticky top-0", bg || "bg-white"]}>
   <Logo />
   <div id="my-name" class="hidden md:flex">Ray Xia</div>
-  {
-    showButtons && (
-      <ul class="menu flex gap-4 md:gap-8 text-sm pr-1">
+
+  <ul class="menu flex gap-4 md:gap-8 text-sm pr-1">
+    {
+      showButtons ? (
         <li class="">
           <a href="/#projects" class="p-1">
             <span>Projects</span>
@@ -16,14 +17,20 @@ import Logo from "../components/Logo.astro";
           </a>
         </li>
         <li class="">
-          <a href="/about/" class="p-1">
-            <span>About</span>
-            <span class="slider" />
-          </a>
-        </li>
-      </ul>
-    )
-  }
+      <a href="/about/" class="p-1">
+        <span>About</span>
+        <span class="slider"></span>
+      </a>
+    </li>
+      ) : (    
+      <li id="li-about" class="hidden">
+      <a href="/about/" class="p-1">
+        <span>About</span>
+        <span class="slider"></span>
+      </a>
+    </li>
+    )}
+  </ul>
 </nav>
 
 <style>
@@ -94,4 +101,10 @@ import Logo from "../components/Logo.astro";
     width: 0%;
     transition: width 0.2s ease;
   }
+
+  @media (hover: none) {
+   #li-about {
+        display: block; 
+    }
+}
 </style>

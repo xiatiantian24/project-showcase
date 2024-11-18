@@ -121,6 +121,14 @@
 
 @font-face {
   font-family: "TT Fors";
+  src: url("./fonts/TT-Fors-Medium-Italic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Fors";
   src: url("./fonts/TT-Fors-Demi-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;

@@ -144,10 +144,11 @@ import ThemeToggle from "./ThemeToggle.astro";
       }
 
       target.style.transition =
-        "filter 200ms ease-out, visibility 100ms linear";
+        "filter 200ms ease-out, visibility 100ms linear, opacity 200ms linear";
       target.style.filter = "saturate(0%) contrast(50%)";
       button.style.transform = "translate(0, 0)";
       button.style.transition = "transform 400ms ease-out";
+      target.style.opacity = "0";
 
       button.addEventListener("mouseenter", () => {
         button.style.transform = "translate(-0.1rem, 0)";
@@ -155,6 +156,7 @@ import ThemeToggle from "./ThemeToggle.astro";
         target.style.visibility = "visible";
         setTimeout(() => {
           target.style.filter = "saturate(100%) contrast(100%)";
+          target.style.opacity = "1";
         }, 1);
         document.addEventListener("mousemove", follow);
       });
@@ -165,6 +167,7 @@ import ThemeToggle from "./ThemeToggle.astro";
         target.style.visibility = "hidden";
         setTimeout(() => {
           target.style.filter = "saturate(0%) contrast(50%)";
+          target.style.opacity = "0";
         }, 1);
       });
     }
@@ -242,6 +245,7 @@ import ThemeToggle from "./ThemeToggle.astro";
     font-weight: 400;
     font-size: 0.875rem;
     margin-top: 2rem;
+    line-height: 1.2;
   }
 
   #project-nav {
