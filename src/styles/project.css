@@ -57,8 +57,12 @@ li {
   margin-bottom: 0.2rem;
 }
 
+li::marker {
+  color: var(--color-text-secondary);
+}
+
 .em {
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .image-gallery-grid {

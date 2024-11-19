@@ -21,12 +21,14 @@
 
   --color-text-main: rgba(50, 50, 50, 1);
   --color-text-secondary: rgba(99, 99, 99, 1);
-  --color-text-tertiary: rgba(99, 99, 99,1);
+  --color-text-tertiary: rgba(99, 99, 99, 1);
+  --color-text-highlight: rgba(24, 24, 24, 1);
   --color-bg-main: rgba(252, 251, 248, 1);
   --color-bg-secondary: rgba(244, 242, 238, 1);
   --color-bg-white: rgba(255, 255, 255, 1);
   --color-border-main: rgba(99, 99, 99, 1);
   --color-border-secondary: rgba(199, 199, 199, 1);
+  --color-highlight: rgba(227, 220, 209, 1);
 
   /* h6, caption  */
   --font-size-small: clamp(0.813rem, 0.063vw + 0.8rem, 0.875rem);
@@ -64,27 +66,30 @@
 }
 
 .dark {
-  --color-text-main: rgba(233, 230, 230,1);
+  --color-text-main: rgba(233, 230, 230, 1);
   --color-text-secondary: rgb(182, 182, 182);
   --color-text-tertiary: rgb(209, 209, 209);
-  --color-bg-main: rgb(77, 77, 77);
-  --color-bg-secondary: rgb(100, 100, 100);
+  --color-text-highlight: rgba(24, 24, 24, 1);
+  --color-bg-main: rgba(77, 77, 77, 1);
+  --color-bg-secondary: rgba(96, 96, 96, 1);
+  --color-border-main: rgba(148, 148, 148, 1);
   --color-border-secondary: rgba(120, 120, 120, 1);
-
+  --color-highlight: rgba(221, 213, 201, 1);
 }
 
 @media (prefers-color-scheme: dark) {
-:root {
-  --color-text-main: rgba(233, 230, 230,1);
-  --color-text-secondary: rgb(182, 182, 182);
-  --color-text-tertiary: rgb(209, 209, 209);
-  --color-bg-main: rgb(77, 77, 77);
-  --color-bg-secondary: rgb(100, 100, 100);
-  --color-border-secondary: rgba(120, 120, 120, 1);
-
+  :root {
+    --color-text-main: rgba(233, 230, 230, 1);
+    --color-text-secondary: rgb(182, 182, 182);
+    --color-text-tertiary: rgb(209, 209, 209);
+    --color-text-highlight: rgba(24, 24, 24, 1);
+    --color-bg-main: rgba(77, 77, 77, 1);
+    --color-bg-secondary: rgba(96, 96, 96, 1);
+    --color-border-main: rgba(148, 148, 148, 1);
+    --color-border-secondary: rgba(120, 120, 120, 1);
+    --color-highlight: rgba(221, 213, 201, 1);
+  }
 }
-}
-
 
 @font-face {
   font-family: "Figtree";
@@ -191,8 +196,18 @@
   font-display: swap;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+img,
+svg {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 html {
@@ -215,16 +230,7 @@ body {
   fill: var(--color-bg-main);
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-img,
-svg {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
+::selection {
+  background: var(--color-highlight);
+  color: var(--color-text-highlight);
 }
