@@ -7,6 +7,7 @@ const { coverSquare } = Astro.props;
   <div id="logo" class="logo-container">
     <a href="/">
       <svg width="200" height="200" viewBox="0 0 200 200">
+        <!-- Bottom square -->
         <rect
           x="50"
           y="50"
@@ -19,6 +20,7 @@ const { coverSquare } = Astro.props;
           ry="1"
           transform="rotate(45, 0, 0)"></rect>
 
+        <!-- Cover square -->
         <rect
           id="cover-square"
           class:list={[coverSquare || "coverSquare-main"]}
@@ -28,6 +30,7 @@ const { coverSquare } = Astro.props;
           ry="10"
           transform="rotate(45, 0, 0) translate(52.5,125)"></rect>
 
+        <!-- Line 1 -->
         <line
           id="line1"
           x1="100"
@@ -39,6 +42,7 @@ const { coverSquare } = Astro.props;
           stroke-width="5"
           stroke-linecap="round"></line>
 
+        <!-- Line 2 -->
         <line
           id="line2"
           x1="50"
@@ -62,6 +66,7 @@ const { coverSquare } = Astro.props;
       const line1 = document.getElementById("line1");
       const line2 = document.getElementById("line2");
 
+      // Effect on mouse hover
       logo.addEventListener("mouseenter", () => {
         coverSquare.setAttribute(
           "transform",
@@ -71,6 +76,7 @@ const { coverSquare } = Astro.props;
         line2.setAttribute("transform", "rotate(45, 0, 0) scale(1, 1)");
       });
 
+      // Follow effect for cover square
       logo.addEventListener("mousemove", (event) => {
         const mouseEvent = event as MouseEvent;
         const rect = logo.getBoundingClientRect();
@@ -93,6 +99,7 @@ const { coverSquare } = Astro.props;
         coverSquare.setAttribute("y", rotatedY * 2.4);
       });
 
+      // Reverse effect on mouse leave
       logo.addEventListener("mouseleave", () => {
         coverSquare.setAttribute("width", "45");
         coverSquare.setAttribute("height", "45");

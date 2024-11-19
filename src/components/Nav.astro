@@ -38,6 +38,7 @@ import Logo from "../components/Logo.astro";
     const links = document.querySelectorAll(".nav-link");
     const currentUrl = window.location.pathname;
 
+    // Highlight link for current page
     links.forEach(link => {
       if (link.getAttribute("href") === currentUrl || link.getAttribute("href") === currentUrl + "/") {
         link.classList.add("active");
@@ -74,7 +75,6 @@ import Logo from "../components/Logo.astro";
   }
 
   #my-name {
-    /* font-family: "LT Cushion"; */
     text-transform: uppercase;
     font-weight: 400;
     font-size: 0.8rem;

@@ -8,6 +8,7 @@ import "../styles/global.css";
   document.addEventListener("astro:page-load", () => {
     const preloader = document.getElementById("preloader");
 
+    // Preloader is default to show, and will become hidden if exists
     if (preloader !== null) {
       setTimeout(() => {
         preloader.style.opacity = "0";

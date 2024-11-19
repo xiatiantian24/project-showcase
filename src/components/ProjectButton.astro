@@ -18,13 +18,16 @@ if (!images[imgPath])
 
 <project-button class="button-wrap" data-imgpath={imgPath}>
     <a href={href}>
+        <!-- Desktop ver. -->
         <div class="button menu md:flex md:items-end sm:justify-between">
+            <!-- Title & Description -->
             <div class="description-wrap flex flex-col justify-between pb-1.5">
                 <div class="project-description mt-12 md:mt-8 pb-2 md:pb-1">
                     {description}
                 </div>
                 <div class="project-title">{title}</div>
             </div>
+            <!-- Scope -->
             <div class="project-scope flex pb-2 pr-4">
                 {
                 scopes.map((scope,index) => (
@@ -35,6 +38,8 @@ if (!images[imgPath])
                 } 
             </div>
         </div>
+
+        <!-- Mobile ver. -->
         <div class="img-desktop hidden md:block">
             <div class="img-wrap">
                 <Image src={images[imgPath]()} alt={altText} class="image" loading="eager"/>
@@ -55,6 +60,7 @@ if (!images[imgPath])
            const button = this.querySelector('a');
            const target = this.querySelector('.img-wrap') as HTMLElement;
 
+            // Cursor following effect for project button
            function follow(e) {
                target.style.left = `${e.pageX + 24}px`;
                target.style.top = `${e.pageY - window.scrollY - 0.5*target.scrollHeight}px`;
@@ -73,7 +79,6 @@ if (!images[imgPath])
             });
 
             button.addEventListener('mouseleave', () => {
-                // target.style.display="none";
                 target.style.visibility = 'hidden';
                 target.style.filter = 'saturate(0%) contrast(50%)';
             });

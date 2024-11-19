@@ -1,7 +1,6 @@
 ---
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
-import Preloader from "../components/Preloader.astro";
 import "../styles/global.css";
 import ViewTransitions from "astro/components/ViewTransitions.astro";
 const { pageTitle } = Astro.props;
@@ -16,6 +15,7 @@ const { pageTitle } = Astro.props;
     <ViewTransitions />
     <title>{pageTitle}</title>
   </head>
+
   <body>
     <div class="flex flex-col min-h-screen">
       <Nav bg="bg-main" showButtons={true} />
