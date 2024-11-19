@@ -1,9 +1,7 @@
 ---
+import ThemeToggle from "./ThemeToggle.astro";
+
 const socialLinks = [
-  {
-    text: "Resume",
-    href: "/about#resume",
-  },
   {
     text: "GitHub",
     href: "https://github.com/xiatiantian24",
@@ -12,39 +10,115 @@ const socialLinks = [
     text: "LinkedIn",
     href: "https://www.linkedin.com/in/xray24/",
   },
+  {
+    text: "Resume",
+    href: "/about#resume",
+  },
 ];
 ---
 
-<footer class="w-full mx-auto pt-8 pb-10">
-  <div
-    class:list={[
-      " flex flex-col gap-4",
-      {
-        "sm:flex-row-reverse sm:justify-between sm:items-center":
-          socialLinks.length > 0,
-      },
-    ]}
-  >
-    {
-      socialLinks.length > 0 && (
-        <div class="flex gap-4 md:gap-8 text-sm">
-                     
-          {socialLinks.map((link) => (
-            <a
-              class="text-sm p-1"
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferer"
-            >
-              <span>{link.text}</span>
-              <span class="slider" />
-            </a>
-          ))}
+<footer class="w-full mx-auto">
+  <div class="footer-wrapper flex flex-col">
+    <div
+      class="flex flex-col md:grid md:grid-cols-4 lg:grid-cols-8 pb-12 pt-16 gap-16 md:gap-8"
+    >
+      <div class="col-span-4 flex flex-col gap-3 max-w-lg">
+        <div class="footer-title">
+          <div class="line"></div>
+          <div class="flex">Credits</div>
         </div>
-      )
-    }
-    <div class="copy-right">
-      &copy; {new Date().getFullYear()}.&nbsp; Ray Xia.
+        <div class="footer-content flex flex-col gap-1">
+          <div class="credits">
+            This site is designed and developed by Ray Xia. Type set in TT Fors
+            by <a
+              href="https://typetype.org/"
+              target="_blank"
+              rel="noopener noreferer">TypeType</a
+            >, Figtree by <a
+              href="https://www.erikdkennedy.com/"
+              target="_blank"
+              rel="noopener noreferer">Erik Kennedy</a
+            >, and LT Cushion by <a
+              href="https://lyonstype4.wixsite.com/homepage"
+              target="_blank"
+              rel="noopener noreferer">Daniel Lyons</a
+            >. Icons by <a
+              href="https://fontawesome.com/icons"
+              target="_blank"
+              rel="noopener noreferer">Font Awesome</a
+            >. Frameworks provided by <a
+              href="https://astro.build/"
+              target="_blank"
+              rel="noopener noreferer">Astro</a
+            > and <a
+              href="https://tailwindcss.com/"
+              target="_blank"
+              rel="noopener noreferer">Tailwind CSS</a
+            >.
+            Hosted on <a
+              href="https://www.netlify.com/"
+              target="_blank"
+              rel="noopener noreferer">Netlify</a
+            >.
+            View source code on <a
+            href="https://github.com/xiatiantian24/project-showcase"
+            target="_blank"
+            rel="noopener noreferer">Github</a
+          >.
+          </div>
+        </div>
+      </div>
+      <div class="col-span-2 flex flex-col gap-3">
+        <div class="footer-title">
+          <div class="line"></div>
+          <div class="flex">Contact</div>
+        </div>
+        <div class="footer-links flex flex-col gap-2 w-min">
+          <a
+            class="flex py-1"
+            href="mailto:xiatiantian24@gmail.com"
+            id="email-link">xiatiantian24@gmail.com</a
+          >
+          <span class="slider"></span>
+        </div>
+      </div>
+      <div class="col-span-2 flex flex-col gap-3">
+        <div class="footer-title">
+          <div class="line"></div>
+          <div class="flex">Social</div>
+        </div>
+        <div
+          class:list={[
+            {
+              "social-link": socialLinks.length > 0,
+            },
+          ]}
+        >
+          {
+            socialLinks.length > 0 && (
+              <div class="footer-links flex flex-col gap-1 w-min">
+                {socialLinks.map((link) => (
+                  <a
+                    class="text-sm flex py-1 w-min"
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferer"
+                  >
+                    <span>{link.text}</span>
+                    <span class="slider" />
+                  </a>
+                ))}
+              </div>
+            )
+          }
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-between items-end">
+      <div class="copy-right">
+        &copy; {new Date().getFullYear()}.&nbsp; Ray Xia.
+      </div>
+      <ThemeToggle />
     </div>
   </div>
 </footer>
@@ -52,20 +126,32 @@ const socialLinks = [
 <style>
   footer {
     font-family: "TT Fors";
-    padding: 1.8rem 1rem 1rem;
+    color: var(--color-text-secondary);
   }
 
-  a {
+  .footer-wrapper {
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .footer-links a {
     text-transform: uppercase;
     border-bottom: solid transparent 1.5px;
     position: relative;
   }
 
+  .footer-content a {
+    border-bottom: 1.5px solid var(--color-border-secondary);
+  }
+
+  .footer-content a:hover {
+    border-bottom: 1.5px solid var(--color-border-main);
+  }
+
   .copy-right {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    transform: scaleY(0.95);
+    letter-spacing: 0.12rem;
+    font-weight: 400;
   }
 
   a:before {
@@ -79,6 +165,11 @@ const socialLinks = [
     transition: all 0.2s ease-in-out;
   }
 
+  a:hover {
+    border-bottom: solid transparent 1.5px;
+    color: var(--color-text-main);
+  }
+
   a:hover:before {
     width: 100%;
   }
@@ -90,8 +181,29 @@ const socialLinks = [
     top: 90%;
     margin: 0 auto;
     height: 1.5px;
-    background-color: var(--color-border-secondary);
+    /* background-color: var(--color-border-secondary); */
     width: 0%;
     transition: width 0.2s ease;
+  }
+
+  .footer-title {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    width: min-content;
+  }
+
+  .line {
+    width: 26px;
+    border-bottom: 1.5px solid var(--color-border-secondary);
+    margin-bottom: 0.3rem;
+  }
+
+  .credits {
+    font-size: 0.9rem;
+  }
+
+  #email-link {
+    text-transform: lowercase;
+    font-size: 0.9rem;
   }
 </style>
