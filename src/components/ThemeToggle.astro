@@ -2,7 +2,7 @@
 
 ---
 
-<button id="theme-toggle" aria-label="Change color scheme">
+<button class="button-sm" id="theme-toggle" aria-label="Change color scheme">
 </button>
 
 <script>
@@ -66,3 +66,19 @@
     }
   });
 </script>
+
+<style>
+  .button-sm {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    border-bottom: 1.5px solid var(--color-border-secondary);
+    pointer-events: auto;
+  }
+
+  .button-sm:hover {
+    color: var(--color-text-main);
+    border-bottom: 1.5px solid var(--color-border-main);
+  }
+</style>
