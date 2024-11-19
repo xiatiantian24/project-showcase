@@ -1,0 +1,36 @@
+---
+import "../styles/global.css";
+---
+
+<div id="preloader" class="fixed inset-0 showing"></div>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const preloader = document.getElementById("preloader");
+
+    setTimeout(() => {
+      preloader.style.opacity = "0";
+      setTimeout(() => {
+        preloader.style.visibility = "hidden";
+        preloader.classList.remove("showing");
+      }, 300);
+    }, 100);
+  });
+</script>
+
+<style>
+  #preloader {
+    background-color: var(--color-bg-main);
+    z-index: 10000;
+    transition: opacity 0.3s ease-out;
+    visibility: hidden;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #preloader.showing {
+    opacity: 1;
+    visibility: visible;
+  }
+</style>
