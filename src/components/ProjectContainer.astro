@@ -131,45 +131,42 @@ import ThemeToggle from "./ThemeToggle.astro";
       const button = document.querySelector(buttonId) as HTMLElement;
       const target = document.querySelector(targetId) as HTMLElement;
 
-      function follow(e) {
-        const offsetX = -24;
-        const offsetY = -1 * target.offsetHeight;
-        target.style.left = `${e.pageX + offsetX}px`;
-        target.style.top = `${e.pageY - window.scrollY + offsetY}px`;
+      if (button !== null && target !== null) {
+        function follow(e) {
+          const offsetX = -24;
+          const offsetY = -1 * target.offsetHeight;
+          target.style.left = `${e.pageX + offsetX}px`;
+          target.style.top = `${e.pageY - window.scrollY + offsetY}px`;
+        }
 
-        console.log(`Mouse position: (${e.pageX}, ${e.pageY})`);
-        console.log(
-          `Project Nav position: (${target.style.left}, ${target.style.top})`
-        );
+        target.style.transition =
+          "filter 200ms ease-out, visibility 100ms linear, opacity 200ms linear";
+        target.style.filter = "saturate(0%) contrast(50%)";
+        button.style.transform = "translate(0, 0)";
+        button.style.transition = "transform 400ms ease-out";
+        target.style.opacity = "0";
+
+        button.addEventListener("mouseenter", () => {
+          button.style.transform = "translate(-0.1rem, 0)";
+          target.style.display = "block";
+          target.style.visibility = "visible";
+          setTimeout(() => {
+            target.style.filter = "saturate(100%) contrast(100%)";
+            target.style.opacity = "1";
+          }, 0.2);
+          document.addEventListener("mousemove", follow);
+        });
+
+        button.addEventListener("mouseleave", () => {
+          button.style.transform = "translate(+0.1rem, 0)";
+          target.style.display = "none";
+          target.style.visibility = "hidden";
+          setTimeout(() => {
+            target.style.filter = "saturate(0%) contrast(50%)";
+            target.style.opacity = "0";
+          }, 0.2);
+        });
       }
-
-      target.style.transition =
-        "filter 200ms ease-out, visibility 100ms linear, opacity 200ms linear";
-      target.style.filter = "saturate(0%) contrast(50%)";
-      button.style.transform = "translate(0, 0)";
-      button.style.transition = "transform 400ms ease-out";
-      target.style.opacity = "0";
-
-      button.addEventListener("mouseenter", () => {
-        button.style.transform = "translate(-0.1rem, 0)";
-        target.style.display = "block";
-        target.style.visibility = "visible";
-        setTimeout(() => {
-          target.style.filter = "saturate(100%) contrast(100%)";
-          target.style.opacity = "1";
-        }, 0.2);
-        document.addEventListener("mousemove", follow);
-      });
-
-      button.addEventListener("mouseleave", () => {
-        button.style.transform = "translate(+0.1rem, 0)";
-        target.style.display = "none";
-        target.style.visibility = "hidden";
-        setTimeout(() => {
-          target.style.filter = "saturate(0%) contrast(50%)";
-          target.style.opacity = "0";
-        }, 0.2);
-      });
     }
 
     navHoverEffect("#profile-img", "#about-btn");

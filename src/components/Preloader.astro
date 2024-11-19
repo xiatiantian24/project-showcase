@@ -8,13 +8,15 @@ import "../styles/global.css";
   document.addEventListener("astro:page-load", () => {
     const preloader = document.getElementById("preloader");
 
-    setTimeout(() => {
-      preloader.style.opacity = "0";
+    if (preloader !== null) {
       setTimeout(() => {
-        preloader.style.visibility = "hidden";
-        preloader.classList.remove("showing");
-      }, 300);
-    }, 100);
+        preloader.style.opacity = "0";
+        setTimeout(() => {
+          preloader.style.visibility = "hidden";
+          preloader.classList.remove("showing");
+        }, 300);
+      }, 100);
+    }
   });
 </script>
 
