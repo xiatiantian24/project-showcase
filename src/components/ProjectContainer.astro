@@ -115,7 +115,7 @@ import ThemeToggle from "./ThemeToggle.astro";
   </div>
   <div class="project-wrap" id="motion">
     <ProjectButton
-      title="coming soon..."
+      title="work in progress..."
       description=""
       scopes={[]}
       href="/"
@@ -157,7 +157,7 @@ import ThemeToggle from "./ThemeToggle.astro";
         setTimeout(() => {
           target.style.filter = "saturate(100%) contrast(100%)";
           target.style.opacity = "1";
-        }, 1);
+        }, 0.2);
         document.addEventListener("mousemove", follow);
       });
 
@@ -168,7 +168,7 @@ import ThemeToggle from "./ThemeToggle.astro";
         setTimeout(() => {
           target.style.filter = "saturate(0%) contrast(50%)";
           target.style.opacity = "0";
-        }, 1);
+        }, 0.2);
       });
     }
 
