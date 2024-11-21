@@ -3,6 +3,7 @@ import "../styles/global.css";
 import "../styles/project.css";
 import AboutLayout from "../layouts/AboutLayout.astro";
 import Resume from "../components/Resume.astro";
+import Emoji from "../components/Emoji.astro";
 
 const pageTitle = "Ray Xia - About";
 ---
@@ -14,7 +15,7 @@ const pageTitle = "Ray Xia - About";
       class="category grid md:grid-cols-2 w-full relative gap-2 mb-32"
       id="projects"
     >
-      <div class="category-label md:col-span-1">
+      <div class="md:col-span-1">
         <div class="profile-container block relative mb-8">
           <img
             id="profile-img"
@@ -64,7 +65,7 @@ const pageTitle = "Ray Xia - About";
 
     <!-- Resume -->
     <div
-      class="category md:grid md:grid-cols-2 w-full relative gap-2"
+      class="category md:grid md:grid-cols-2 w-full relative gap-2 mb-32"
       id="resume"
     >
       <div class="category-label md:col-span-1 pt-4">
@@ -82,6 +83,26 @@ const pageTitle = "Ray Xia - About";
         </div>
       </div>
       <Resume />
+    </div>
+
+    <!-- Random Things I Do -->
+    <div class="category" id="random">
+      <div class="category-label py-4">Random Things I Do</div>
+      <!-- Emoji Prosthesis -->
+      <div class="md:grid md:grid-cols-2 w-full relative gap-2">
+        <div class="category-label md:col-span-1 pt-4">
+          <div class="line"></div>
+          <div>Emoji Prosthesis</div>
+          <div class="text-sm description pb-4">In case you forgot to bring your phone.</div>
+          <a
+              href="https://drive.google.com/file/d/1KEFXON0NZjVaJPbWqj-rapZCItWqnyEB/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferer"
+              class="button-sm">View Prosthesis In Action</a
+            >
+        </div>
+        <Emoji />
+      </div>
     </div>
   </main>
 </AboutLayout>
@@ -109,7 +130,8 @@ const pageTitle = "Ray Xia - About";
     max-width: 28rem;
   }
 
-  #resume {
+  #resume,
+  #random {
     border-top: 1.5px solid var(--color-border-secondary);
   }
 
@@ -139,6 +161,10 @@ const pageTitle = "Ray Xia - About";
 
   .category-label {
     font-family: "TT Fors";
+  }
+
+  .description {
+    color: var(--color-text-secondary);
   }
 
   @media screen and (min-width: 768px) {
