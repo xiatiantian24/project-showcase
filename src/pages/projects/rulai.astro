@@ -11,8 +11,8 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
   detail1Title="Role"
   detail1Content={[
     "UX Design",
-    "Solution Design",
     "Conversation Design",
+    "Solution Engineering",
     "Front-end Engineering",
   ]}
   detail2Title="Team"
@@ -21,6 +21,8 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
     "Law Black (Sales)",
     "Lawrence Yau (Product Manager)",
   ]}
+  detail3Title="Timeline"
+  detail3Content={["3 months"]}
 >
   <!-- Cover Image -->
   <img
@@ -45,10 +47,10 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           <p>
             Through the summer of 2022, I joined Rulai as the sole designer. To
             tackle the inquiries from businesses in various industries and
-            sizes, I designed a new demo system that allows prospects to explore
-            the Virtual Assistant Studio in their own desired way. They can ask
-            about a specific use case, and interact with the tool to see
-            corresponding features targeting that use case.
+            sizes, I designed a new live demo system that allows prospects to
+            explore the Virtual Assistant Studio in their own desired way. They
+            can ask about a specific use case, and interact with the tool to see
+            its corresponding features being built in action.
           </p>
         </div>
       </div>
@@ -64,8 +66,9 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
         <p>
           Working with so many conversational AI features, I had a problem with
           knowing which audience might be most interested in using what
-          features. They may want the Virtual Assistant to do different things,
-          and I did not have the authority to meet Rulai’s current customers.
+          features. They may want virtual assistants to do totally different
+          things, and I did not have the authority to meet Rulai's current
+          customers.
         </p>
       </div>
     </section>
@@ -82,7 +85,7 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           />
         </div>
         <figcaption>
-          The team gave me a crash course on all the cool functionalities of the
+          The team gave me a crash course on all the cool features of the
           Virtual Assistant Studio.
         </figcaption>
       </div>
@@ -96,7 +99,7 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           />
         </div>
         <figcaption>
-          I sorted the features according to their functionality.
+          Sorting features according to their functionality.
         </figcaption>
       </div>
     </div>
@@ -105,86 +108,55 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
         <div class="img-medium">
           <img
             src="/images/rulai/rulai-industries.jpg"
-            alt="S list of industries that expressed interest in the Virtual Assistant product"
+            alt="A list of industries that expressed interest in the Virtual Assistant product"
             loading="lazy"
             style="aspect-ratio: 54/29;"
           />
         </div>
         <figcaption>
-          Studying user analytics and transcripts, I compiled a list of
-          industries that expressed interest in the Virtual Assistant product.
+          Compiling a list of industries that expressed interest in the virtual
+          assistant product.
         </figcaption>
       </div>
     </div>
     <section class="findings mb-36 md:mb-48">
       <div>
         <p>
-          An interesting insight I found out was that, regardless of industry:
+          Studying user analytics and transcripts, I discovered a finding that
+          first felt counterintuitive to me but later helped me determine the
+          structure of the demo:
         </p>
         <ul class="mb-8">
           <li>
-            <span class="em">larger companies</span> tend to prioritize the Virtual
-            Assistant's ease of use with limited resources.
+            <span class="em">Larger enterprises</span> tend to prioritize the ease
+            of use to build virtual assistants with limited resources, thereby relying
+            more complex support from Rulai.
           </li>
           <li>
-            <span class="em">more modest-sized businesses</span> aim to be more hands-on
-            and demand less from the Rulai team.
+            <span class="em">Modest-sized businesses</span> aim to start with more
+            small-scale, straightforward solutions and get more hands-on with customization
+            themselves.
           </li>
         </ul>
         <p>
-          Therefore, larger companies often want more complex support that are
-          not cookie-cutter solutions.
+          Because of Rulai's new emphasis on obtaining parterships with smaller
+          businesses, I decided to prioritize targeting their needs in the demo.
         </p>
       </div>
     </section>
 
     <!-- Solution -->
-    <section class="solution">
-      <h3>cookie-cutters can work well when coming in many shapes</h3>
-      <div class="mb-16">
-        <p>
-          With Rulai’s new emphasis on smaller businesses, I decided the new
-          demo to be cookie-cutter-based (i.e., solutions that can tackle common
-          tasks). However, different audience interest would still be a problem.
-        </p>
-        <p>
-          After tapping into my product manager’s expertise, I determined to
-          break the demo system into use cases like chapters. Each use case <span
-            class="em">solves one problem</span
-          >with a set of specific features, and audience can customize their demo to  <span
-          class="em">explore use cases independently in any order.</span
-          >, depending on their priority.
-        </p>
-      </div>
-    </section>
-    <div class="rulai-images">
-      <div class="figure-medium mx-auto mb-16">
-        <div class="img-medium">
-          <img
-            src="/images/rulai/rulai-persona.jpg"
-            alt="I also created an end user profile, Remi, to match the company’s profile"
-            loading="lazy"
-            style="aspect-ratio: 72/59;"
-          />
-        </div>
-        <figcaption>
-          To help the audience better imagine the end users interacting with
-          Virtual Assistants, I also created an end user profile, Remi, to match
-          the company’s profile.
-        </figcaption>
-      </div>
-    </div>
     <section class="solution mb-16">
-      <div>
-        <p>
-          Our team implemented the first common use case, scheduling a delivery,
-          into the demo Virtual Assistant. We presented a mock demo to the rest
-          of the team and executives, who ended up giving us the green light!
-        </p>
-      </div>
+      <h3>cookie-cutters can work well when coming in many shapes</h3>
+      <p>
+        Considering the needs of simpler solutions, I thought about using a set
+        list of predetermined scenarios tackling common tasks for the demo. But
+        this cookie-cutter approach won't address the demand for more freedom to
+        fine-tune the assistants with customers' own data.
+      </p>
     </section>
-    <div class="rulai-images mb-36 md:mb-48">
-      <div class="figure-medium mx-auto mb-8">
+    <div class="rulai-images mb-16">
+      <div class="figure-medium mx-auto">
         <div class="img-medium">
           <img
             src="/images/rulai/rulai-workflow.jpg"
@@ -199,7 +171,20 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           data access and retrieval.
         </figcaption>
       </div>
-      <div class="figure-medium mx-auto mb-8">
+    </div>
+
+    <section class="solution mb-16">
+      <p>
+        So I tried another approach on top of the cookie-cutter solution:
+        breaking the demo structure into multiple independednt use cases. Each
+        use case will focus on <span class="em">solving one user problem</span> with
+        a set of features, and audience can change up the problem and <span
+          class="em">explore the process of tuning the assistant to adapt</span
+        > to the new constraints.
+      </p>
+    </section>
+    <div class="rulai-images mb-16">
+      <div class="figure-medium mx-auto">
         <div class="img-medium">
           <img
             src="/images/rulai/rulai-all-use-cases.jpg"
@@ -214,6 +199,17 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
         </figcaption>
       </div>
     </div>
+    <section class="solution mb-36 md:mb-48">
+      <div>
+        <p>
+          After implementing the first use case, our team presented a mock demo
+          to the rest of the teams and executives. They ended up agreeing with
+          the "transformable" cookie-cutters appraoch and gave us the green
+          light to work on the rest of the demo!
+        </p>
+      </div>
+    </section>
+
     <section class="solution mb-16">
       <h3>little personality never killed nobody</h3>
       <div>
