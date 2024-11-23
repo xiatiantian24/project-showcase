@@ -132,7 +132,6 @@ import ThemeToggle from "./ThemeToggle.astro";
 
 <script>
   document.addEventListener("astro:page-load", () => {
-
     //Cursor following effect for hero section
     function navHoverEffect(buttonId, targetId) {
       const button = document.querySelector(buttonId) as HTMLElement;
@@ -154,7 +153,6 @@ import ThemeToggle from "./ThemeToggle.astro";
         target.style.opacity = "0";
 
         button.addEventListener("mouseenter", () => {
-          button.style.transform = "translate(-0.1rem, 0)";
           target.style.display = "block";
           target.style.visibility = "visible";
           setTimeout(() => {
@@ -165,7 +163,6 @@ import ThemeToggle from "./ThemeToggle.astro";
         });
 
         button.addEventListener("mouseleave", () => {
-          button.style.transform = "translate(+0.1rem, 0)";
           target.style.display = "none";
           target.style.visibility = "hidden";
           setTimeout(() => {
