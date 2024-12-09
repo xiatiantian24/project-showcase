@@ -72,11 +72,13 @@ const images = [
       ))
     }
   </div>
-  <div class="hidden md:flex justify-center text-sm description pt-4">
+  <div class="flex justify-center text-sm pt-4 description description-desktop">
     Hover on one of the emojis to see prosthesis
   </div>
-  <div class="flex md:hidden justify-center text-sm description pt-4">
-    Click on one of the emojis to see prosthesis
+  <div
+    class="hidden justify-center text-sm pt-4 description description-mobile"
+  >
+    Tap on one of the emojis to see prosthesis
   </div>
 </div>
 
@@ -116,23 +118,19 @@ const images = [
   });
 </script>
 
-<!-- <script>
-  for (const button in container) {
-    button.addEventListener("click", buttonOnClick);
-  }
-  function fullImage(src, alt) {
-    const fullImageElement = document.querySelector("#");
-    fullImageElement.src = src;
-    fullImageElement.alt = alt;
-  }
-  function buttonOnClick(e) {
-    fullImage(e.target.src, e.target.alt);
-  }
-</script> -->
-
 <style>
   .description {
     font-family: "TT Fors";
     color: var(--color-text-secondary);
+  }
+
+  @media (hover: none) {
+    .description-desktop {
+      display: none;
+    }
+
+    .description-mobile {
+      display: flex;
+    }
   }
 </style>
