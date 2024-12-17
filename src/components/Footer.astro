@@ -10,10 +10,6 @@ const socialLinks = [
     text: "LinkedIn",
     href: "https://www.linkedin.com/in/xray24/",
   },
-  {
-    text: "Resume",
-    href: "/about#resume",
-  },
 ];
 ---
 
@@ -55,17 +51,15 @@ const socialLinks = [
               href="https://tailwindcss.com/"
               target="_blank"
               rel="noopener noreferer">Tailwind CSS</a
-            >.
-            Hosted on <a
+            >. Hosted on <a
               href="https://www.netlify.com/"
               target="_blank"
               rel="noopener noreferer">Netlify</a
+            >. View source code on <a
+              href="https://github.com/xiatiantian24/project-showcase"
+              target="_blank"
+              rel="noopener noreferer">Github</a
             >.
-            View source code on <a
-            href="https://github.com/xiatiantian24/project-showcase"
-            target="_blank"
-            rel="noopener noreferer">Github</a
-          >.
           </div>
         </div>
       </div>
@@ -113,6 +107,10 @@ const socialLinks = [
                     <span class="slider" />
                   </a>
                 ))}
+                <a class="text-sm flex py-1 w-min" href="/about#resume">
+                  <span>Resume</span>
+                  <span class="slider" />
+                </a>
               </div>
             )
           }
