@@ -8,28 +8,18 @@ import Logo from "../components/Logo.astro";
   <div id="my-name" class="hidden md:flex">Ray Xia</div>
 
   <ul class="menu flex gap-4 md:gap-8 text-sm pr-1">
-    {
-      showButtons ? (
-        <li class="">
-          <a href="/#projects" class="p-1 nav-link">
-            <span>Projects</span>
-            <span class="slider" />
-          </a>
-        </li>
-        <li class="">
+    <li class="">
+      <a href="/#projects" class="p-1 nav-link">
+        <span>Projects</span>
+        <span class="slider"></span>
+      </a>
+    </li>
+    <li class="">
       <a href="/about/" class="p-1 nav-link">
         <span>About</span>
         <span class="slider"></span>
       </a>
     </li>
-      ) : (    
-      <li id="li-about" class="hidden">
-      <a href="/about/" class="p-1 nav-link">
-        <span>About</span>
-        <span class="slider"></span>
-      </a>
-    </li>
-    )}
   </ul>
 </nav>
 
@@ -39,8 +29,11 @@ import Logo from "../components/Logo.astro";
     const currentUrl = window.location.pathname;
 
     // Highlight link for current page
-    links.forEach(link => {
-      if (link.getAttribute("href") === currentUrl || link.getAttribute("href") === currentUrl + "/") {
+    links.forEach((link) => {
+      if (
+        link.getAttribute("href") === currentUrl ||
+        link.getAttribute("href") === currentUrl + "/"
+      ) {
         link.classList.add("active");
       } else {
         link.classList.remove("active");
@@ -106,7 +99,8 @@ import Logo from "../components/Logo.astro";
     color: var(--color-text-main);
   }
 
-  .nav-link:hover:before, .active:before {
+  .nav-link:hover:before,
+  .active:before {
     width: 100%;
   }
 
@@ -122,9 +116,9 @@ import Logo from "../components/Logo.astro";
     transition: width 0.2s ease;
   }
 
-  @media (hover: none) {
+  /* @media (hover: none) {
    #li-about {
         display: block; 
     }
-}
+} */
 </style>
