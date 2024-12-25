@@ -14,12 +14,12 @@ h3 {
 }
 
 h4 {
-  font-family: "TT Fors";
-  font-size: 0.75rem;
-  font-weight: 450;
-  text-transform: uppercase;
-  color: var(--color-text-tertiary);
-  margin-bottom: 0.3rem;
+  font-family: "LT Cushion";
+  font-weight: 325;
+  font-size: 1.55rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+  line-height: 1.5;
 }
 
 p {
