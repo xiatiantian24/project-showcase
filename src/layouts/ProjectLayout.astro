@@ -8,6 +8,7 @@ import "../styles/global.css";
 const {
   projectTitle,
   projectDescription,
+  summary,
   tags,
   detail1Title,
   detail1Content,
@@ -39,7 +40,7 @@ const {
           <div class="w-full flex flex-col items-center gap-6 md:gap-8">
             <div class="w-full flex flex-col items-center gap-2">
               <h2 class="text-base text-center md:text-lg">{projectDescription}</h2>
-              <h1 class="text-2xl text-center md:text-5xl pb-1">{projectTitle}</h1>
+              <h1 class="text-4xl text-center md:text-6xl pb-1">{projectTitle}</h1>
             </div>
             <div class="tags flex flex-wrap text-xs pb-1">
               {
@@ -58,8 +59,12 @@ const {
         <slot />
 
         <!-- Detail Lists -->
+        <div class="flex flex-col mt-28 md:mt-36 mb-24 mx-auto items-center px-6">
+          <h4 class="w-full max-w-2xl">{summary}</h4>
+        </div>
+
         <div
-          class="detail-box w-8/12 my-28 md:my-36 max-w-2xl mx-auto flex flex-col items-start gap-8 py-8 px-4 text-sm"
+          class="detail-box w-8/12 mb-28 md:mb-36 max-w-2xl mx-auto flex flex-col items-start gap-8 py-8 px-4 text-sm"
         >
           <div class="line hidden md:flex"></div>
           <div class="grid grid-cols-1 w-full md:grid-cols-10">
@@ -77,13 +82,13 @@ const {
             </div>
             {detail3Title && <div class="detail mb-8 md:mb-0 px-1 md:col-span-3">
               <div class="detail-title">{detail3Title}</div>
-              <div class="detail-content">
+              {detail3Content && <div class="detail-content">
                 {detail3Content.map((content) => <div class="detail-item">{content}</div>)}
-              </div>
+              </div>}
               <div class="detail-content flex flex-col items-start gap-1">
                 {
                   linksURL && linksURL.map((url, index) => (
-                    <a class="flex flex-row detail-item" href={url}>
+                    <a class="detail-item detail-link" href={url} target="_blank" rel="noopener noreferer">
                       {linksTitle[index]}
                     </a>
                   ))
@@ -121,11 +126,26 @@ const {
 
     h2 {
       line-height: 1.35;
-      font-weight: 400;
+      font-weight: 500;
+    }
+
+    a.detail-item {
+      color: var(--color-text-tertiary);
+      text-decoration: none;
+      position: relative;
+      transition: 100ms ease;
+      pointer-events: auto;
+      border-bottom: 1.5px solid var(--color-border-secondary);
+    }
+
+    a.detail-item:hover {
+      color: var(--color-text-main);
+      border-bottom: 1.5px solid var(--color-border-main);
     }
 
     .tags {
       font-family: "TT Fors";
+      color:var(--color-text-tertiary);
       text-transform: uppercase;
       font-weight: 500;
     }
