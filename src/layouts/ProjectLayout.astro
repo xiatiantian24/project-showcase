@@ -54,17 +54,27 @@ const {
           </div>
         </div>
 
-        <!-- Slot for cover image -->
-        <slot name="cover-img" />
-        <slot />
+        <div
+        class="flex flex-col lg:grid lg:grid-cols-8 items-center"
+        >
+        <div class="col-span-5 flex flex-col">
+          <!-- Slot for cover image -->
+          <slot name="cover-img" />
+          <slot />
+        </div>
+        <div class="hidden col-span-3 lg:flex flex-col">
+          <h4 class="w-full max-w-2xl px-12">{summary}</h4>
+        </div>
+        </div>
+
 
         <!-- Detail Lists -->
-        <div class="flex flex-col mt-28 md:mt-36 mb-24 mx-auto items-center px-6">
+        <div class="lg:hidden flex flex-col mt-28 md:mt-36 mb-24 mx-auto items-center px-6">
           <h4 class="w-full max-w-2xl">{summary}</h4>
         </div>
 
         <div
-          class="detail-box w-8/12 mb-28 md:mb-36 max-w-2xl mx-auto flex flex-col items-start gap-8 py-8 px-4 text-sm"
+          class="detail-box w-8/12 mb-28 md:mb-36 lg:mt-36 max-w-2xl mx-auto flex flex-col items-start gap-8 py-8 px-4 text-sm"
         >
           <div class="line hidden md:flex"></div>
           <div class="grid grid-cols-1 w-full md:grid-cols-10">
