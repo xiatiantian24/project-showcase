@@ -15,9 +15,9 @@ h3 {
 
 h4 {
   font-family: "LT Cushion";
-  font-weight: 325;
-  font-size: 1.55rem;
-  font-style: italic;
+  font-weight: 300;
+  font-size: 1.25rem;
+  /* font-style: italic; */
   margin-bottom: 2rem;
   line-height: 1.5;
 }
