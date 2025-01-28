@@ -4,241 +4,259 @@ import { ViewTransitions } from "astro:transitions";
 import { Image } from "astro:assets";
 
 interface Props {
-    href: string;
-    title: string;
-    description: string;
-    scopes: string[];
-    altText: string;
-    imgPath?: string;
-    videoSrc?: string;
-    mediaType?: 'image' | 'video';
+  href: string;
+  title: string;
+  description: string;
+  scopes: string[];
+  altText: string;
+  imgPath?: string;
+  videoSrc?: string;
+  mediaType?: "image" | "video";
 }
 
-const { href, title, description, scopes, altText, imgPath, videoSrc, mediaType = 'image' } = Astro.props;
+const {
+  href,
+  title,
+  description,
+  scopes,
+  altText,
+  imgPath,
+  videoSrc,
+  mediaType = "image",
+} = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-    "../assets/images/*"
+  "../assets/images/*"
 );
-if (mediaType === 'image' && !images[imgPath]) {
-    throw new Error(
-        `"${imgPath}" does not exist in glob: "../assets/images/*"`,
-    );
+if (mediaType === "image" && !images[imgPath]) {
+  throw new Error(`"${imgPath}" does not exist in glob: "../assets/images/*"`);
 }
 ---
 
 <head>
-    <ViewTransitions />
+  <ViewTransitions />
 </head>
 
-<project-button class="button-wrap" data-mediatype={mediaType} data-imgpath={imgPath}>
-    <a href={href}>
-        <!-- Desktop ver. -->
-        <div class="button menu md:flex md:items-end sm:justify-between">
-            <!-- Title & Description -->
-            <div class="description-wrap flex flex-col justify-between pb-1.5">
-                <div class="project-description mt-12 md:mt-8 pb-2 md:pb-1">
-                    {description}
-                </div>
-                <div class="project-title">{title}</div>
-            </div>
-            <!-- Scope -->
-            <div class="project-scope flex pb-2 pr-4">
-                {
-                    scopes.map((scope, index) => (
-                        <>
-                            <div class="content-center w-max">{scope}</div>
-                            {index !== scopes.length - 1 && 
-                                <span class="px-1 content-center">&#47;</span>
-                            }
-                        </>
-                    ))
-                }
-            </div>
+<project-button
+  class="button-wrap"
+  data-mediatype={mediaType}
+  data-imgpath={imgPath}
+>
+  <a href={href}>
+    <!-- Desktop ver. -->
+    <div class="button menu md:flex md:items-end sm:justify-between">
+      <!-- Title & Description -->
+      <div class="description-wrap flex flex-col justify-between pb-3">
+        <div class="project-description mt-10 md:mt-6 pb-2 md:pb-1">
+          {description}
         </div>
+        <div class="project-title">{title}</div>
+      </div>
+      <!-- Scope -->
+      <div class="project-scope flex pb-3.5 pr-4">
+        {
+          scopes.map((scope, index) => (
+            <>
+              <div class="content-center w-max">{scope}</div>
+              {index !== scopes.length - 1 && (
+                <span class="px-1 content-center">&#47;</span>
+              )}
+            </>
+          ))
+        }
+      </div>
+    </div>
 
-        <!-- Desktop Media -->
-        <div class="media-desktop hidden md:block">
-            <div class="media-wrap">
-                {mediaType === 'image' ? (
-                    <Image src={images[imgPath]()} alt={altText} class="media-content image" loading="eager"/>
-                ) : (
-                    <video 
-                        class="media-content video" 
-                        autoplay 
-                        loop 
-                        muted 
-                        playsinline
-                    >
-                        <source src={videoSrc} type="video/mp4" />
-                    </video>
-                )}
-            </div>
-        </div>
+    <!-- Desktop Media -->
+    <div class="media-desktop hidden md:block">
+      <div class="media-wrap">
+        {
+          mediaType === "image" ? (
+            <Image
+              src={images[imgPath]()}
+              alt={altText}
+              class="media-content image"
+              loading="eager"
+            />
+          ) : (
+            <video class="media-content video" autoplay loop muted playsinline>
+              <source src={videoSrc} type="video/mp4" />
+            </video>
+          )
+        }
+      </div>
+    </div>
 
-        <!-- Mobile Media -->
-        <div class="media-mobile md:hidden mt-4">
-            {mediaType === 'image' ? (
-                <Image src={images[imgPath]()} alt={altText} class="media-content image" loading="eager"/>
-            ) : (
-                <video 
-                    class="media-content video" 
-                    autoplay 
-                    loop 
-                    muted 
-                    playsinline
-                >
-                    <source src={videoSrc} type="video/mp4" />
-                </video>
-            )}
-        </div>
-        <div></div>
-    </a>
+    <!-- Mobile Media -->
+    <div class="media-mobile md:hidden mt-4">
+      {
+        mediaType === "image" ? (
+          <Image
+            src={images[imgPath]()}
+            alt={altText}
+            class="media-content image"
+            loading="eager"
+          />
+        ) : (
+          <video class="media-content video" autoplay loop muted playsinline>
+            <source src={videoSrc} type="video/mp4" />
+          </video>
+        )
+      }
+    </div>
+    <div></div>
+  </a>
 </project-button>
 
 <script>
-    class ProjectButton extends HTMLElement {
-        constructor() {
-            super();
+  class ProjectButton extends HTMLElement {
+    constructor() {
+      super();
 
-            const button = this.querySelector('a');
-            const target = this.querySelector('.media-wrap') as HTMLElement;
-            const mediaType = this.dataset.mediatype;
-            const mediaContent = target?.querySelector('.media-content');
+      const button = this.querySelector("a");
+      const target = this.querySelector(".media-wrap") as HTMLElement;
+      const mediaType = this.dataset.mediatype;
+      const mediaContent = target?.querySelector(".media-content");
 
-            // Cursor following effect for project button
-            function follow(e) {
-                if (target) {
-                    target.style.left = `${e.pageX + 24}px`;
-                    target.style.top = `${e.pageY - window.scrollY - 0.5*target.scrollHeight}px`;
-                }
-            }
-
-            if (target && mediaContent) {
-                target.style.transition = 'filter 400ms ease-out, visibility 100ms linear';
-                target.style.filter = 'saturate(0%) contrast(50%)';
-                
-                button?.addEventListener('mouseenter', () => {
-                    target.style.display = "block";
-                    target.style.visibility = 'visible';
-                    setTimeout(() => {
-                        target.style.filter = 'saturate(100%) contrast(100%)';
-                    }, 1);
-                    document.addEventListener('mousemove', follow);
-
-                    // If it's a video, ensure it's playing
-                    if (mediaType === 'video') {
-                        (mediaContent as HTMLVideoElement).play();
-                    }
-                });
-
-                button?.addEventListener('mouseleave', () => {
-                    target.style.visibility = 'hidden';
-                    target.style.transition = 'filter 400ms ease-out';
-                    target.style.filter = 'saturate(0%) contrast(50%)';
-                    document.removeEventListener('mousemove', follow);
-                });
-            }
+      // Cursor following effect for project button
+      function follow(e) {
+        if (target) {
+          target.style.left = `${e.pageX + 24}px`;
+          target.style.top = `${e.pageY - window.scrollY - 0.5 * target.scrollHeight}px`;
         }
-    }       
+      }
 
-    customElements.define('project-button', ProjectButton);
+      if (target && mediaContent) {
+        target.style.transition =
+          "filter 400ms ease-out, visibility 100ms linear";
+        target.style.filter = "saturate(0%) contrast(50%)";
+
+        button?.addEventListener("mouseenter", () => {
+          target.style.display = "block";
+          target.style.visibility = "visible";
+          setTimeout(() => {
+            target.style.filter = "saturate(100%) contrast(100%)";
+          }, 1);
+          document.addEventListener("mousemove", follow);
+
+          // If it's a video, ensure it's playing
+          if (mediaType === "video") {
+            (mediaContent as HTMLVideoElement).play();
+          }
+        });
+
+        button?.addEventListener("mouseleave", () => {
+          target.style.visibility = "hidden";
+          target.style.transition = "filter 400ms ease-out";
+          target.style.filter = "saturate(0%) contrast(50%)";
+          document.removeEventListener("mousemove", follow);
+        });
+      }
+    }
+  }
+
+  customElements.define("project-button", ProjectButton);
 </script>
 
 <style>
-    .button-wrap {
-        width: 100%;
-        font-family: "TT Fors";
-        height: max-content;
-    }
+  .button-wrap {
+    width: 100%;
+    /* font-family: "TT Fors"; */
+    font-family: "Figtree";
+    height: max-content;
+  }
 
-    .button:last-child {
-        border-bottom: none;
+  .button:last-child {
+    border-bottom: none;
+  }
+
+  .button {
+    height: max-content;
+  }
+
+  .project-title {
+    font-family: "LT Cushion";
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1;
+    transform: scaleY(1.05);
+    transform-origin: 0 0;
+    font-size: 1.6rem;
+    transition: font-size 250ms ease-in-out;
+  }
+
+  .description-wrap {
+    height: 100%;
+  }
+
+  .project-description {
+    /* font-family: "TT Fors"; */
+    font-family: "Figtree";
+    text-transform: uppercase;
+    transform: scaleY(1.02);
+    line-height: 1.1;
+    font-weight: 450;
+    transform-origin: 0 0;
+    letter-spacing: -0.01rem;
+    color: var(--color-text-secondary);
+  }
+
+  .project-scope {
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    transform: scaleY(1.1);
+    transform-origin: 0 0;
+    font-size: 0.7rem;
+    letter-spacing: -0.01rem;
+    line-height: 110%;
+    font-weight: 500;
+  }
+
+  .media-wrap {
+    position: fixed;
+    text-align: center;
+    display: none;
+    z-index: 1000;
+    pointer-events: none;
+  }
+
+  .media-content {
+    object-fit: cover;
+    border-bottom: 1.5px solid var(--color-border-secondary);
+    padding-bottom: 1rem;
+  }
+
+  a {
+    border-bottom: 1.5px solid var(--color-border-secondary);
+  }
+
+  @media screen and (min-width: 768px) {
+    .project-title {
+      font-size: clamp(2.5rem, 5vw, 3.2rem);
+      letter-spacing: -0.06rem;
     }
 
     .button {
-        height: max-content;
-    }
-
-    .project-title {
-        font-family: "LT Cushion";
-        font-weight: 300;
-        font-style: normal;
-        line-height: 1;
-        transform: scaleY(1.05);
-        transform-origin: 0 0;
-        font-size: 1.6rem;
-        transition: font-size 250ms ease-in-out;
-    }
-
-    .description-wrap {
-        height: 100%;
-    }
-
-    .project-description {
-        font-family: "TT Fors";
-        text-transform: uppercase;
-        line-height: 1.1;
-        font-weight: 450;
-        transform-origin: 0 0;
-        letter-spacing: -0.02rem;
-    }
-
-    .project-scope {
-        color: var(--color-text-secondary);
-        text-transform: uppercase;
-        transform: scaleY(1.1);
-        transform-origin: 0 0;
-        font-size: 0.7rem;
-        letter-spacing: -0.02rem;
-        line-height: 110%;
-        font-weight: 500;
-    }
-
-    .media-wrap {
-        position: fixed;
-        text-align: center;
-        display: none;
-        z-index: 1000;
-        pointer-events: none;
+      padding: 0.5rem 0 0.5rem 3rem;
+      border-bottom: 1.5px solid var(--color-border-secondary);
     }
 
     .media-content {
-        object-fit: cover;
-        border-bottom: 1.5px solid var(--color-border-secondary);
-        padding-bottom: 1rem;
+      border-bottom: none;
+      padding-bottom: 0;
+      width: 40vw;
+      min-width: 200px;
+      max-width: 1400px;
     }
 
-    a {
-        border-bottom: 1.5px solid var(--color-border-secondary);
+    video {
+      object-fit: contain;
     }
+  }
 
-    @media screen and (min-width: 768px) {
-        .project-title {
-            font-size: clamp(2.5rem, 5vw, 3.2rem);
-            letter-spacing: -0.06rem;
-        }
-
-        .button {
-            padding: 0.5rem 0 0.5rem 3rem;
-            border-bottom: 1.5px solid var(--color-border-secondary);
-        }
-
-        .media-content {
-            border-bottom: none;
-            padding-bottom: 0;
-            width: 40vw;
-            min-width: 200px;
-            max-width: 1400px;
-        }
-
-        video{
-            object-fit: contain;
-        }
+  @media screen and (min-width: 1024px) {
+    .button {
+      padding: 0.5rem 0 0.5rem 6rem;
     }
-    
-    @media screen and (min-width: 1024px) {
-        .button {
-            padding: 0.5rem 0 0.5rem 6rem;
-        }
-    }
+  }
 </style>
