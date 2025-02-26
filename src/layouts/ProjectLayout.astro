@@ -63,14 +63,22 @@ const {
           <slot />
         </div>
         <div class="hidden col-span-3 lg:flex flex-col">
-          <h4 class="w-full max-w-2xl px-12">{summary}</h4>
+          <h4 class="w-full max-w-2xl px-16">
+            {summary.map((line) => (
+            <p>{line}</p>
+          ))}
+          </h4>
         </div>
         </div>
 
 
         <!-- Detail Lists -->
         <div class="lg:hidden flex flex-col mt-28 md:mt-36 mb-24 mx-auto items-center px-6">
-          <h4 class="w-full max-w-2xl">{summary}</h4>
+          <h4 class="w-full max-w-2xl">
+            {summary.map((line) => (
+            <p>{line}</p>
+          ))}
+          </h4>        
         </div>
 
         <div
