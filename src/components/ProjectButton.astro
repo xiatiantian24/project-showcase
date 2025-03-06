@@ -47,7 +47,7 @@ if (mediaType === "image" && !images[imgPath]) {
     <div class="button menu md:flex md:items-end sm:justify-between">
       <!-- Title & Description -->
       <div class="description-wrap flex flex-col justify-between pb-3">
-        <div class="project-description mt-10 md:mt-6 pb-2 md:pb-1">
+        <div class="project-description mt-6 pb-2 md:pb-1">
           {description}
         </div>
         <div class="project-title">{title}</div>
@@ -88,7 +88,7 @@ if (mediaType === "image" && !images[imgPath]) {
     </div>
 
     <!-- Mobile Media -->
-    <div class="media-mobile md:hidden mt-4">
+    <div class="media-mobile md:hidden mt-4 mb-8">
       {
         mediaType === "image" ? (
           <Image
@@ -176,13 +176,13 @@ if (mediaType === "image" && !images[imgPath]) {
 
   .project-title {
     font-family: "LT Cushion";
-    font-weight: 300;
+    font-weight: 375;
     font-style: normal;
     line-height: 1;
     transform: scaleY(1.05);
     transform-origin: 0 0;
     font-size: 1.6rem;
-    transition: font-size 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
   }
 
   .description-wrap {
@@ -195,10 +195,11 @@ if (mediaType === "image" && !images[imgPath]) {
     text-transform: uppercase;
     transform: scaleY(1.02);
     line-height: 1.1;
-    font-weight: 400;
+    font-weight: 375;
     transform-origin: 0 0;
     letter-spacing: -0.01rem;
     color: var(--color-text-main);
+    transition: all 250ms ease-in-out;
   }
 
   .project-scope {
@@ -239,6 +240,7 @@ if (mediaType === "image" && !images[imgPath]) {
     .button {
       padding: 0.5rem 0 0.5rem 3rem;
       border-bottom: 1.5px solid var(--color-border-secondary);
+      transition: border 250ms ease-in-out;
     }
 
     .media-content {
