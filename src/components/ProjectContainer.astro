@@ -82,14 +82,14 @@ import ThemeToggle from "./ThemeToggle.astro";
 >
   <div class="category-label">
     <div class="sticky top-24 pt-10">
-      <a href="#ux"><div>UX</div></a>
+      <a href="#product-and-experience"><div>Product & Experience</div></a>
     </div>
   </div>
-  <div class="project-wrap" id="ux">
+  <div class="project-wrap" id="product-and-experience">
     <ProjectButton
       title="streamliming shift scheduling for nurses"
       description="BJC HealthCare"
-      scopes={["Internship", "2023-2024", "UX & UI Design"]}
+      scopes={["Internship", "UX & UI Design", "2023-2024"]}
       href="/projects/bjc-flexible-scheduling"
       mediaType="image"
       imgPath="../assets/images/bjc-cover-flex.jpg"
@@ -98,7 +98,7 @@ import ThemeToggle from "./ThemeToggle.astro";
     <ProjectButton
       title="what nurses need to work virtually"
       description="BJC HealthCare"
-      scopes={["Internship", "2023-2024", "UX Research"]}
+      scopes={["Internship", "UX Research", "2023-2024"]}
       href="/projects/bjc-virtual-nursing"
       mediaType="image"
       imgPath="../assets/images/bjc-cover-main.jpg"
@@ -107,7 +107,7 @@ import ThemeToggle from "./ThemeToggle.astro";
     <ProjectButton
       title="personalizing virtual assistant demos"
       description="Rulai, Inc."
-      scopes={["Internship", "2022", "UX Design", "Solution Engineer"]}
+      scopes={["Internship", "Solution Engineer",  "2022"]}
       href="/projects/rulai"
       mediaType="image"
       imgPath="../assets/images/rulai-cover.jpg"
@@ -118,10 +118,10 @@ import ThemeToggle from "./ThemeToggle.astro";
       description="B.F.A. Capstone Project"
       scopes={[
         "Academic",
-        "2024",
         "UX Design",
         "Interaction Design",
         "UX Research",
+        "2024"
       ]}
       href="/projects/the-path"
       mediaType="video"
@@ -140,7 +140,7 @@ import ThemeToggle from "./ThemeToggle.astro";
     <ProjectButton
       title="pipe type"
       description="Creative Coding Project"
-      scopes={["Academic", "2024", "Interaction Design", "Creative Coding"]}
+      scopes={["Academic", "Interaction Design", "Creative Coding",  "2024"]}
       mediaType="video"
       href="/projects/pipe-type"
       videoSrc="/videos/covers/pipe-cover-video.mp4"
@@ -310,7 +310,6 @@ import ThemeToggle from "./ThemeToggle.astro";
     .category-label {
       border-bottom: 1.5px solid var(--color-border-secondary);
       width: 8rem;
-      font-size: 1.5rem;
     }
 
     #hero {
@@ -337,6 +336,7 @@ import ThemeToggle from "./ThemeToggle.astro";
   @media (min-width: 1024px) {
     .category-label {
       width: 10rem;
+      font-size: 1.5rem;
     }
 
     #hero {
