@@ -1,0 +1,44 @@
+---
+import "../../styles/global.css";
+import "../../styles/project.css";
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+---
+
+<ProjectLayout
+  projectTitle="How Cities Breathe"
+  projectDescription="A Creative Experiment"
+  summary={[
+    "Visualizing the rhythms of city atmosphere.",
+    "Using real-time weather data—wind speed, humidity, atmospheric pressure, and temperature—to graph parametric equations and moving particles with p5.js.",
+  ]}
+  tags={["Academic", "2024", "Interaction Design", "UI Development"]}
+  detail1Title="Role"
+  detail1Content={["Design",
+    "Development",
+    "User Testing",]}
+  detail2Title="Team"
+  detail2Content={["Hanna Fu (Designer & Developer) "]}
+  detail3Title="URL"
+  linksURL={["https://xiatiantian24.github.io/conditional-design-3-city-weather-finder/"]}
+  linksTitle={["github.io/weather-finder"]}
+>
+  <!-- Cover Image -->
+  <video
+    class="media-content video"
+    slot="cover-img"
+    style="aspect-ratio: 1920/978;"
+    autoplay
+    loop
+    muted
+    playsinline
+  >
+    <source src="/videos/cities/cities-decompressed.mp4" type="video/mp4" />
+  </video>
+</ProjectLayout>
+
+<style>
+  body,
+  nav {
+    background-color: #fff;
+  }
+</style>
