@@ -14,7 +14,7 @@ const { coverSquare } = Astro.props;
           width="100"
           height="100"
           stroke="var(--color-text-secondary)"
-          stroke-width="5"
+          stroke-width="8"
           fill="none"
           rx="1"
           ry="1"
@@ -24,8 +24,8 @@ const { coverSquare } = Astro.props;
         <rect
           id="cover-square"
           class:list={[coverSquare || "coverSquare-main"]}
-          width="45"
-          height="45"
+          width="55"
+          height="55"
           rx="10"
           ry="10"
           transform="rotate(45, 0, 0) translate(52.5,125)"></rect>
@@ -39,7 +39,7 @@ const { coverSquare } = Astro.props;
           y2="150"
           transform="rotate(0, 0, 0) scale(1, 1.4)"
           stroke="var(--color-text-secondary)"
-          stroke-width="5"
+          stroke-width="8"
           stroke-linecap="round"></line>
 
         <!-- Line 2 -->
@@ -51,7 +51,7 @@ const { coverSquare } = Astro.props;
           y2="100"
           transform="rotate(0, 0, 0) scale(1.4, 1)"
           stroke="var(--color-text-secondary)"
-          stroke-width="5"
+          stroke-width="8"
           stroke-linecap="round"></line>
       </svg>
     </a>
@@ -70,7 +70,7 @@ const { coverSquare } = Astro.props;
       logo.addEventListener("mouseenter", () => {
         coverSquare.setAttribute(
           "transform",
-          "rotate(45, 0, 0) translate(25, 25) scale(1.6, 1.6)"
+          "rotate(45, 0, 0) translate(0, 0) scale(1.8, 1.8)"
         );
         line1.setAttribute("transform", "rotate(45, 0, 0) scale(1, 1)");
         line2.setAttribute("transform", "rotate(45, 0, 0) scale(1, 1)");
@@ -101,8 +101,8 @@ const { coverSquare } = Astro.props;
 
       // Reverse effect on mouse leave
       logo.addEventListener("mouseleave", () => {
-        coverSquare.setAttribute("width", "45");
-        coverSquare.setAttribute("height", "45");
+        coverSquare.setAttribute("width", "55");
+        coverSquare.setAttribute("height", "55");
         coverSquare.setAttribute(
           "transform",
           "rotate(45, 0, 0) translate(0,0) scale(1,1)"
