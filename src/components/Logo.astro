@@ -65,6 +65,7 @@ const { coverSquare } = Astro.props;
       const coverSquare = this.querySelector("#cover-square");
       const line1 = document.getElementById("line1");
       const line2 = document.getElementById("line2");
+      const bottomSquare = this.querySelector("rect:first-child");
 
       // Effect on mouse hover
       logo.addEventListener("mouseenter", () => {
@@ -74,6 +75,11 @@ const { coverSquare } = Astro.props;
         );
         line1.setAttribute("transform", "rotate(45, 0, 0) scale(1, 1)");
         line2.setAttribute("transform", "rotate(45, 0, 0) scale(1, 1)");
+        
+        // Change stroke colors to accent
+        bottomSquare.setAttribute("stroke", "var(--color-accent)");
+        line1.setAttribute("stroke", "var(--color-accent)");
+        line2.setAttribute("stroke", "var(--color-accent)");
       });
 
       // Follow effect for cover square
@@ -111,6 +117,11 @@ const { coverSquare } = Astro.props;
         coverSquare.setAttribute("y", "125");
         line1.setAttribute("transform", "rotate(0, 0, 0) scale(1, 1.4)");
         line2.setAttribute("transform", "rotate(0, 0, 0) scale(1.4, 1)");
+        
+        // Reset stroke colors back to secondary
+        bottomSquare.setAttribute("stroke", "var(--color-text-secondary)");
+        line1.setAttribute("stroke", "var(--color-text-secondary)");
+        line2.setAttribute("stroke", "var(--color-text-secondary)");
       });
     }
   }
@@ -119,8 +130,8 @@ const { coverSquare } = Astro.props;
 
 <style>
   .logo-container svg {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
   }
 
   svg * {

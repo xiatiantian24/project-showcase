@@ -80,14 +80,14 @@ import ThemeToggle from "./ThemeToggle.astro";
   class="category flex flex-col md:flex-row w-full pl-4 relative gap-0"
   id="projects"
 >
-  <div class="category-label">
+  <!-- <div class="category-label">
     <div class="sticky top-24 pt-10">
       <a href="#product-and-experience"><div>Product & Experience</div></a>
     </div>
-  </div>
+  </div> -->
   <div class="project-wrap" id="product-and-experience">
     <ProjectButton
-      title="streamliming shift scheduling for nurses"
+      title="Streamliming shift scheduling for nurses"
       description="BJC HealthCare"
       scopes={["Internship", "UX & UI Design", "2023-2024"]}
       href="/projects/bjc-flexible-scheduling"
@@ -96,7 +96,7 @@ import ThemeToggle from "./ThemeToggle.astro";
       altText="Cover image for the BJC Virtual Nursing project"
     />
     <ProjectButton
-      title="what nurses need to work virtually"
+      title="What nurses need to work virtually"
       description="BJC HealthCare"
       scopes={["Internship", "UX Research", "2023-2024"]}
       href="/projects/bjc-virtual-nursing"
@@ -105,23 +105,23 @@ import ThemeToggle from "./ThemeToggle.astro";
       altText="Cover image for the BJC Virtual Nursing project"
     />
     <ProjectButton
-      title="personalizing virtual assistant demos"
+      title="Personalizing virtual assistant demos"
       description="Rulai, Inc."
-      scopes={["Internship", "Solution Engineer",  "2022"]}
+      scopes={["Internship", "Solution Engineer", "2022"]}
       href="/projects/rulai"
       mediaType="image"
       imgPath="../assets/images/rulai-cover.jpg"
       altText="Cover image for the Rulai project"
     />
     <ProjectButton
-      title="the path"
+      title="The Path"
       description="B.F.A. Capstone Project"
       scopes={[
         "Academic",
         "UX Design",
         "Interaction Design",
         "UX Research",
-        "2024"
+        "2024",
       ]}
       href="/projects/the-path"
       mediaType="video"
@@ -130,7 +130,7 @@ import ThemeToggle from "./ThemeToggle.astro";
     />
   </div>
 </div>
-<div class="category flex flex-col md:flex-row w-full pl-4 relative">
+<!-- <div class="category flex flex-col md:flex-row w-full pl-4 relative">
   <div class="category-label">
     <div class="sticky pt-8 top-16">
       <a href="#motion"><div>Motion</div></a>
@@ -140,23 +140,23 @@ import ThemeToggle from "./ThemeToggle.astro";
     <ProjectButton
       title="pipe type"
       description="A Creative Experiment"
-      scopes={["Academic", "Interaction Design", "UI Development",  "2024"]}
+      scopes={["Academic", "Interaction Design", "UI Development", "2024"]}
       mediaType="video"
       href="/projects/pipe-type"
       videoSrc="/videos/covers/pipe-cover-video.mp4"
       altText="Cover video for the Pipe Type project"
     />
     <ProjectButton
-    title="how cities breathe"
-    description="A Creative Experiment"
-    scopes={["Academic", "Interaction Design", "UI Development",  "2023"]}
-    mediaType="video"
-    href="/projects/how-cities-breathe"
-    videoSrc="/videos/covers/cities-cover-video.mp4"
-    altText="Cover video for the How Fast the Wind Blows project"
-  />
+      title="how cities breathe"
+      description="A Creative Experiment"
+      scopes={["Academic", "Interaction Design", "UI Development", "2023"]}
+      mediaType="video"
+      href="/projects/how-cities-breathe"
+      videoSrc="/videos/covers/cities-cover-video.mp4"
+      altText="Cover video for the How Fast the Wind Blows project"
+    />
   </div>
-</div>
+</div> -->
 
 <script>
   document.addEventListener("astro:page-load", () => {
@@ -217,6 +217,9 @@ import ThemeToggle from "./ThemeToggle.astro";
 
   .project-wrap {
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* row-gap: 40px; */
   }
 
   .category {
@@ -343,6 +346,15 @@ import ThemeToggle from "./ThemeToggle.astro";
   }
 
   @media (min-width: 1024px) {
+    .project-wrap {
+      grid-template-columns: repeat(2, 1fr);
+      /* column-gap: var(--gutter, 2rem); */
+    }
+
+    .project-wrap > *:nth-child(even) a {
+      border-left: 1.5px solid var(--color-border-secondary);
+    }
+
     .category-label {
       width: 10rem;
       font-size: 1.5rem;

@@ -29,6 +29,8 @@
   --color-border-main: rgba(99, 99, 99, 1);
   --color-border-secondary: rgba(199, 199, 199, 1);
   --color-highlight: rgba(227, 220, 209, 1);
+  --color-bg-highlight: rgb(238, 234, 229);
+  --color-accent: rgba(123, 103, 178, 1);
 }
 
 .dark {
@@ -42,6 +44,9 @@
   --color-border-main: rgba(148, 148, 148, 1);
   --color-border-secondary: rgba(120, 120, 120, 1);
   --color-highlight: rgba(221, 213, 201, 1);
+  --color-bg-highlight: rgb(88, 88, 88);
+  --color-accent: rgb(191, 175, 210);
+
 }
 
 @media (prefers-color-scheme: dark) {
