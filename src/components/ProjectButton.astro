@@ -141,14 +141,14 @@ if (mediaType === "image" && !images[imgPath]) {
 <style>
   .button-wrap {
     width: 100%;
-    /* font-family: "TT Fors"; */
     font-family: "Figtree";
-    aspect-ratio: 1;
+    /* aspect-ratio: 1; */
     height: auto;
+    border-bottom: 1.5px solid var(--color-border-secondary);
   }
 
   .button {
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -224,7 +224,7 @@ if (mediaType === "image" && !images[imgPath]) {
 
   .media-content {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 581/382;
     object-fit: cover;
     border-radius: 4px;
   }
@@ -232,7 +232,6 @@ if (mediaType === "image" && !images[imgPath]) {
   a {
     height: 100%;
     display: block;
-    border-bottom: 1.5px solid var(--color-border-secondary);
     padding: 0;
   }
 
@@ -246,7 +245,7 @@ if (mediaType === "image" && !images[imgPath]) {
     }
 
     a {
-      padding: 1.5rem;
+      margin: 1.5rem;
     }
 
     .media-content {
@@ -260,9 +259,8 @@ if (mediaType === "image" && !images[imgPath]) {
   }
 
   @media screen and (min-width: 1024px) {
-
     /* Target even project buttons for border-left */
-    .button-wrap:nth-child(even) a {
+    .button-wrap:nth-child(even) {
       border-left: 1.5px solid var(--color-border-secondary);
     }
   }
