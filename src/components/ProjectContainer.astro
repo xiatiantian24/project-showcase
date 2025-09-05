@@ -3,10 +3,8 @@ import ProjectButton from "../components/ProjectButton.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 ---
 
-<!-- Hero -->
-<div class="w-full mt-16 md:mt-12 mb-24 md:mb-20 pl-4" id="hero">
+<!-- Hero --><!-- <div class="w-full mt-16 md:mt-12 mb-24 md:mb-20 pl-4" id="hero">
   <div class="grid md:grid-cols-2 relative gap-2">
-    <!-- Hero Text -->
     <div class="md:col-span-1 intro flex flex-col pr-4 md:pr-0">
       <div id="headline">
         Ray designs user experiences and likes to do fun (and serious) things
@@ -42,7 +40,6 @@ import ThemeToggle from "./ThemeToggle.astro";
       </div>
     </div>
 
-    <!-- Hero Image -->
     <div class="md:col-span-1">
       <a
         class="profile-container block relative mb-4"
@@ -70,6 +67,68 @@ import ThemeToggle from "./ThemeToggle.astro";
             d="M98.4935 57.3704C97.8144 56.3297 98.1075 54.9356 99.1481 54.2564C100.189 53.5773 101.583 53.8704 102.262 54.911L98.4935 57.3704ZM161.706 63.8965L163.955 63.9828L161.706 63.8965ZM197.184 44.357C198.368 44.7347 199.021 46.0006 198.643 47.1845L192.487 66.4761C192.11 67.6599 190.844 68.3133 189.66 67.9356C188.476 67.5578 187.823 66.2919 188.2 65.1081L193.672 47.96L176.524 42.488C175.341 42.1102 174.687 40.8443 175.065 39.6604C175.443 38.4766 176.709 37.8232 177.892 38.2009L197.184 44.357ZM102.262 54.911C103.614 56.9833 105.046 58.1412 106.447 58.7337C107.847 59.3257 109.407 59.4345 111.157 59.0843C114.763 58.3624 118.869 55.7489 122.969 52.1543L125.936 55.538C121.68 59.2694 116.838 62.5364 112.04 63.4968C109.588 63.9877 107.082 63.8882 104.694 62.8783C102.308 61.8689 100.23 60.0312 98.4935 57.3704L102.262 54.911ZM161.077 52.5145C162.884 56.0779 164.108 59.9941 163.955 63.9828L159.458 63.8103C159.572 60.841 158.662 57.7005 157.064 54.5502L161.077 52.5145ZM163.955 63.9828C163.888 65.7193 164.108 66.4499 164.225 66.663C164.252 66.7114 164.207 66.6161 164.054 66.5414C163.917 66.4741 163.858 66.5055 163.986 66.4927C164.335 66.4581 165.053 66.213 166.252 65.4922C167.394 64.8059 168.749 63.8281 170.321 62.6094C176.491 57.8288 185.633 49.5779 195.468 44.5011L197.532 48.4998C188.185 53.3246 179.65 61.0735 173.078 66.1664C171.465 67.416 169.943 68.5237 168.57 69.349C167.255 70.1399 165.821 70.8324 164.432 70.9706C163.692 71.0442 162.868 70.9708 162.077 70.5835C161.27 70.1888 160.682 69.5585 160.283 68.8329C159.548 67.498 159.385 65.7246 159.458 63.8103L163.955 63.9828ZM122.969 52.1543C128.667 47.1587 136.141 43.627 143.204 43.0871C150.372 42.5391 157.319 45.1074 161.077 52.5145L157.064 54.5502C154.32 49.1413 149.361 47.1295 143.547 47.574C137.628 48.0265 131.044 51.0598 125.936 55.538L122.969 52.1543Z"
             fill="white"></path>
         </svg>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="w-full px-4 py-4" id="hero">
+  <div class="hero-grid h-full">
+    <div class="hero-top-left">
+      <div class="hero-top-left-content">
+        <div class="hero-header-right" id="hero-role">Product Designer</div>
+        <div class="hero-header-right" id="hero-location">
+          Based in San Francisco
+        </div>
+        <div class="hero-logo-left">
+          <img src="/svgs/ray.svg" alt="Ray" class="ray-logo" />
+        </div>
+      </div>
+    </div>
+    <div class="hero-top-middle">
+      <img
+        src="/images/about/profile-pic.jpg"
+        alt="Profile picture"
+        class="hero-profile-pic"
+      />
+    </div>
+    <div class="hero-top-right">
+      <div class="hero-top-right-content">
+        <div class="hero-top-right-grid">
+          <div class="hero-top-right-col1"></div>
+          <div class="hero-top-right-col2">
+            <div class="hero-logo-right">
+              <img src="/svgs/xia.svg" alt="Xia" class="xia-logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bottom-left">
+      <div class="hero-bottom-left-text">
+        I specialize in human-AI collaboration for enterprise teams, with a
+        systematic approach to multi-product ecosystems and frontend engineering
+        skills that turn design into delivery fast.
+      </div>
+    </div>
+    <div class="hero-bottom-middle"></div>
+    <div class="hero-bottom-right">
+      <div class="hero-bottom-right-grid">
+        <div class="hero-bottom-right-col1">
+          <div class="hero-bottom-right-col1-content">Prev.</div>
+        </div>
+        <div class="hero-bottom-right-col2">
+          <div class="hero-text-content">
+            <div class="experience-item">
+              <span class="org-name">CARNEGIE MELLON UNIV.</span> Lead Product Designer
+            </div>
+            <div class="experience-item">
+              <span class="org-name">BJC HEALTHCARE</span> UX Designer
+            </div>
+            <div class="experience-item">
+              <span class="org-name">RULAI, INC.</span> UX Designer & Engineer
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -201,6 +260,42 @@ import ThemeToggle from "./ThemeToggle.astro";
       }
     }
 
+    // Dark mode SVG switcher
+    function updateLogoForTheme() {
+      const rayLogo = document.querySelector(".ray-logo") as HTMLImageElement;
+      const xiaLogo = document.querySelector(".xia-logo") as HTMLImageElement;
+      const isDarkMode = document.documentElement.classList.contains("dark");
+
+      if (rayLogo) {
+        rayLogo.src = isDarkMode ? "/svgs/ray-dark.svg" : "/svgs/ray.svg";
+      }
+
+      if (xiaLogo) {
+        xiaLogo.src = isDarkMode ? "/svgs/xia-dark.svg" : "/svgs/xia.svg";
+      }
+    }
+
+    // Initial logo update
+    updateLogoForTheme();
+
+    // Watch for theme changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (
+          mutation.type === "attributes" &&
+          mutation.attributeName === "class"
+        ) {
+          updateLogoForTheme();
+        }
+      });
+    });
+
+    // Start observing the document element for class changes
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
     navHoverEffect("#profile-img", "#about-btn");
     navHoverEffect("#project-nav", "#project-btn");
   });
@@ -219,6 +314,7 @@ import ThemeToggle from "./ThemeToggle.astro";
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
+    margin-top: 10vh;
     /* row-gap: 40px; */
   }
 
@@ -259,36 +355,158 @@ import ThemeToggle from "./ThemeToggle.astro";
     overflow: hidden;
   }
 
-  .intro {
-    margin-top: 20vh;
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
   }
 
-  #headline,
-  #prev-exp {
-    line-height: 1.1;
-    max-width: 475px;
-    /* max-height: 100vh; */
+  .hero-top-left,
+  .hero-top-middle,
+  .hero-top-right {
+    width: 100%;
   }
 
-  #prev-exp {
-    /* font-family: "TT Fors"; */
+  .hero-top-left {
+    overflow: visible;
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-top-left-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    padding-top: 16vh;
+  }
+
+  .hero-header-right {
+    text-align: right;
     font-family: "Figtree";
     font-size: 1rem;
-    line-height: 1.2;
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--color-accent);
   }
 
-  #current {
-    /* font-family: "TT Fors"; */
-    font-family: "Figtree";
-    text-transform: uppercase;
-    font-weight: 375;
-    transform: scaleY(0.98);
-    transform: scaleX(1.02);
-    transform-origin: 0 0;
-    font-size: 0.875rem;
-    margin-top: 2rem;
-    line-height: 1.2;
+  #hero-location {
+    font-size: 0.95rem;
+    font-weight: 350;
+    color: var(--color-text-main);
+    padding-bottom: 35vh;
   }
+
+  .hero-logo-left {
+    text-align: left;
+    overflow: visible;
+  }
+
+  .ray-logo {
+    height: 10vw;
+    width: auto;
+    max-width: none;
+    transform-origin: left center;
+  }
+
+  .hero-profile-pic {
+    width: 100%;
+    height: 85vh;
+    /* max-height: 1000px; */
+    object-fit: cover;
+    display: block;
+    padding: 0.5rem 2rem;
+  }
+
+  .hero-top-right {
+    overflow: visible;
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-top-right-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-top-right-grid {
+    display: grid;
+    grid-template-columns: 6.5vw 1fr;
+    gap: 0;
+    width: 100%;
+  }
+
+  .hero-top-right-col1 {
+    width: 6.5vw;
+  }
+
+  .hero-top-right-col2 {
+    width: 100%;
+  }
+
+  .hero-logo-right {
+    text-align: right;
+    overflow: visible;
+  }
+
+  .xia-logo {
+    height: 10vw;
+    width: auto;
+    max-width: none;
+    transform-origin: right center;
+  }
+
+  .hero-text-content {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.3;
+    color: var(--color-text-main);
+  }
+
+  .hero-bottom-left-text {
+    width: 100%;
+    max-width: 475px;
+    font-size: 1rem;
+    line-height: 1.3;
+    color: var(--color-text-main);
+  }
+
+  .hero-bottom-right-grid {
+    display: grid;
+    grid-template-columns: 6.5vw 1fr;
+    gap: 0;
+    width: 100%;
+    font-family: "Figtree";
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .hero-bottom-right-col1 {
+    width: 6.5vw;
+  }
+
+  .hero-bottom-right-col2 {
+    width: 100%;
+  }
+
+  .experience-item {
+    font-size: 0.85rem;
+    color: var(--color-text-main);
+    padding-bottom: 0.3rem;
+    font-weight: 400;
+  }
+
+  .experience-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .org-name {
+    font-weight: 300;
+  }
+  
 
   #project-nav {
     height: 100%;
@@ -325,8 +543,8 @@ import ThemeToggle from "./ThemeToggle.astro";
     }
 
     #hero {
-      padding: 0 0 2rem 11rem;
-      font-size: 1.15rem;
+      /* padding: 0 0 2rem 11rem;
+      font-size: 1.15rem; */
       border-bottom: none;
     }
 
@@ -342,6 +560,51 @@ import ThemeToggle from "./ThemeToggle.astro";
       max-height: 100%;
       object-fit: cover;
       object-position: center;
+    }
+
+    .hero-grid {
+      grid-template-columns: 4fr 3fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        "middle middle"
+        "left right"
+        "left-text right-text";
+    }
+
+    .hero-top-middle {
+      grid-area: middle;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-profile-pic {
+      width: 50%;
+      height: 65vh;
+      object-fit: cover;
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    .hero-top-left {
+      grid-area: left;
+    }
+
+    .hero-top-right {
+      grid-area: right;
+    }
+
+    .hero-bottom-left {
+      grid-area: left-text;
+    }
+
+    .hero-bottom-middle {
+      grid-area: left-text;
+      grid-column: 1 / -1;
+    }
+
+    .hero-bottom-right {
+      grid-area: right-text;
     }
   }
 
@@ -361,13 +624,40 @@ import ThemeToggle from "./ThemeToggle.astro";
     }
 
     #hero {
-      font-size: 1.4rem;
-      padding-left: 15.5rem;
+      /* font-size: 1.4rem;
+      padding-left: 15.5rem; */
     }
 
     #profile-img {
       width: 85%;
       max-height: 90vh;
+    }
+
+    .hero-grid {
+      grid-template-columns: 31vw 1fr 31vw;
+      grid-template-rows: 1fr auto;
+      grid-template-areas: none;
+    }
+
+    .hero-top-left,
+    .hero-top-middle,
+    .hero-top-right {
+      grid-area: auto;
+      height: 100%;
+    }
+
+    .hero-bottom-left,
+    .hero-bottom-middle,
+    .hero-bottom-right {
+      grid-area: auto;
+    }
+
+    .hero-profile-pic {
+      width: 100%;
+      height: 85vh;
+      object-fit: cover;
+      display: block;
+      padding: 0.5rem 2rem;
     }
   }
 
@@ -377,7 +667,7 @@ import ThemeToggle from "./ThemeToggle.astro";
     }
 
     #hero {
-      padding-left: 20rem;
+      /* padding-left: 20rem; */
     }
   }
 </style>
