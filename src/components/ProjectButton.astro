@@ -145,6 +145,7 @@ if (mediaType === "image" && !images[imgPath]) {
     /* aspect-ratio: 1; */
     height: auto;
     border-bottom: 1.5px solid var(--color-border-secondary);
+    padding: 2rem 0rem;
   }
 
   .button {
@@ -155,7 +156,7 @@ if (mediaType === "image" && !images[imgPath]) {
     gap: 1rem;
     border-radius: 12px;
     transition: background-color 250ms ease-in-out;
-    padding: 2rem;
+    padding: 0rem;
   }
 
   .project-description {
@@ -224,37 +225,40 @@ if (mediaType === "image" && !images[imgPath]) {
 
   .media-content {
     width: 100%;
-    aspect-ratio: 581/382;
+    aspect-ratio: 585/382;
     object-fit: cover;
-    border-radius: 4px;
   }
 
   a {
-    height: 100%;
     display: block;
     padding: 0;
   }
 
-  .button:hover {
-    background-color: var(--color-bg-highlight);
+
+  .media-content {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
-  @media screen and (min-width: 768px) {
+  video {
+    object-fit: contain;
+  }
+
+  @media screen and (min-width: 640px) {
     .project-title {
       letter-spacing: -0.03rem;
     }
 
-    a {
-      margin: 1.5rem;
+    .button-wrap {
+      padding: 1rem;
     }
 
-    .media-content {
-      border-bottom: none;
-      padding-bottom: 0;
+    .button {
+      padding: 2rem;
     }
 
-    video {
-      object-fit: contain;
+    .button:hover {
+      background-color: var(--color-bg-highlight);
     }
   }
 
