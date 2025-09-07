@@ -4,60 +4,52 @@ import ThemeToggle from "./ThemeToggle.astro";
 ---
 
 <div class="w-full px-4 py-4" id="hero">
-  <div class="hero-grid h-full">
-    <div class="hero-top-left">
-      <div class="hero-top-left-content">
-        <div class="hero-header-right" id="hero-role">Product Designer</div>
-        <div class="hero-header-right" id="hero-location">
+  <div class="hero-container h-full">
+    <!-- Fixed position SVGs -->
+    <div class="hero-logo-left">
+      <img src="/svgs/ray.svg" alt="Ray" class="ray-logo" />
+    </div>
+    <div class="hero-logo-right">
+      <img src="/svgs/xia.svg" alt="Xia" class="xia-logo" />
+    </div>
+
+    <!-- Top section with role, location, and description -->
+    <div class="hero-top-section">
+      <!-- Role and location centered at top -->
+      <div class="hero-header-center">
+        <div class="hero-header-text" id="hero-role">Product Designer</div>
+        <div class="hero-header-text" id="hero-location">
           Based in San Francisco
         </div>
-        <div class="hero-logo-left">
-          <img src="/svgs/ray.svg" alt="Ray" class="ray-logo" />
-        </div>
       </div>
-    </div>
-    <div class="hero-top-middle">
-      <img
-        src="/images/about/profile-pic.jpg"
-        alt="Profile picture"
-        class="hero-profile-pic"
-      />
-    </div>
-    <div class="hero-top-right">
-      <div class="hero-top-right-content">
-        <div class="hero-top-right-grid">
-          <div class="hero-top-right-col1"></div>
-          <div class="hero-top-right-col2">
-            <div class="hero-logo-right">
-              <img src="/svgs/xia.svg" alt="Xia" class="xia-logo" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-bottom-left">
-      <div class="hero-bottom-left-text">
+
+      <!-- Description text centered -->
+      <div class="hero-description">
         I specialize in human-AI collaboration for enterprise teams, with a
         systematic approach to multi-product ecosystems and frontend engineering
         skills that turn design into delivery fast.
       </div>
     </div>
-    <div class="hero-bottom-middle"></div>
-    <div class="hero-bottom-right">
-      <div class="hero-bottom-right-grid">
-        <div class="hero-bottom-right-col1">
-          <div class="hero-bottom-right-col1-content">Prev.</div>
-        </div>
-        <div class="hero-bottom-right-col2">
-          <div class="hero-text-content">
-            <div class="experience-item">
-              <span class="org-name">CARNEGIE MELLON UNIV.</span> Lead Product Designer
-            </div>
-            <div class="experience-item">
-              <span class="org-name">BJC HEALTHCARE</span> UX Designer
-            </div>
-            <div class="experience-item">
-              <span class="org-name">RULAI, INC.</span> UX Designer & Engineer
+
+    <!-- Bottom section with experience -->
+    <div class="hero-bottom-section">
+      <div class="hero-experience">
+        <div class="hero-experience-grid">
+          <div class="hero-experience-col1">
+            <div class="hero-experience-label">Prev.</div>
+          </div>
+          <div class="hero-experience-col2">
+            <div class="hero-experience-content">
+              <div class="experience-item">
+                <span class="org-name">CARNEGIE MELLON UNIV.</span> Lead Product
+                Designer
+              </div>
+              <div class="experience-item">
+                <span class="org-name">BJC HEALTHCARE</span> UX Designer
+              </div>
+              <div class="experience-item">
+                <span class="org-name">RULAI, INC.</span> UX Designer & Engineer
+              </div>
             </div>
           </div>
         </div>
@@ -111,11 +103,7 @@ import ThemeToggle from "./ThemeToggle.astro";
     <ProjectButton
       title="The Path"
       description="Personal"
-      scopes={[
-        "Adult Care",
-        "Interaction Design",
-        "Design Systems",
-      ]}
+      scopes={["Adult Care", "Interaction Design", "Design Systems"]}
       href="/projects/the-path"
       mediaType="video"
       videoSrc="/videos/covers/the-path-cover-video.mp4"
@@ -289,83 +277,97 @@ import ThemeToggle from "./ThemeToggle.astro";
     overflow: hidden;
   }
 
-  .hero-grid {
-    display: grid;
-    grid-template-rows: auto auto auto auto auto auto;
-    grid-template-columns: 4fr 3fr;
-    grid-template-areas:
-      "middle middle"
-      "left right"
-      "left-text left-text"
-      "right-text right-text";
-  }
-
-  .hero-top-middle {
-    grid-area: middle;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .hero-top-left {
-    grid-area: left;
-  }
-
-  .hero-top-right {
-    grid-area: right;
-  }
-
-  .hero-bottom-left {
-    grid-area: left-text;
-  }
-
-  .hero-bottom-middle {
-    grid-area: left-text;
-    grid-column: 1 / -1;
-  }
-
-  .hero-bottom-right {
-    grid-area: right-text;
-  }
-
-  .hero-top-left,
-  .hero-top-middle,
-  .hero-top-right {
-    width: 100%;
-  }
-
-  .hero-top-left {
-    overflow: visible;
+  .hero-container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+  }
+
+  .hero-top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 12rem;
     z-index: 10;
   }
 
-  .hero-top-left-content {
+  .hero-bottom-section {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding-top: 35vh;
+    z-index: 10;
   }
 
-  .hero-header-right {
-    text-align: left;
+  .hero-header-center {
+    margin-bottom: 4rem;
+  }
+
+  .hero-header-text {
     font-family: "Figtree";
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.4;
     font-weight: 600;
     color: var(--color-accent);
   }
 
+  #hero-role {
+    text-transform: uppercase;
+  }
+
   #hero-location {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 350;
     color: var(--color-text-main);
-    padding-bottom: 1rem;
+    margin-top: 0.2rem;
+  }
+
+  .hero-description {
+    width: 100%;
+    max-width: 600px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: 300;
+    color: var(--color-text-main);
+  }
+
+  .hero-experience {
+    width: fit-content;
+  }
+
+  .hero-experience-grid {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    font-family: "Figtree";
+    font-size: 0.8rem;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  .hero-experience-content {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.3;
+    color: var(--color-text-main);
   }
 
   .hero-logo-left {
-    text-align: left;
-    overflow: visible;
+    position: absolute;
+    left: 0;
+    top: 75%;
+    transform: translateY(-50%);
+    z-index: 5;
+  }
+
+  .hero-logo-right {
+    position: absolute;
+    right: 0;
+    top: 80%;
+    transform: translateY(-50%);
+    z-index: 5;
   }
 
   .ray-logo {
@@ -375,82 +377,11 @@ import ThemeToggle from "./ThemeToggle.astro";
     transform-origin: left center;
   }
 
-  .hero-profile-pic {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    padding: 0.5rem 0;
-  }
-
-  .hero-top-right {
-    overflow: visible;
-    position: relative;
-    z-index: 10;
-  }
-
-  .hero-top-right-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: flex-end;
-    padding-bottom: 3.5rem;
-    padding-top: 6rem;
-  }
-
-  .hero-top-right-grid {
-    display: block;
-    width: 100%;
-  }
-
-  .hero-top-right-col1 {
-    width: 3rem;
-  }
-
-  .hero-top-right-col2 {
-    width: 100%;
-  }
-
-  .hero-logo-right {
-    text-align: right;
-    overflow: visible;
-  }
-
   .xia-logo {
     height: 15vw;
     width: auto;
     max-width: none;
     transform-origin: right center;
-  }
-
-  .hero-text-content {
-    width: 100%;
-    font-size: 1rem;
-    line-height: 1.3;
-    color: var(--color-text-main);
-  }
-
-  .hero-bottom-left-text {
-    width: 100%;
-    max-width: 475px;
-    font-size: 1rem;
-    line-height: 1.3;
-    color: var(--color-text-main);
-    margin-top: 0;
-    margin-bottom: 4rem;
-  }
-
-  .hero-bottom-right-grid {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 6rem 1fr;
-    font-family: "Figtree";
-    font-size: 0.8rem;
-    line-height: 1.4;
-  }
-
-  .hero-bottom-right-col2 {
-    width: 100%;
   }
 
   .experience-item {
@@ -503,183 +434,38 @@ import ThemeToggle from "./ThemeToggle.astro";
       width: 8rem;
     }
 
-    .profile-container {
-      left: 8vw;
+    .hero-container {
     }
 
-    #profile-img {
-      max-height: 100%;
-      object-fit: cover;
-      object-position: center;
+    .hero-top-section {
+      padding-top: 8rem;
     }
 
-    .hero-grid {
-      grid-template-columns: 4fr 3fr;
-      grid-template-rows: auto 1fr auto;
-      grid-template-areas:
-        "middle middle"
-        "left right"
-        "left-text right-text";
+    .hero-header-center {
+      margin-bottom: 3rem;
     }
 
-    .hero-top-left,
-    .hero-top-middle,
-    .hero-top-right {
-      width: 100%;
-    }
-
-    .hero-top-left {
-      overflow: visible;
-      position: relative;
-      z-index: 10;
-    }
-
-    .hero-top-left-content {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: flex-start;
-      padding-top: 1rem;
-    }
-
-    .hero-header-right {
-      text-align: left;
-      font-family: "Figtree";
+    .hero-header-text {
       font-size: 1rem;
-      line-height: 1.4;
-      font-weight: 600;
-      color: var(--color-accent);
     }
 
-    #hero-location {
-      font-size: 0.9rem;
-      font-weight: 350;
-      color: var(--color-text-main);
-      padding-bottom: 1.5rem;
+    .hero-description {
+      font-size: 1.4rem;
+      max-width: 540px;
+      letter-spacing: -0.01rem;
+      height: 6.2rem;
     }
 
-    .hero-logo-left {
-      text-align: left;
-      overflow: visible;
+    .hero-bottom-section {
+      padding-top: 45vh;
     }
 
-    .ray-logo {
-      height: 15vw;
-      width: auto;
-      max-width: none;
-      transform-origin: left center;
-    }
-
-    .hero-profile-pic {
-      width: 55%;
-      height: 60vh;
-      object-fit: cover;
-      display: block;
-      padding: 0.5rem 0;
-    }
-
-    .hero-top-right {
-      overflow: visible;
-      position: relative;
-      z-index: 10;
-    }
-
-    .hero-top-right-content {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: flex-end;
-      padding-bottom: 2.5rem;
-      padding-top: 10rem;
-    }
-
-    .hero-top-right-grid {
-      display: grid;
-      grid-template-columns: 6.5vw 1fr;
-      gap: 0;
-      width: 100%;
-    }
-
-    .hero-top-right-col1 {
-      width: 6.5vw;
-    }
-
-    .hero-top-right-col2 {
-      width: 100%;
-    }
-
-    .hero-logo-right {
-      text-align: right;
-      overflow: visible;
-    }
-
-    .xia-logo {
-      height: 15vw;
-      width: auto;
-      max-width: none;
-      transform-origin: right center;
-    }
-
-    .hero-top-right-grid {
-      display: grid;
-      grid-template-columns: 6.5vw 1fr;
-      gap: 0;
-      width: 100%;
-    }
-
-    .hero-top-right-col1 {
-      display: block;
-      width: 6.5vw;
-    }
-
-    .hero-bottom-right-grid {
-      display: grid;
-      grid-template-columns: 6.5vw 1fr;
-      gap: 0;
-      width: 100%;
-      font-family: "Figtree";
+    .hero-experience-grid {
       font-size: 0.85rem;
-      line-height: 1.4;
     }
 
-    .hero-bottom-right-col1 {
-      display: block;
-      width: 6.5vw;
-    }
-
-    .hero-text-content {
-      width: 100%;
+    .hero-experience-content {
       font-size: 1rem;
-      line-height: 1.3;
-      color: var(--color-text-main);
-    }
-
-    .hero-bottom-left-text {
-      width: 100%;
-      max-width: 475px;
-      font-size: 1rem;
-      line-height: 1.3;
-      color: var(--color-text-main);
-      margin-top: -5.5rem;
-      margin-bottom: 0;
-    }
-
-    .hero-bottom-right-grid {
-      display: grid;
-      grid-template-columns: 6.5vw 1fr;
-      gap: 0;
-      width: 100%;
-      font-family: "Figtree";
-      font-size: 0.85rem;
-      line-height: 1.4;
-    }
-
-    .hero-bottom-right-col1 {
-      width: 6.5vw;
-    }
-
-    .hero-bottom-right-col2 {
-      width: 100%;
     }
 
     .experience-item {
@@ -702,25 +488,6 @@ import ThemeToggle from "./ThemeToggle.astro";
       font-size: 1.5rem;
     }
 
-    .hero-grid {
-      grid-template-columns: 31vw 1fr 31vw;
-      grid-template-rows: 1fr auto;
-      grid-template-areas: none;
-    }
-
-    .hero-top-left,
-    .hero-top-middle,
-    .hero-top-right {
-      grid-area: auto;
-      height: 100%;
-    }
-
-    .hero-bottom-left,
-    .hero-bottom-middle,
-    .hero-bottom-right {
-      grid-area: auto;
-    }
-
     #hero {
       font-family: "LT Cushion";
       font-weight: 400;
@@ -730,103 +497,29 @@ import ThemeToggle from "./ThemeToggle.astro";
       letter-spacing: 0.005rem;
     }
 
-    .hero-top-left {
-      overflow: visible;
-      position: relative;
-      z-index: 10;
-    }
-
-    .hero-top-left-content {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: flex-start;
-      padding-top: 16vh;
-    }
-
-    .hero-header-right {
-      text-align: right;
-      font-family: "Figtree";
-      font-size: 1rem;
-      line-height: 1.4;
-      font-weight: 600;
-      color: var(--color-accent);
+    .hero-header-text {
+      font-size: 0.9rem;
     }
 
     #hero-location {
-      font-size: 0.9rem;
-      font-weight: 350;
-      color: var(--color-text-main);
-      padding-bottom: 35vh;
+      font-size: 0.85rem;
     }
 
-    .hero-logo-left {
-      text-align: left;
-      overflow: visible;
+    .hero-description {
+      font-size: 1.6rem;
+      max-width: 640px;
     }
 
     .ray-logo {
-      height: 10vw;
-      width: auto;
-      max-width: none;
-      transform-origin: left center;
-    }
-
-    .hero-profile-pic {
-      width: 100%;
-      height: 85vh;
-      object-fit: cover;
-      display: block;
-      padding: 0.5rem 2rem;
-    }
-
-    .hero-top-right {
-      overflow: visible;
-      position: relative;
-      z-index: 10;
-    }
-
-    .hero-top-right-content {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: flex-end;
-      padding-bottom: 2.5rem;
-      padding-top: 0;
-    }
-
-    .hero-logo-right {
-      text-align: right;
-      overflow: visible;
+      height: clamp(100px, 20vh, 180px);
     }
 
     .xia-logo {
-      height: 10vw;
-      width: auto;
-      max-width: none;
-      transform-origin: right center;
+      height: clamp(100px, 20vh, 180px);
     }
 
-    .hero-bottom-left,
-    .hero-bottom-middle,
-    .hero-bottom-right {
-      grid-area: auto;
-    }
-
-    .hero-text-content {
-      width: 100%;
-      font-size: 1rem;
-      line-height: 1.3;
-      color: var(--color-text-main);
-    }
-
-    .hero-bottom-left-text {
-      width: 100%;
-      max-width: 475px;
-      font-size: 1rem;
-      line-height: 1.3;
-      color: var(--color-text-main);
-      margin-top: 0;
+    .hero-experience-content {
+      font-size: 1.1rem;
     }
   }
 
@@ -835,8 +528,12 @@ import ThemeToggle from "./ThemeToggle.astro";
       width: 15rem;
     }
 
-    #hero {
-      /* padding-left: 20rem; */
+    .ray-logo {
+      height: 20vh;
+    }
+
+    .xia-logo {
+      height: 20vh;
     }
   }
 </style>

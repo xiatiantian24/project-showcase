@@ -32,16 +32,20 @@ const { pageTitle } = Astro.props;
         const navContainer = document.getElementById("nav-container");
 
         if (navContainer) {
-          const showNavOnScroll = () => {
-            if (document.documentElement.scrollTop > 200) {
-              navContainer.classList.add("visible");
-            } else {
-              navContainer.classList.remove("visible");
-            }
-          };
+          // Make nav always visible - temporarily disabled scroll behavior
+          navContainer.classList.add("visible");
           
-          showNavOnScroll();
-          document.addEventListener("scroll", showNavOnScroll);
+          // Commented out scroll behavior for temporary disable
+          // const showNavOnScroll = () => {
+          //   if (document.documentElement.scrollTop > 200) {
+          //     navContainer.classList.add("visible");
+          //   } else {
+          //     navContainer.classList.remove("visible");
+          //   }
+          // };
+          // 
+          // showNavOnScroll();
+          // document.addEventListener("scroll", showNavOnScroll);
         }
       });
     </script>
