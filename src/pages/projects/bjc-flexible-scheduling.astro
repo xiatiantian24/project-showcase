@@ -8,21 +8,33 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
   projectTitle="Streamliming shift scheduling for nurses"
   projectDescription="BJC HealthCare"
   summary={[
-    "Worked fast across multiple platform & user segments, expanding new features and improving existing ones to fill 700,000+ hours of nursing shifts, saving $3.5M+ in operating expenses within a year.",
+    "Worked fast across multiple platform & user segments to fill 700,000+ hours of nursing shifts, saving $3.5M+ in operating expenses within a year.",
   ]}
-  tags={["Enterprise internal tool",
-        "Multi-platform",
-        "End-to-end prototyping",]}
-  detail1Title="Role"
-  detail1Content={["UX Design", "UX Research", "Usability Testing"]}
+  tags={[
+    "Enterprise internal tool",
+    "Multi-platform",
+    "End-to-end prototyping",
+  ]}
+  detail1Title="Role / Skills"
+  detail1Content={[
+    "UX Design",
+    "Solution Architecture",
+    "Prototyping",
+    "User Testing",
+    "Design Systems",
+  ]}
   detail2Title="Team"
   detail2Content={[
-    "Benjamin Flotken (Product Designer)",
-    "Gregory Casey (Sr. Product Designer)",
-    "Michael Buffa (Sr. Product Manager)",
+    "1 Sn. Product Manager",
+    "2 Sn. Product Designers",
+    "1 UX Researcher",
+    "7 Software Engineers",
+    "1 Data Analyst",
   ]}
-  detail3Title="Duration"
-  detail3Content={["12 months"]}
+  detail3Title="Timeline"
+  detail3Content={["2 months for MVP, with 3 months of continued iteration"]}
+  detail4Title="Tools Used"
+  detail4Content={["Figma", "Dovetail", "Maze"]}
 >
   <!-- Cover Image -->
   <img
@@ -37,130 +49,334 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
 
   <div class="project-content px-6" slot="content">
     <!-- Summary -->
-    <section class="summary mb-36 md:mb-48">
-      <h3>new, versitile, fully custom-built app for nurses</h3>
+    <section class="summary my-20">
+      <div class="line hidden md:flex"></div>
+      <h3>The Big Problem</h3>
+      <h4>
+        BJC HealthCare wants to improve its open shift scheduling process
+        because it lacks efficiency and personalization.
+      </h4>
       <div>
         <p>
-          With the pressing chalenge of nurse turnover and work shift vacancies at BJC, I worked on a new initiative that aims to <span class="em">remove friction in scheduling, enabling nurses to pick up work flexibly</span>. I designed both new piloting features and production-ready prototypes for existing capabilities that are used by nurses and nurse managers daily across the org.
+          With the current solution, nurses are only allowed to pick up shifts
+          in set length (i.e., 12hrs) and at a single location.
+        </p>
+        <div class="tip-container" id="problem-tips">
+          <div class="tip">
+            <div class="tip-title">The user problem</div>
+            <div class="tip-body">
+              Nurse managers spend hours asking individual nurses to fill open
+              shifts, while nurses are fatigued with notifications about shifts
+              they're not able/interested in filling.
+            </div>
+          </div>
+          <div class="tip">
+            <div class="tip-title">The business problem</div>
+            <div class="tip-body">
+              Open shift filled rates remains low, causing hospitals to hire
+              expensive agency staff.
+            </div>
+          </div>
+        </div>
+        <p>
+          As a UX Designer, I joined to to understand the user pain points in
+          shift scheduling, strategize desired solution features, push the
+          launch of the MVP, and iterate on new and existing capabilities that
+          are used by nurses and administrators daily across the org.
         </p>
       </div>
     </section>
 
-    <!-- Communication Tool -->
-    <section class="bjc-flex mb-16">
-      <h3>
-        simplifying multiple actions, touchpoints, and back-and-forth
-        communication
-      </h3>
+    <!-- Goals -->
+    <section class="bjc-flex my-20">
+      <h3>Our Goal</h3>
       <div>
+        <div class="mb-2 font-semibold">
+          Develop the MVP of an in-house shift scheduling solution that:
+        </div>
+        <ul class="mb-8">
+          <li>
+            Allows nurses to self-schedule without relying on managers calling
+          </li>
+          <li>Allows administrators to manage and approve shift sign-ups</li>
+          <li>Allows managers to create custom notifications to nurses</li>
+          <li>
+            Can be scaled across unit type and eventually all 14 hospitals
+            within the org
+          </li>
+        </ul>
+        <div class="mb-2 font-semibold">
+          For the business, the solution should:
+        </div>
+        <ul>
+          <li>Increase open shift picked up rate (aka reduce vacancy rate)</li>
+          <li>
+            Reduce spending on Travel Nurses (who gets paid more) and reduce
+            Full Time Nurse turnover rate
+          </li>
+          <li>Increase nurse satisfaction during shift scheduling process</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Research and Discovery -->
+    <section class="section-start mb-12">
+      <div class="line hidden md:flex"></div>
+      <h3>Research and Discovery</h3>
+      <h4>
+        The scheduling workflow involves two roles, each operating with only
+        partial visibility into the overall process, creating a fragmented
+        experience with little effective coordination.
+      </h4>
+      <div>
+        <div class="tip-container roles-tips">
+          <div class="tip tip-green">
+            <div class="tip-title">Nurse</div>
+            <div class="tip-body">
+              Works on a 12 hour schedule (typically 3 shifts/week) and is
+              eligible for open shifts for additional pay. Can see their own
+              schedule but cannot see available open shift until notified.
+            </div>
+          </div>
+          <div class="tip tip-purple">
+            <div class="tip-title">Admin</div>
+            <div class="tip-body">
+              Nurse managers or central staffing coordinators who manage open
+              shift coverage. They can notify nurses about staffing gaps but do
+              not know nurse availability and willingness to fill.
+            </div>
+          </div>
+        </div>
         <p>
-          One of the main initiatives I took in this project was to create the
-          right way for nurse managers to communicate about scheduling to their
-          nurses.
+          Before this initiative, open shift scheduling relies on manual
+          processes with no centralized system to track the interactions between
+          roles. When urgent staffing gaps appeared, nurse managers have to sit
+          down and call every nurse one at a time, which is time consuming in
+          addition to their other responsibilities.
         </p>
         <p>
-          Scheduling open shifts had been tedious and manual. Normally,
-          nurse managers would call their floor nurses one by one to see if they
-          would like to pick them up when open shifts appear. If not, they might
-          call nurse managers from other floors to see if they have any extra
-          hands.
-        </p>
-        <p>
-          I took lead in designing and pushing forward the launch of a messaging
-          tool as part of BJC Flex, with the following three core goals in
-          mind:
-          <ul class="mb-8">
-            <li>
-              <span class="em"
-                >Allow nurse managers to quickly notify nurses</span
-              > when and what shifts are available, or when there is an upcoming
-              shift needing urgent help.
-            </li>
-            <li>
-              <span class="em"
-                >Allow nurse managers to rescope message recipients to those
-                that are more likely to respond</span
-              >, especially when they know the nurses' routine better or know
-              some nurses prefer working together.
-            </li>
-            <li>
-              <span class="em">Avoid alert fatigue among nurses</span>.
-            </li>
-          </ul>
+          To understand deeper pain points behind this broken workflow and
+          identify opportunities for improvement, I visited three BJC hospitals
+          to observe and interview nurses and managers in their actual work
+          environments.
         </p>
       </div>
     </section>
 
-    <!-- Communication Tool Imgaes -->
-    <div
-      class="image-gallery-grid mx-auto mb-36 md:mb-48 grid grid-cols-1 gap-10"
-    >
-      <div class="grid-item-row-1 grid grid-cols-1 gap-4">
-        <div class="grid-item-col">
-          <div class="gallery-image img-bg">
-            <img
-              src="/images/bjc/bjc-admin.jpg"
-              alt="Creating a new message - full view"
-              loading="lazy"
-              style="aspect-ratio: 996/725;"
-            />
+    <div class="figure-large mx-auto mb-12">
+      <img
+        src="/images/bjc/bjc-flex-journey-map.jpg"
+        alt="Open shift scheduling user journey map"
+        loading="lazy"
+        style="aspect-ratio: 732/347;"
+      />
+    </div>
+
+    <section class="bjc-flex my-20">
+      <h3>Insights and Implications</h3>
+      <div>
+        <div class="insight-card">
+          <div class="insight-card-top">
+            Nurses are financially driven when considering working extra.
           </div>
-          <figcaption>Creating a new message - full view</figcaption>
-        </div>
-        <div class="grid-item-col flex flex-col md:grid grid-rows-2 gap-4">
-          <div class="gallery-image md:row-start-1 md:row-span-3">
-            <div class="grid-item-col">
-              <img
-                src="/images/bjc/bjc-admin-attach.jpg"
-                alt="Messaging tool for BJC Flex"
-                style="height:100%; object-fit:cover; aspect-ratio: 166/255;"
-                loading="lazy"
-              />
-              <figcaption>Attaching shift(s) to message - modal</figcaption>
-            </div>
-          </div>
-          <div class="gallery-image">
-            <div class="grid-item-col">
-              <img
-                src="/images/bjc/bjc-admin-attached.jpg"
-                alt="Messaging tool for BJC Flex"
-                loading="lazy"
-                style="aspect-ratio: 332/199;"
-              />
-              <figcaption>
-                Removing nurses with schedule conflict from the recipients -
-                detail view
-              </figcaption>
-            </div>
+          <div class="insight-card-bottom">
+            → Solution should highlight incentive levels to attract nurse
+            interest.
           </div>
         </div>
-      </div>
-      <div class="grid-item-row-2 grid grid-cols-1 gap-4">
-        <div class="grid-item-col">
-          <div class="gallery-image h-full">
-            <img
-              src="/images/bjc/bjc-admin-group.jpg"
-              style="height:100%; object-fit:cover; border:2px solid #f4f4f4; aspect-ratio: 441/229;"
-              alt="Messaging tool for BJC Flex"
-              loading="lazy"
-            />
-            <figcaption>
-              Customizing recipients by groups - detail view
-            </figcaption>
+        <div class="insight-card">
+          <div class="insight-card-top">
+            Nurses often can't commit the full 12 hours for extra shift but
+            would take part of it, which is still beneficial especially for
+            urgent coverage needs.
+          </div>
+          <div class="insight-card-bottom">
+            → Solution should support partial shift signups such as in 4 hours
+            increment.
           </div>
         </div>
-        <div class="grid-item-col">
-          <div class="gallery-image img-bg">
-            <img
-              src="/images/bjc/bjc-admin-edit.jpg"
-              alt="Messaging tool for BJC Flex"
-              loading="lazy"
-              style="aspect-ratio: 443/462;"
-            />
+        <div class="insight-card">
+          <div class="insight-card-top">
+            Most nurses don't sit in front of a computer when off-shift. They
+            prefer scheduling on mobile and receiving notification via text for
+            better visibility.
           </div>
-          <figcaption>Editing recipient groups - modal</figcaption>
+          <div class="insight-card-bottom">
+            → Mobile should be the primary interface for shift browsing, signup,
+            and receiving communications.
+          </div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-card-top">
+            Managers want granular control over who receives notifications and
+            detailed information when reviewing nurse signups.
+          </div>
+          <div class="insight-card-bottom">
+            → Admin interface should be desktop-based with advanced
+            communication settings.
+          </div>
         </div>
       </div>
+    </section>
+    <section class="section-start mb-12">
+      <div class="line hidden md:flex"></div>
+      <h3>Solution Architecture and User Flow Design</h3>
+      <div>
+        <p>
+          I met with senior designers to align on a dual-platform approach for
+          our solution, BJC Flex.
+        </p>
+        <p>
+          However, I soon discovered a business constraint while discussing with
+          our product manager: our solution had to integrate with Kronos, BJC's
+          legacy workforce management system, as the official data source. This
+          created potential delays in status updates, which could negatively
+          impact the nurse scheduling experience and become critical for urgent
+          shift scheduling.
+        </p>
+        <p>
+          In a design meeting with the entire team, I contributed by pushing for
+          a parallel processing architecture that provides immediate user
+          feedback while syncing scheduling decisions with Kronos in the
+          background. This approach ensures minimal impact on user experience
+          while maintaining Kronos as the system of record.
+        </p>
+        <p>
+          This architectural approach set up the foundation that influenced all
+          our subsequent design decisions, including the user flow that connects
+          the two platforms and two roles.
+        </p>
+      </div>
+    </section>
+
+    <div class="figure-large mx-auto mb-20">
+      <img
+        src="/images/bjc/bjc-flex-user-flow.jpg"
+        alt="BJC Flex solution user flow"
+        loading="lazy"
+        style="aspect-ratio: 745/392;"
+      />
+    </div>
+
+    <section class="section-start mb-12">
+      <div class="line hidden md:flex"></div>
+      <h3>MVP Development and Testing</h3>
+      <h4>
+        For our MVP launch, we focused on the core nurse experience: mobile
+        shift browsing and one-step signup.
+      </h4>
+      <div>
+        <p>
+          As our research informed that giving nurses visibility into open
+          shifts and proactive scheduling capabilities were key to streamlining
+          the manual process, we prioritized creating a mobile experience that
+          allows nurses to browse, filter, and sign up for shifts quickly.
+        </p>
+      </div>
+    </section>
+
+    <div class="figure-large mx-auto mb-12">
+      <img
+        src="/images/bjc/bjc-flex-mobile-mvp.jpg"
+        alt="BJC Flex solution mobile mvp"
+        loading="lazy"
+        style="aspect-ratio: 3029/1420;"
+      />
+    </div>
+
+    <section class="mb-20">
+      <div>
+        <p>
+          I conducted user testing sessions at the two pilot hospitals with
+          nurses across different units. While we received positive feedback
+          that validated our mobile-first approach, I discovered several
+          challenges that are critical to the effectiveness of our solution.
+        </p>
+      </div>
+      <div class="figure-large mx-auto">
+        <img
+          src="/images/bjc/bjc-flex-user-testing.jpg"
+          alt="BJC Flex user testing"
+          loading="lazy"
+          style="aspect-ratio: 2095/1171; object-fit: cover;"
+        />
+      </div>
+    </section>
+
+    <section class="section-start mb-12">
+      <div class="line hidden md:flex"></div>
+      <h3>Challenges and Iterations</h3>
+      <h4>Challenge 1: High error rates in shift selection</h4>
+      <div>
+        <p>
+          After MVP rollout, we discovered nurses were frequently signing up for
+          shifts they couldn't actually work, which created extra manual cleanup
+          work for administrators.
+        </p><p class="mb-2">
+          Through follow-up conversations with nurse managers, I was able to
+          identify two primary causes:
+        </p>
+        <ul class="mb-8">
+          <li>
+            <span class="font-semibold">Time confusion:</span> Nurses were overlooking whether shifts were day or
+            night
+          </li>
+          <li>
+            <span class="font-semibold">Schedule conflicts:</span> No system to warn about schedule conflicts
+          </li>
+        </ul>
+        <p> 
+          Using layout, color, and iconography, I explored different variations
+          of shift cards with stronger visual cues to distinguish day versus
+          night shift. Combining rapid testing results and engineering team’s
+          feedback from a design review, we selected the one that’s the most
+          effective while remaining technically feasible to implement quickly.
+        </p>
+      </div>
+    </section>
+
+    <div class="figure-large mx-auto mb-12">
+      <img
+        src="/images/bjc/bjc-flex-challenge-1-1.jpg"
+        alt="Iterations of shift card designs to improve day vs. night shift visibility"
+        loading="lazy"
+        style="aspect-ratio: 3029/1238;"
+      />
+    </div>
+
+    <section class="section-start mb-12">
+      <div>
+        <p>
+          For scheduling conflict, our first attempt to simply disable all overlapping and back-to-back shifts proved too restrictive. Subsequently, I designed an additional confirmation modal to show warnings with conflict breakdown, allowing nurses to make informed decisions about consecutive shifts that may still work for their specific situations.
+        </p>
+      </div>
+    </section>
+
+    <div class="figure-large mx-auto mb-20">
+      <img
+        src="/images/bjc/bjc-flex-challenge-1-2.jpg"
+        alt="Iterations of shift conflict modal designs"
+        loading="lazy"
+        style="aspect-ratio: 3029/1249;"
+      />
+    </div>
+
+    <section class="section-start mb-12">
+      <h4>Challenge 2: Limited flexibility with irregular shifts</h4>
+      <div>
+        <p>
+          Unlike medical-surgical units with standard 12-hour shifts, schedules in emergency departments are highly irregular with unpredictable patient flow. Beyond our existing 4-hour increments, our solution needs to allow customizable start and end times in order to scale to different units.
+        </p>
+      </div>
+    </section>
+
+    <div class="figure-large mx-auto mb-12">
+      <img
+        src="/images/bjc/bjc-flex-challenge-1-1.jpg"
+        alt="Iterations of shift card designs to improve day vs. night shift visibility"
+        loading="lazy"
+        style="aspect-ratio: 3029/1238;"
+      />
     </div>
 
     <!-- Mobile Revamp -->
@@ -260,17 +476,26 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
       </div>
     </div>
 
-    <!-- Result  -->
-    <section class="result mb-36 md:mb-48">
-      <h3>the result</h3>
+    <!-- Results -->
+    <section class="result my-20">
+      <h3>Results</h3>
       <ul
-        class="text-gallery grid grid-cols-1 gap-x-20 gap-y-4 md:gap-y-12 md:grid-cols-2"
+        class="text-gallery grid grid-cols-1 gap-x-20 gap-y-4 md:gap-y-10 md:grid-cols-2"
       >
+        <div class="text-gallery-item">
+          <div class="result-item">
+            <div class="result-highlight">2% → 23%</div>
+            <p>
+              Open shift response rate<br />
+              <span class="note">(avg. of 3 months after MVP rollout)</span>
+            </p>
+          </div>
+        </div>
         <div class="text-gallery-item">
           <div class="result-item">
             <div class="result-highlight">700,000+</div>
             <p>
-              hours of extra shift picked up through BJC Flex, as of January
+              extra hours of shift scheduled through BJC Flex, as of January
               2024.
             </p>
           </div>
@@ -283,15 +508,18 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
         </div>
         <div class="text-gallery-item">
           <div class="result-item">
-            <div class="result-highlight">~2000</div>
-            <p>average monthly active users from the caregiving teams.</p>
+            <div class="result-highlight">Increased</div>
+            <p>Full time employee retention intent</p>
           </div>
         </div>
-        <div class="result-item">
-          <div class="result-highlight">Launched</div>
-          <p>
-            messaging tool into pilot phase. (I was proud of this the most!)
-          </p>
+        <div class="text-gallery-item">
+          <div class="result-item">
+            <div class="result-highlight">94%</div>
+            <p>
+              User satisfaction rating<br />
+              <span class="note">about app using experience</span>
+            </p>
+          </div>
         </div>
       </ul>
     </section>
@@ -329,15 +557,57 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
     background-color: #fff;
   }
 
-  /* li::marker {
-    color: #1820ed;
+  .tip-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter, 2rem);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
-  @media (prefers-color-scheme: dark) {
-    li::marker {
-      color: #6584e1;
+  @media (min-width: 768px) {
+    .tip-container {
+      flex-direction: row;
     }
-  } */
+
+    .roles-tips {
+      flex-direction: column;
+    }
+
+    /* Default: all tips have equal width (1:1) */
+    .tip-container .tip {
+      flex: 1;
+    }
+
+    /* Specific ratio for problem tips only */
+    #problem-tips .tip:first-child {
+      flex: 4.5;
+    }
+
+    #problem-tips .tip:last-child {
+      flex: 3;
+    }
+  }
+
+  .tip-green {
+    background-color: #e4f6f4;
+    border: 1px solid #559f97;
+  }
+
+  .tip-green .tip-title,
+  .tip-green .tip-body {
+    color: #316f69;
+  }
+
+  .tip-purple {
+    background-color: #e7e4f9;
+    border: 1px solid #8580a7;
+  }
+
+  .tip-purple .tip-title,
+  .tip-purple .tip-body {
+    color: #48417a;
+  }
 
   .link-next-part {
     border-bottom: none;

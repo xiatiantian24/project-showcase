@@ -16,6 +16,8 @@ const {
   detail2Content,
   detail3Title,
   detail3Content,
+  detail4Title,
+  detail4Content,
   linksURL,
   linksTitle,
 } = Astro.props;
@@ -63,11 +65,11 @@ const {
           <slot />
         </div>
         <div class="hidden col-span-3 lg:flex flex-col">
-          <h4 class="w-full max-w-2xl px-16">
+          <h5 class="w-full max-w-2xl px-20">
             {summary.map((line) => (
             <p>{line}</p>
           ))}
-          </h4>
+          </h5>
         </div>
         </div>
 
@@ -82,26 +84,42 @@ const {
         </div>
 
         <div
-          class="detail-box w-8/12 mb-28 md:mb-36 lg:mt-36 max-w-2xl mx-auto flex flex-col items-start gap-8 py-8 px-4 text-sm"
+          class="detail-box w-10/12 md:w-8/12 mb-28 md:mb-36 lg:mt-36 max-w-2xl mx-auto flex flex-col items-start gap-6 p-10 md:px-20 md:py-16 text-sm"
         >
           <div class="line hidden md:flex"></div>
-          <div class="grid grid-cols-1 w-full md:grid-cols-10">
-            <div class="detail mb-8 md:mb-0 px-1 md:col-span-3">
+          <div class="grid grid-cols-1 w-full md:grid-cols-2 gap-y-10 gap-x-24">
+            <div class="detail">
               <div class="detail-title">{detail1Title}</div>
               <div class="detail-content">
                 {detail1Content.map((content) => <div class="detail-item">{content}</div>)}
               </div>
             </div>
-            <div class="detail mb-8 md:mb-0 px-1 md:col-span-4">
+            <div class="detail">
               <div class="detail-title">{detail2Title}</div>
               <div class="detail-content">
                 {detail2Content.map((content) => <div class="detail-item">{content}</div>)}
               </div>
             </div>
-            {detail3Title && <div class="detail mb-8 md:mb-0 px-1 md:col-span-3">
+            {detail3Title && <div class="detail">
               <div class="detail-title">{detail3Title}</div>
               {detail3Content && <div class="detail-content">
                 {detail3Content.map((content) => <div class="detail-item">{content}</div>)}
+              </div>}
+              {!detail4Title && <div class="detail-content flex flex-col items-start gap-1">
+                {
+                  linksURL && linksURL.map((url, index) => (
+                    <a class="detail-item detail-link" href={url} target="_blank" rel="noopener noreferer">
+                      {linksTitle[index]}
+                    </a>
+                  ))
+                }
+              </div>}
+            </div>
+            }
+            {detail4Title && <div class="detail">
+              <div class="detail-title">{detail4Title}</div>
+              {detail4Content && <div class="detail-content">
+                {detail4Content.map((content) => <div class="detail-item">{content}</div>)}
               </div>}
               <div class="detail-content flex flex-col items-start gap-1">
                 {
@@ -131,6 +149,7 @@ const {
   <style>
     main {
       background-color: var(--color-bg-main);
+      font-family: "Figtree";
     }
 
     h1 {
@@ -183,14 +202,17 @@ const {
     }
 
     .detail-title {
-      font-family: "LT Cushion";
+      font-family: "Figtree";
+      letter-spacing: -0.01rem;
       text-transform: uppercase;
-      font-weight: 500;
-      padding-bottom: 0.3rem;
+      color: var(--color-text-main);
+      font-weight: 450;
+      padding-bottom: 0.35rem;
     }
 
     .detail-item {
-      margin-bottom: 0.15rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 0.1rem;
       padding-bottom: 0.15rem;
       line-height: 1.3;
     }
@@ -202,7 +224,7 @@ const {
 
     @media (min-width: 768px) {
       .detail-title {
-      padding-bottom: 0.65rem;
+      padding-bottom: 0.35rem;
     }
   }
   </style>
