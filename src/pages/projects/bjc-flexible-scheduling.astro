@@ -296,7 +296,7 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
       <div class="figure-large mx-auto">
         <img
           src="/images/bjc/bjc-flex-user-testing.jpg"
-          alt="BJC Flex user testing"
+          alt="Enticing BJC Flex users to share their feedback with us"
           loading="lazy"
           style="aspect-ratio: 2095/1171; object-fit: cover;"
         />
@@ -312,20 +312,22 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           After MVP rollout, we discovered nurses were frequently signing up for
           shifts they couldn't actually work, which created extra manual cleanup
           work for administrators.
-        </p><p class="mb-2">
+        </p>
+        <p class="mb-2">
           Through follow-up conversations with nurse managers, I was able to
           identify two primary causes:
         </p>
         <ul class="mb-8">
           <li>
-            <span class="font-semibold">Time confusion:</span> Nurses were overlooking whether shifts were day or
-            night
+            <span class="font-semibold">Time confusion:</span> Nurses were overlooking
+            whether shifts were day or night
           </li>
           <li>
-            <span class="font-semibold">Schedule conflicts:</span> No system to warn about schedule conflicts
+            <span class="font-semibold">Schedule conflicts:</span> No system to warn
+            about schedule conflicts
           </li>
         </ul>
-        <p> 
+        <p>
           Using layout, color, and iconography, I explored different variations
           of shift cards with stronger visual cues to distinguish day versus
           night shift. Combining rapid testing results and engineering team’s
@@ -347,7 +349,12 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
     <section class="section-start mb-12">
       <div>
         <p>
-          For scheduling conflict, our first attempt to simply disable all overlapping and back-to-back shifts proved too restrictive. Subsequently, I designed an additional confirmation modal to show warnings with conflict breakdown, allowing nurses to make informed decisions about consecutive shifts that may still work for their specific situations.
+          For scheduling conflict, our first attempt to simply disable all
+          overlapping and back-to-back shifts proved too restrictive.
+          Subsequently, I designed an additional confirmation modal to show
+          warnings with conflict breakdown, allowing nurses to make informed
+          decisions about consecutive shifts that may still work for their
+          specific situations.
         </p>
       </div>
     </section>
@@ -365,119 +372,105 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
       <h4>Challenge 2: Limited flexibility with irregular shifts</h4>
       <div>
         <p>
-          Unlike medical-surgical units with standard 12-hour shifts, schedules in emergency departments are highly irregular with unpredictable patient flow. Beyond our existing 4-hour increments, our solution needs to allow customizable start and end times in order to scale to different units.
+          Unlike medical-surgical units with standard 12-hour shifts, schedules
+          in emergency departments are highly irregular with unpredictable
+          patient flow. Beyond our existing 4-hour increments, our solution
+          needs to allow customizable start and end times in order to scale to
+          different units.
         </p>
+        <p class="mb-8">Two potential solutions I explored:</p>
+        <p class="mb-2">
+          <span class="font-semibold">Option 1:</span> Snap slider with minimum time
+          range
+        </p>
+        <ul class="mb-8">
+          <li>
+            <span class="font-semibold">Pros:</span> Intuitive interaction, clear
+            visual reference of shift length
+          </li>
+          <li>
+            <span class="font-semibold">Cons:</span> Less flexible input options
+          </li>
+        </ul>
+        <p class="mb-2">
+          <span class="font-semibold">Option 2:</span>Free-text input fields for
+          start/end times
+        </p>
+        <ul class="mb-8">
+          <li>
+            <span class="font-semibold">Pros:</span> More flexibility with precise
+            time entry
+          </li>
+          <li>
+            <span class="font-semibold">Cons:</span> No indication of minimum shift
+            length requirement; could create gaps that are difficult to fill between
+            partial shifts
+          </li>
+        </ul>
       </div>
     </section>
 
     <div class="figure-large mx-auto mb-12">
-      <img
-        src="/images/bjc/bjc-flex-challenge-1-1.jpg"
-        alt="Iterations of shift card designs to improve day vs. night shift visibility"
-        loading="lazy"
-        style="aspect-ratio: 3029/1238;"
-      />
+      <div class="img-wrap">
+        <img
+          src="/images/bjc/bjc-flex-challenge-2-1.jpg"
+          alt="Before state of 4-hour increment checkbox card design"
+          loading="lazy"
+          style="aspect-ratio: 978/789;"
+        />
+        <img
+          src="/images/bjc/bjc-flex-challenge-2-2.jpg"
+          alt="Option 1 with a snap slider"
+          loading="lazy"
+          style="aspect-ratio: 978/789;"
+        />
+        <img
+          src="/images/bjc/bjc-flex-challenge-2-3.jpg"
+          alt="Option 2 with free-text input fields for start/end times"
+          loading="lazy"
+          style="aspect-ratio: 978/789;"
+        />
+      </div>
     </div>
 
-    <!-- Mobile Revamp -->
-    <section class="bjc-flex mb-16">
-      <h3>reducing mistakenly scheduled shifts</h3>
+    <section class="my-20">
+      <p>
+        Feedback we obtained from testing indicated that nurse appreciated
+        straightforward visuals, while managers needed organized shift
+        boundaries and customizable increments. As a result, we chose option 1
+        with the slider approach.
+      </p>
+    </section>
+
+    <section class="section-start mb-12">
+      <div class="line hidden md:flex"></div>
+      <h3>Admin Messaging Flow End-to-End Design</h3>
+      <h4>
+        Beyond the scope of the MVP, I also owned the shift communication part
+        of the admin journey from early exploration through final design.
+      </h4>
       <div>
         <p>
-          Besides working on new ideas, I also had fun experimenting with
-          improving existing features based on nurses' needs throughout my time
-          at BJC. Some were highly appreciated, some turned out not but helped
-          us better learn the prioritization of desirability.
-        </p>
-        <p>
-          For example, one of the successful improvements we made was to reduce
-          error in mistakenly signed up shifts.
+          I pushed the launch of the messaging system in Flex Admin that allows
+          nurse managers to attach specific shifts to messages and send them to
+          relevant nurses, reducing notification fatigue while improving
+          response rates.
         </p>
       </div>
     </section>
 
-    <!-- Mobile Revamp Images -->
-    <div class="flex-images mb-36 md:mb-48">
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-flex-overlap.jpg"
-            alt="Experimenting with UIs that prevent nurses from picking up shifts that overlap with ones they already have."
-            loading="lazy"
-            style="aspect-ratio: 432/251;"
-          />
-        </div>
-        <figcaption>
-          We found that errors in self-scheduling can happen when nurses don't
-          realize the shift overlaps with those they've already signed up for.
-          We experiment with reducing the affordability of overlapping shifts.
-        </figcaption>
-      </div>
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-flex-night.jpg"
-            alt="Experimenting with UIs that help nurses identify day shifts from night shifts faster."
-            loading="lazy"
-            style="aspect-ratio: 432/251;"
-          />
-        </div>
-        <figcaption>
-          After learning that overlooking the time of the day was another major
-          factor of mistakenly signed up shifts, we experiment with visual cues
-          that help nurses more easily identify and sort day shifts from night
-          shifts.
-        </figcaption>
-      </div>
-    </div>
-
-    <!-- Behind the Scenes -->
-    <section class="behind-the-scenes">
-      <h3>behind the scenes</h3>
-    </section>
-    <div class="behind-the-scenes-images mb-36 md:mb-48">
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-office.png"
-            alt="A peek inside my office building."
-            loading="lazy"
-            style="aspect-ratio: 27/20;"
-          />
-        </div>
-        <figcaption>A peek inside my office building.</figcaption>
-      </div>
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-meeting.png"
-            alt="First time in a rapid improvement event with nurse managers and I led a ideatation session!"
-            loading="lazy"
-            style="aspect-ratio: 864/457;"
-          />
-        </div>
-        <figcaption>
-          Working with nurse managers during a rapid improvement event, and I
-          led a ideatation session on reimagining float pool shift scheduling!
-        </figcaption>
-      </div>
-      <div class="figure-medium mx-auto mb-8">
-        <div class="img-medium">
-          <img
-            src="/images/bjc/bjc-flex-donuts.png"
-            style="aspect-ratio: 864/317;"
-            alt="Enticing users of BJC Flex to share feedback."
-            loading="lazy"
-          />
-        </div>
-        <figcaption>
-          Enticing users of BJC Flex to share their feedback with us.
-        </figcaption>
-      </div>
+    <div class="figure-large mx-auto mb-20">
+      <img
+        src="/images/bjc/bjc-flex-admin-mvp.jpg"
+        alt="BJC Flex Admin MVP"
+        loading="lazy"
+        style="aspect-ratio: 3029/1535;"
+      />
     </div>
 
     <!-- Results -->
     <section class="result my-20">
+      <div class="line hidden md:flex"></div>
       <h3>Results</h3>
       <ul
         class="text-gallery grid grid-cols-1 gap-x-20 gap-y-4 md:gap-y-10 md:grid-cols-2"
@@ -524,8 +517,46 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
       </ul>
     </section>
 
+    <!-- Reflections -->
+    <section class="section-start my-20">
+      <div class="line hidden md:flex"></div>
+      <h3>Reflections and Learnings</h3>
+      <div>
+        <h4 class="mb-2">
+          Proactive information gathering in complex environments
+        </h4>
+        <p class="mb-8">
+          Frequent stakeholder communications and early cross-functional
+          communication proved essential to our success. I learned to actively
+          engage with product managers to understand operational requirements,
+          while building close relationships with engineers to learn technical
+          constraints early, which allowed me to iterate toward a viable
+          solution without major redesigns.
+        </p>
+        <h4 class="mb-2">Opportunity for greater business impact</h4>
+        <p class="mb-8">
+          If there’s more time, I would want to tackle additional business
+          challenges through design. For example, we noticed that nurses
+          naturally gravitated toward popular units and preferred hours,
+          creating staffing imbalances. This problem could potentially be solved
+          by dynamic staffing balance and incentive features.
+        </p>
+        <h4 class="mb-2">Design for breaking the status quo</h4>
+        <p class="mb-8">
+          This project reinforced my skills to balance understanding existing workflows with creative
+          problem-solving approaches. As my manager noted: <span
+            class="quote"
+            >"The fresh pair of eyes helped us start with a clean slate and get
+            us to where we are today. I had a few preconceived notions about
+            user satisfaction that Ray effectively challenged. I've been
+            impressed with Ray's design skills!"</span
+          >
+        </p>
+      </div>
+    </section>
+
     <!-- Next -->
-    <section class="w-full flex flex-col items-center mb-36">
+    <section class="w-full flex flex-col items-center my-36">
       <p class="text-next-part">Continue to BJC HealthCare pt.2</p>
       <a
         href="/projects/bjc-virtual-nursing"

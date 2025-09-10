@@ -198,3 +198,15 @@ video {
   border-bottom: 1.5px solid var(--color-border-secondary);
   margin-bottom: 1.5rem;
 }
+
+.img-wrap {
+  display: flex;
+  gap: var(--gutter);
+  width: 100%;
+}
+
+.img-wrap img {
+  flex: 1;
+  width: 0; /* This allows flex to determine width based on flex: 1 */
+  min-width: 0; /* Prevents flex items from overflowing */
+}
