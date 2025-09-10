@@ -48,8 +48,8 @@ const {
               {
                 tags.map((tag,index) => (
                 index == (tags.length - 1) ?
-                <p>{tag}</p> : 
-                <p>{tag}</p> <span class="px-2">&#47;</span>
+                <span>{tag}</span> : 
+                <span>{tag}</span> <span class="px-2">&#47;</span>
                 ))
                 } 
             </div>
@@ -155,7 +155,7 @@ const {
     h1 {
       font-family: "LT Cushion";
       font-weight: 375;
-      letter-spacing: -0.015em;
+      letter-spacing: -0.075rem;
       line-height: 0.9;
       transform: scaleY(1.05);
       margin: 0.5rem 0;
@@ -163,11 +163,11 @@ const {
 
     h2 {
       line-height: 1.35;
-      font-weight: 400;
+      font-weight: 500;
     }
 
     p {
-      letter-spacing: -0.02rem;
+      letter-spacing: -0.015rem;
     }
 
     a.detail-item {
@@ -190,7 +190,6 @@ const {
       transform: scaleY(1);
       transform-origin: 0 0;
       font-size: 0.85rem;
-      letter-spacing: 0.01rem;
       line-height: 110%;
       font-weight: 450;
       display: flex;
