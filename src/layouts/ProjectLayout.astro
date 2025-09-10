@@ -48,8 +48,8 @@ const {
               {
                 tags.map((tag,index) => (
                 index == (tags.length - 1) ?
-                <span>{tag}</span> : 
-                <span>{tag}</span> <span class="px-2">&#47;</span>
+                <span class="mb-1">{tag}</span> : 
+                <span class="mb-1">{tag}</span> <span class="px-2">&#47;</span>
                 ))
                 } 
             </div>
@@ -194,6 +194,10 @@ const {
       font-weight: 450;
       display: flex;
       flex-wrap: wrap;
+    }
+
+    .tags span {
+      letter-spacing: -0.01rem;
     }
 
     .detail-box {
