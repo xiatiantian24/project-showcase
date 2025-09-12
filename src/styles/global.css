@@ -31,7 +31,7 @@
   --color-highlight: rgba(227, 220, 209, 1);
   --color-bg-highlight: rgba(244, 241, 233, 1);
   --color-accent: rgba(124, 104, 180, 1);
-  --color-accent-secondary: rgba(182, 162, 236, 1);
+  --color-accent-secondary: rgb(180, 162, 231);
   --gutter: 2rem;
 }
 
