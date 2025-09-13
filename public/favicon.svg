@@ -4,9 +4,10 @@
         stroke-width="5" stroke-linecap="round" />
     <path d="M3.5 47.4031H93.5M48.798 4.54785V90.5479" stroke-width="6" />
     <style>
-        path { stroke: #323232; }
+        :root { --icon-color: #323232; }
         @media (prefers-color-scheme: dark) {
-        path { stroke: #FBFBF8; }
+            :root { --icon-color: #FBFBF8; }
         }
+        path { stroke: var(--icon-color, #323232); }
     </style>
 </svg>

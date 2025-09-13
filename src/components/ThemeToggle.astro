@@ -23,7 +23,7 @@
       localStorage.setItem("theme", theme);
     };
 
-    // Detect initial theme: apply local storage if exists, then looks up system mode
+    // Detect initial theme: apply local storage if exists, then default to light mode
     const theme = (() => {
       if (
         typeof localStorage !== "undefined" &&
@@ -31,9 +31,10 @@
       ) {
         return localStorage.getItem("theme");
       }
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        return "dark";
-      }
+      // Temporarily disabled system preference detection
+      // if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      //   return "dark";
+      // }
       return "light";
     })();
 
@@ -63,11 +64,13 @@
   // A separate document event listener that handles page navigation
   document.addEventListener("astro:after-swap", () => {
     const themeToggleButton = document.getElementById("theme-toggle");
-    const theme =
-      localStorage.theme ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light");
+    const theme = localStorage.theme || "light";
+    // Temporarily disabled system preference detection
+    // const theme =
+    //   localStorage.theme ||
+    //   (window.matchMedia("(prefers-color-scheme: dark)").matches
+    //     ? "dark"
+    //     : "light");
 
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
