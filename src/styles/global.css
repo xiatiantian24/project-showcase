@@ -18,10 +18,10 @@
 :root.light {
   scroll-padding-top: 12rem;
 
-  --color-text-main: rgba(50, 50, 50, 1);
-  --color-text-secondary: rgba(99, 99, 99, 1);
-  --color-text-tertiary: rgba(99, 99, 99, 1);
-  --color-text-headline: rgba(70, 70, 70, 1);
+  --color-text-main: rgb(55, 55, 55);
+  --color-text-secondary: rgb(100, 99, 95);
+  --color-text-tertiary: rgb(125, 125, 123);
+  --color-text-headline: rgb(79, 76, 70);
   --color-text-highlight: rgba(24, 24, 24, 1);
   --color-bg-main: rgba(252, 251, 248, 1);
   --color-bg-secondary: rgba(244, 241, 233, 1);
@@ -36,10 +36,10 @@
 }
 
 .dark {
-  --color-text-main: rgba(233, 230, 230, 1);
+  --color-text-main: rgb(220, 220, 220);
   --color-text-secondary: rgba(192, 192, 192, 1);
-  --color-text-tertiary: rgb(209, 209, 209);
-  --color-text-headline: rgba(230, 230, 230, 1);
+  --color-text-tertiary: rgb(173, 173, 173);
+  --color-text-headline: rgb(209, 209, 209);
   --color-text-highlight: rgba(24, 24, 24, 1);
   --color-bg-main: rgba(77, 77, 77, 1);
   --color-bg-secondary: rgba(96, 96, 96, 1);
@@ -53,15 +53,19 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-text-main: rgba(233, 230, 230, 1);
+    --color-text-main: rgb(220, 220, 220);
     --color-text-secondary: rgba(192, 192, 192, 1);
-    --color-text-tertiary: rgb(209, 209, 209);
+    --color-text-tertiary: rgb(173, 173, 173);
+    --color-text-headline: rgb(209, 209, 209);
     --color-text-highlight: rgba(24, 24, 24, 1);
     --color-bg-main: rgba(77, 77, 77, 1);
     --color-bg-secondary: rgba(96, 96, 96, 1);
     --color-border-main: rgba(148, 148, 148, 1);
     --color-border-secondary: rgba(120, 120, 120, 1);
-    --color-highlight: rgba(221, 213, 201, 1);
+    --color-highlight: rgb(225, 219, 209);
+    --color-bg-highlight: rgb(88, 88, 88);
+    --color-accent: rgba(191, 175, 210, 1);
+    --color-accent-secondary: rgba(183, 158, 228, 1);
   }
 }
 

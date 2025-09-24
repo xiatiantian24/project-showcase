@@ -84,10 +84,10 @@ const {
         </div>
 
         <div
-          class="detail-box w-10/12 mb-28 md:mb-36 lg:mt-36 mx-auto flex flex-col items-start p-10 lg:px-20 lg:py-16 text-sm"
+          class="detail-box w-10/12 lg:w-3/4 my-20 md:my-24 mx-auto flex flex-col items-start p-10 lg:px-20 lg:py-16 text-sm"
         >
           <!-- <div class="line hidden md:flex"></div> -->
-          <div class="grid grid-cols-1 w-full md:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-12">
+          <div class={`grid grid-cols-1 w-full md:grid-cols-2 ${detail4Title ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-y-10 gap-x-12`}>
             <div class="detail">
               <div class="detail-title">{detail1Title}</div>
               <div class="detail-content">
@@ -159,11 +159,14 @@ const {
       line-height: 0.9;
       transform: scaleY(1.05);
       margin: 0.5rem 0;
+      color: var(--color-text-headline);
     }
 
     h2 {
       line-height: 1.35;
       font-weight: 500;
+      color: var(--color-text-tertiary);
+
     }
 
     p {
@@ -206,17 +209,16 @@ const {
 
     .detail-title {
       font-family: "Figtree";
-      letter-spacing: 0.075rem;
-      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 500;
       color: var(--color-text-main);
-      font-weight: 450;
-      padding-bottom: 0.35rem;
-      font-size: 0.82rem;
+      text-transform: uppercase;
+      padding-bottom: 0.6rem;
     }
 
     .detail-item {
       color: var(--color-text-secondary);
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.15rem;
       padding-bottom: 0.15rem;
       line-height: 1.4;
     }
@@ -228,7 +230,7 @@ const {
 
     @media (min-width: 768px) {
       .detail-title {
-      padding-bottom: 0.35rem;
+      padding-bottom: 0.8rem;
     }
   }
   </style>

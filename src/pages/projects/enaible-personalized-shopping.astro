@@ -6,7 +6,7 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
 
 <ProjectLayout
   projectTitle="Streamliming shift scheduling for nurses"
-  projectDescription="BJC HealthCare"
+  projectDescription="ENAiBLE, CMU's AI x Retail initiative"
   summary={[
     "Worked fast across multiple platform & user segments to fill 700,000+ hours of nursing shifts, saving $3.5M+ in operating expenses within a year.",
   ]}
@@ -62,20 +62,12 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           in set length (i.e., 12hrs) and at a single location.
         </p>
         <div class="tip-container" id="problem-tips">
-          <div class="user-problems">
-            <div class="tip tip-purple">
-              <div class="tip-title">The nurse manager problem</div>
-              <div class="tip-body">
-                Nurse managers spend hours asking individual nurses to fill open
-                shifts.
-              </div>
-            </div>
-            <div class="tip tip-green">
-              <div class="tip-title">The nurse problem</div>
-              <div class="tip-body">
-                Nurses are fatigued with notifications about shifts they're not
-                able/interested in filling.
-              </div>
+          <div class="tip">
+            <div class="tip-title">The user problem</div>
+            <div class="tip-body">
+              Nurse managers spend hours asking individual nurses to fill open
+              shifts, while nurses are fatigued with notifications about shifts
+              they're not able/interested in filling.
             </div>
           </div>
           <div class="tip">
@@ -185,74 +177,50 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
       <div>
         <div class="insight-card">
           <div class="insight-card-top">
-            <span class="insight-symbol">∵</span>
-            <span
-              >Nurses are financially driven when considering working extra.</span
-            >
+            Nurses are financially driven when considering working extra.
           </div>
           <div class="insight-card-bottom">
-            <span class="insight-symbol">∴</span>
-            <span
-              >Solution should highlight incentive levels to attract nurse
-              interest.</span
-            >
+            → Solution should highlight incentive levels to attract nurse
+            interest.
           </div>
         </div>
         <div class="insight-card">
           <div class="insight-card-top">
-            <span class="insight-symbol">∵</span>
-            <span
-              >Nurses often can't commit the full 12 hours for extra shift but
-              would take part of it, which is still beneficial especially for
-              urgent coverage needs.</span
-            >
+            Nurses often can't commit the full 12 hours for extra shift but
+            would take part of it, which is still beneficial especially for
+            urgent coverage needs.
           </div>
           <div class="insight-card-bottom">
-            <span class="insight-symbol">∴</span>
-            <span
-              >Solution should support partial shift signups such as in 4 hours
-              increment.</span
-            >
+            → Solution should support partial shift signups such as in 4 hours
+            increment.
           </div>
         </div>
         <div class="insight-card">
           <div class="insight-card-top">
-            <span class="insight-symbol">∵</span>
-            <span
-              >Most nurses don't sit in front of a computer when off-shift. They
-              prefer scheduling on mobile and receiving notification via text
-              for better visibility.</span
-            >
+            Most nurses don't sit in front of a computer when off-shift. They
+            prefer scheduling on mobile and receiving notification via text for
+            better visibility.
           </div>
           <div class="insight-card-bottom">
-            <span class="insight-symbol">∴</span>
-            <span
-              >Mobile should be the primary interface for shift browsing,
-              signup, and receiving communications.</span
-            >
+            → Mobile should be the primary interface for shift browsing, signup,
+            and receiving communications.
           </div>
         </div>
         <div class="insight-card">
           <div class="insight-card-top">
-            <span class="insight-symbol">∵</span>
-            <span
-              >Managers want granular control over who receives notifications
-              and detailed information when reviewing nurse signups.</span
-            >
+            Managers want granular control over who receives notifications and
+            detailed information when reviewing nurse signups.
           </div>
           <div class="insight-card-bottom">
-            <span class="insight-symbol">∴</span>
-            <span
-              >Admin interface should be desktop-based with advanced
-              communication settings.</span
-            >
+            → Admin interface should be desktop-based with advanced
+            communication settings.
           </div>
         </div>
       </div>
     </section>
     <section class="section-start mb-12">
       <div class="line"></div>
-      <h3>User Flow Design</h3>
+      <h3>Solution Architecture and User Flow Design</h3>
       <div>
         <p>
           I met with senior designers to align on a dual-platform approach for
@@ -425,7 +393,7 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
           </li>
         </ul>
         <p class="mb-2">
-          <span class="font-semibold">Option 2:</span> Free-text input fields for
+          <span class="font-semibold">Option 2:</span>Free-text input fields for
           start/end times
         </p>
         <ul class="mb-8">
@@ -547,16 +515,10 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
       <h4>Feedback 2: Cumbersome modal for shift attachment</h4>
       <div>
         <p>
-          I observed that managers were doing excessive scrolling during shift
-          attachment, and the modal's position often blocked the context about
-          the message.
+          I observed that managers were doing excessive scrolling during shift attachment, and  the modal's position often blocked the context about the message.
         </p>
         <p>
-          As a result, I redesigned a side panel that maintained context
-          visibility while providing better shift browsing experience. With A/B
-          testing, we quickly confirmed the value of this approach, as nurse
-          managers appreciated the increased real estate for shift browsing and
-          the ability to reference their message while selecting shifts.
+          As a result, I redesigned a side panel that maintained context visibility while providing better shift browsing experience. With A/B testing, we quickly confirmed the value of this approach, as nurse managers appreciated the increased real estate for shift browsing and the ability to reference their message while selecting shifts.
         </p>
       </div>
     </section>
@@ -627,27 +589,33 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
         <h4 class="mb-2">
           Proactive information gathering in complex environments
         </h4>
-        <p class="mb-12">
-          Enterprise teamwork needs communication to move fast. I learned to
-          frequently update with product managers to understand new operational
-          requirements, while building relationships with engineers to learn
-          technical constraints early.
+        <p class="mb-8">
+          Frequent stakeholder communications and early cross-functional
+          communication proved essential to our success. I learned to actively
+          engage with product managers to understand operational requirements,
+          while building close relationships with engineers to learn technical
+          constraints early, which allowed me to iterate toward a viable
+          solution without major redesigns.
         </p>
-        <h4 class="mb-2">Solutions can create new problems</h4>
-        <p class="mb-12">
-          While the solution covers urgent staffing needs, it could sometimes cause staffing imbalances. If there's more time, I would've futher explored dynamic staffing and incentive features within the current solution.
+        <h4 class="mb-2">Opportunity for greater business impact</h4>
+        <p class="mb-8">
+          If there’s more time, I would want to tackle additional business
+          challenges through design. For example, we noticed that nurses
+          naturally gravitated toward popular units and preferred hours,
+          creating staffing imbalances. This problem could potentially be solved
+          by dynamic staffing balance and incentive features.
         </p>
         <h4 class="mb-2">Design for breaking the status quo</h4>
-        <p class="mb-2">
-          Through this experience, I was able to balance existing
-          workflows with pitching creative approaches when there's opportunity. As my manager noted:
+        <p class="mb-8">
+          This project reinforced my skills to balance understanding existing
+          workflows with creative problem-solving approaches. As my manager
+          noted: <span class="quote"
+            >"The fresh pair of eyes helped us start with a clean slate and get
+            us to where we are today. I had a few preconceived notions about
+            user satisfaction that Ray effectively challenged. I've been
+            impressed with Ray's design skills!"</span
+          >
         </p>
-        <div class="quote p-6">
-          "The fresh pair of eyes helped us start with a clean slate and get
-          us to where we are today. I had a few preconceived notions about
-          user satisfaction that Ray effectively challenged. I've been
-          impressed with Ray's design skills!"
-        </div>
       </div>
     </section>
 
@@ -688,12 +656,8 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
     display: flex;
     flex-direction: column;
     gap: var(--gutter, 2rem);
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-  }
-
-  #problem-tips {
-    gap: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   @media (min-width: 768px) {
@@ -706,35 +670,17 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
     }
 
     /* Default: all tips have equal width (1:1) */
-    .tip-container div {
+    .tip-container .tip {
       flex: 1;
     }
 
     /* Specific ratio for problem tips only */
-    #problem-tips {
-      align-items: center;
+    #problem-tips .tip:first-child {
+      flex: 4.5;
     }
 
-    #problem-tips .user-problems {
-      flex: 5;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      position: relative;
-    }
-
-    #problem-tips .user-problems::after {
-      content: "";
-      position: absolute;
-      right: -2rem;
-      top: 0;
-      bottom: 0;
-      width: 1px;
-      background-color: #e0e0e0;
-    }
-
-    #problem-tips .tip {
-      flex: 4;
+    #problem-tips .tip:last-child {
+      flex: 3;
     }
   }
 
@@ -745,7 +691,7 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
 
   .tip-green .tip-title,
   .tip-green .tip-body {
-    color: #458982;
+    color: #316f69;
   }
 
   .tip-purple {
@@ -755,17 +701,11 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
 
   .tip-purple .tip-title,
   .tip-purple .tip-body {
-    color: #655f97;
+    color: #48417a;
   }
 
   .link-next-part {
     border-bottom: none;
-  }
-
-  .quote {
-    font-family: "LT Cushion";
-    font-weight: 300;
-    letter-spacing: 0.01rem;
   }
 
   @media (min-width: 768px) {
