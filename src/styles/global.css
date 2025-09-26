@@ -18,9 +18,9 @@
 :root.light {
   scroll-padding-top: 12rem;
 
-  --color-text-main: rgb(55, 55, 55);
+  --color-text-main: rgb(52, 52, 52);
   --color-text-secondary: rgb(100, 99, 95);
-  --color-text-tertiary: rgb(125, 125, 123);
+  --color-text-tertiary: rgb(116, 116, 112);
   --color-text-headline: rgb(79, 76, 70);
   --color-text-highlight: rgba(24, 24, 24, 1);
   --color-bg-main: rgba(252, 251, 248, 1);
